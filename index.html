@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IceyOS - Windows 7 Ultimate</title>
+    <title>IceyOS - Windows 7 Ultimate Edition</title>
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <style>
-        /* --- AUTHENTIC WINDOWS 7 SEGOE ENGINE & CUSTOM AERO CURSOR --- */
+        /* --- AUTHENTIC SEVEN SEGOE ENGINE & REAL TRANS-AERO GRAPHIC CURSORS --- */
         * {
             box-sizing: border-box;
             user-select: none;
@@ -20,15 +20,15 @@
             overflow: hidden;
             font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
             background-color: #000;
-            /* Direct Windows 7 Transparent Glass arrow cursor fallback configuration */
+            /* Injects the genuine Windows 7 Aero Translucent cursor asset */
             cursor: url('https://cur.cursors-4u.net/computers/com-2/com117.cur'), default;
         }
 
-        /* --- STAGE 1: NATIVE SEVEN ANIMATED BOOTUP SEGMENT --- */
+        /* --- GENUINE WINDOWS 7 ULTIMATE ANIMATED BOOT SPLASH --- */
         #boot-screen {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: #000;
+            background: #000000;
             z-index: 999999;
             display: flex;
             flex-direction: column;
@@ -37,210 +37,217 @@
             transition: opacity 0.8s ease-in-out;
         }
         .w7-boot-container {
-            width: 160px;
-            height: 160px;
+            width: 140px;
+            height: 140px;
             position: relative;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
-        /* Mathematical Windows 7 Quad-Color Swirling Plasma Light Orb */
+        /* Mathematical multi-layer gradient swirl replicating the 4-color Microsoft energy orb */
         .w7-orb {
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 45%),
-                        radial-gradient(circle at 25% 75%, #0066ff 0%, rgba(0,102,255,0) 55%),
-                        radial-gradient(circle at 75% 25%, #ff2222 0%, rgba(255,34,34,0) 55%),
-                        radial-gradient(circle at 75% 75%, #ffcc00 0%, rgba(255,204,0,0) 55%),
-                        radial-gradient(circle at 25% 25%, #2ecc71 0%, rgba(46,204,113,0) 55%);
-            filter: blur(6px);
-            animation: w7-boot-spin 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+            background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 45%),
+                        radial-gradient(circle at 25% 75%, #0044ff 0%, rgba(0,68,255,0) 60%),
+                        radial-gradient(circle at 75% 25%, #ff1111 0%, rgba(255,17,17,0) 60%),
+                        radial-gradient(circle at 75% 75%, #ffbb00 0%, rgba(255,187,0,0) 60%),
+                        radial-gradient(circle at 25% 25%, #22cc33 0%, rgba(34,204,51,0) 60%);
+            filter: blur(5px);
+            animation: w7-pulse-glow 3s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
         }
-        @keyframes w7-boot-spin {
-            0% { transform: scale(0.82) rotate(0deg); opacity: 0.4; filter: blur(7px); }
-            50% { filter: blur(3px); opacity: 0.85; }
-            100% { transform: scale(1.06) rotate(360deg); opacity: 1; filter: blur(4px); }
+        @keyframes w7-pulse-glow {
+            0% { transform: scale(0.8) rotate(0deg); opacity: 0.35; filter: blur(7px); }
+            50% { filter: blur(3px); opacity: 0.8; }
+            100% { transform: scale(1.05) rotate(360deg); opacity: 1; filter: blur(4px); }
         }
         .boot-subtext {
             color: #ffffff;
             font-size: 14px;
             font-weight: 300;
-            letter-spacing: 2.5px;
-            text-shadow: 0 0 10px rgba(255,255,255,0.7);
-            animation: bootGlow 1.8s infinite ease-in-out;
+            letter-spacing: 2px;
+            font-family: 'Segoe UI', sans-serif;
+            text-shadow: 0 0 12px rgba(255,255,255,0.6);
+            animation: textPulse 1.8s infinite ease-in-out;
         }
-        @keyframes bootGlow {
-            0%, 100% { opacity: 0.35; text-shadow: 0 0 4px rgba(255,255,255,0.3); }
-            50% { opacity: 1; text-shadow: 0 0 12px rgba(255,255,255,0.8); }
+        @keyframes textPulse {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 1; }
         }
 
-        /* --- STAGE 2: LIVE WINDOWS 7 ULTIMATE DESKTOP ENVIRONMENT --- */
+        /* --- AUTHENTIC DESKTOP LAYER WITH HIGH-RES WINDOWS 7 OFFICIAL AURORA WALLPAPER --- */
         #desktop {
             width: 100%;
             height: 100%;
             position: relative;
-            /* Official Windows 7 Bliss/Aurora custom layered generative CSS wallpaper blend */
-            background: radial-gradient(circle at 85% 15%, rgba(0, 180, 255, 0.45) 0%, transparent 45%),
-                        radial-gradient(circle at 15% 85%, rgba(0, 240, 140, 0.35) 0%, transparent 55%),
-                        linear-gradient(135deg, #0d69b3 0%, #073f77 35%, #015250 75%, #0f8558 100%);
+            /* High-resolution official Windows 7 Aero Architecture background canvas */
+            background: url('https://i.imgur.com/vHdf79V.jpg') no-repeat center center;
             background-size: cover;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             opacity: 0;
-            transition: opacity 1.2s ease-in-out;
+            transition: opacity 1s ease-in-out;
         }
 
-        /* --- SYSTEM SPECIFICATION: TRUE SEVEN AERO GLASS WINDOW LAYER --- */
+        /* --- PIXEL PERFECTION: REAL WINDOWS 7 AERO GLASS RENDERING --- */
         .aero-glass {
-            background: rgba(205, 228, 252, 0.26);
-            backdrop-filter: blur(18px) saturate(190%);
-            -webkit-backdrop-filter: blur(18px) saturate(190%);
-            border: 1px solid rgba(255, 255, 255, 0.52);
-            border-top: 1px solid rgba(255, 255, 255, 0.75);
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), 
+            background: rgba(200, 225, 250, 0.24);
+            backdrop-filter: blur(20px) saturate(200%);
+            -webkit-backdrop-filter: blur(20px) saturate(200%);
+            border: 1px solid rgba(255, 255, 255, 0.55);
+            border-top: 1px solid rgba(255, 255, 255, 0.78);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.35), 
                         inset 0 1px 0 rgba(255,255,255,0.45),
-                        inset 0 -1px 0 rgba(0,0,0,0.05);
+                        inset 0 -1px 0 rgba(0,0,0,0.08);
         }
 
-        /* --- AUTHENTIC DESKTOP ICON SYSTEM MAP --- */
+        /* --- HARDWARE ACCURATE DESKTOP GRID & SHELL32 DESKTOP ICON LIBRARY --- */
         #desktop-grid {
             position: absolute;
-            top: 20px; left: 20px; bottom: 60px;
+            top: 25px; left: 25px; bottom: 65px;
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 18px;
             z-index: 5;
         }
         .w7-icon-item {
-            width: 82px;
-            height: 82px;
+            width: 80px;
+            height: 85px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             border: 1px solid transparent;
-            border-radius: 3px;
-            cursor: pointer;
+            border-radius: 4px;
+            cursor: url('https://cur.cursors-4u.net/computers/com-2/com117.cur'), pointer;
             transition: background 0.1s, border 0.1s;
         }
         .w7-icon-item:hover {
-            background: rgba(255, 255, 255, 0.16);
-            border: 1px solid rgba(255, 255, 255, 0.35);
-            box-shadow: inset 0 0 5px rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: inset 0 0 6px rgba(255,255,255,0.25);
         }
         .w7-icon-item:active, .w7-icon-item.selected {
-            background: rgba(255, 255, 255, 0.26);
-            border: 1px solid rgba(255, 255, 255, 0.55);
+            background: rgba(255, 255, 255, 0.28);
+            border: 1px solid rgba(255, 255, 255, 0.6);
         }
-        .w7-icon-item .art-render {
-            font-size: 36px;
-            margin-bottom: 5px;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+        .w7-icon-item img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            margin-bottom: 4px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
         }
         .w7-icon-item .label-render {
             color: #ffffff;
             font-size: 11px;
             font-weight: 500;
-            letter-spacing: 0.3px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.95), 0 0 2px rgba(0,0,0,0.6);
-            padding: 0 1px;
+            letter-spacing: 0.2px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.95), 0 0 2px rgba(0,0,0,0.7);
+            padding: 0 2px;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
 
-        /* --- HIGH DEFINITION AERO APPS / WINDOW BUILD --- */
+        /* --- AERO INTERACTIVE CONTAINER APPS LAYER --- */
         .window {
             position: absolute;
-            width: 450px;
-            border-radius: 6px 6px 0 0;
+            width: 460px;
+            border-radius: 7px 7px 0 0;
             display: flex;
             flex-direction: column;
-            min-width: 260px;
+            min-width: 280px;
             z-index: 10;
         }
         .window.active {
             z-index: 50;
-            background: rgba(220, 238, 255, 0.38);
-            box-shadow: 0 0 28px rgba(0, 65, 135, 0.52), inset 0 1px 0 rgba(255,255,255,0.55);
+            background: rgba(215, 235, 255, 0.38);
+            box-shadow: 0 0 32px rgba(0, 55, 125, 0.55), inset 0 1px 0 rgba(255,255,255,0.6);
         }
         .window-titlebar {
-            height: 32px;
+            height: 34px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 0 12px;
             cursor: move;
-            border-radius: 5px 5px 0 0;
+            border-radius: 6px 6px 0 0;
             position: relative;
         }
-        /* Translucent diagonal glare sheen characteristic of Windows Seven */
+        /* Glass glare diagonal effect across the application header */
         .window-titlebar::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; height: 50%;
-            background: linear-gradient(to bottom, rgba(255,255,255,0.38) 0%, rgba(255,255,255,0) 100%);
+            background: linear-gradient(to bottom, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0) 100%);
             pointer-events: none;
-            border-radius: 5px 5px 0 0;
+            border-radius: 6px 6px 0 0;
         }
         .window-title {
             font-size: 12px;
             font-weight: 600;
-            color: #16222f;
+            color: #121e2a;
             display: flex;
             align-items: center;
-            gap: 7px;
-            text-shadow: 0 0 4px rgba(255,255,255,0.5);
+            gap: 8px;
+            text-shadow: 0 0 5px rgba(255,255,255,0.6);
+        }
+        .window-title img {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
         }
         .window-controls {
             display: flex;
-            gap: 3px;
+            gap: 4px;
             align-items: center;
             z-index: 60;
         }
         .aero-btn {
-            width: 30px;
-            height: 19px;
-            border: 1px solid rgba(0,0,0,0.22);
-            border-top: 1px solid rgba(255,255,255,0.45);
-            background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(0,0,0,0.06) 100%);
+            width: 28px;
+            height: 18px;
+            border: 1px solid rgba(0,0,0,0.25);
+            border-top: 1px solid rgba(255,255,255,0.5);
+            background: linear-gradient(to bottom, rgba(255,255,255,0.35) 0%, rgba(0,0,0,0.05) 100%);
             border-radius: 3px;
-            cursor: pointer;
+            cursor: url('https://cur.cursors-4u.net/computers/com-2/com117.cur'), pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #111;
             font-size: 10px;
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.25);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
         }
         .aero-btn:hover {
-            background: linear-gradient(to bottom, rgba(255,255,255,0.53) 0%, rgba(255,255,255,0.12) 100%);
+            background: linear-gradient(to bottom, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.15) 100%);
         }
+        /* Glossy high-contrast red shutdown element box style */
         .aero-btn.btn-close-seven:hover {
-            background: linear-gradient(to bottom, #ff6666 0%, #cc0000 100%);
-            color: #fff;
+            background: linear-gradient(to bottom, #ff5e5e 0%, #cc0000 100%);
+            color: #ffffff;
             border-color: #990000;
-            box-shadow: 0 0 8px rgba(204,0,0,0.7);
+            box-shadow: 0 0 10px rgba(204,0,0,0.75);
         }
         .window-body {
             flex: 1;
             background: #ffffff;
-            border: 1px solid rgba(0, 0, 0, 0.28);
+            border: 1px solid rgba(0, 0, 0, 0.3);
             border-top: none;
             margin: 0 5px 5px 5px;
-            padding: 14px;
+            padding: 15px;
             overflow-y: auto;
             color: #000;
             font-size: 13px;
         }
 
-        /* --- INTERNAL EMBEDS & INTEGRATION PANELS --- */
+        /* --- VINTAGE NEOCITIES CHARM ELEMENTS --- */
         .site-banner-box {
-            background-color: #ffffdd;
-            border: 1px dashed #ff1111;
+            background-color: #ffffcc;
+            border: 1px dashed #ff0000;
             padding: 8px;
             margin-bottom: 12px;
             font-weight: bold;
@@ -249,71 +256,71 @@
             font-size: 12px;
         }
         .w7-counter-output {
-            background-color: #050505;
-            color: #ff1111;
+            background-color: #000;
+            color: #ff0000;
             font-family: "Courier New", monospace;
-            font-size: 21px;
+            font-size: 22px;
             font-weight: bold;
             letter-spacing: 4px;
-            padding: 3px 10px;
-            border: 2px inset #999;
+            padding: 4px 12px;
+            border: 2px inset #aaa;
             display: inline-block;
-            box-shadow: inset 0 0 5px rgba(0,0,0,0.8);
+            box-shadow: inset 0 0 6px rgba(0,0,0,0.85);
         }
         .lastfm-equalizer {
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            gap: 2.5px;
-            height: 26px;
-            margin-top: 10px;
-            background: #151515;
+            gap: 3px;
+            height: 28px;
+            margin-top: 12px;
+            background: #111;
             padding: 4px;
-            border: 1px inset #777;
+            border: 1px inset #888;
         }
         .eq-channel {
-            width: 7px;
+            width: 8px;
             height: 100%;
-            background: linear-gradient(to top, #33ff33, #ffff00, #ff2222);
+            background: linear-gradient(to top, #00ff00, #ffff00, #ff0000);
             transform-origin: bottom;
-            animation: renderEQ 0.75s ease-in-out infinite alternate;
+            animation: renderEQ 0.8s ease-in-out infinite alternate;
         }
-        @keyframes renderEQ { 0% { transform: scaleY(0.15); } 100% { transform: scaleY(0.95); } }
+        @keyframes renderEQ { 0% { transform: scaleY(0.2); } 100% { transform: scaleY(0.95); } }
         
         .explorer-links a {
             display: block;
-            color: #0044cc;
-            margin-bottom: 6px;
+            color: #0055cc;
+            margin-bottom: 7px;
             text-decoration: underline;
-            font-size: 12.5px;
+            font-size: 13px;
         }
         .gb-feed-row {
             border-bottom: 1px dashed #999;
             padding: 6px 0;
             font-size: 12px;
         }
-        .gb-feed-user { font-weight: bold; color: #002288; }
+        .gb-feed-user { font-weight: bold; color: #0033aa; }
         
         input[type="text"] {
             width: 100%;
-            padding: 5px;
+            padding: 6px;
             margin-bottom: 6px;
-            font-size: 12.5px;
-            border: 1px solid #8e8e8e;
-            box-shadow: inset 1px 1px 2px rgba(0,0,0,0.12);
+            font-size: 13px;
+            border: 1px solid #7c7c7c;
+            box-shadow: inset 1px 1px 2px rgba(0,0,0,0.15);
         }
         .system-dialog-btn {
-            background: linear-gradient(to bottom, #fefefe 0%, #e5e5e5 100%);
-            border: 1px solid #7c7c7c;
-            padding: 5px 16px;
-            cursor: pointer;
+            background: linear-gradient(to bottom, #ffffff 0%, #e1e1e1 100%);
+            border: 1px solid #707070;
+            padding: 6px 18px;
+            cursor: url('https://cur.cursors-4u.net/computers/com-2/com117.cur'), pointer;
             border-radius: 3px;
             font-size: 12px;
             font-weight: 500;
         }
-        .system-dialog-btn:hover { background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%); border-color: #444; }
+        .system-dialog-btn:hover { background: linear-gradient(to bottom, #ffffff 0%, #f5f5f5 100%); border-color: #333; }
 
-        /* --- OFFICIAL STABLE WINDOWS 7 TASKBAR & ORB --- */
+        /* --- REPLICATED TASKBAR WITH INTEGRATED COBALT START ORB --- */
         #taskbar {
             position: absolute;
             bottom: 0; left: 0; right: 0;
@@ -323,59 +330,60 @@
             justify-content: space-between;
             padding: 0 12px;
             z-index: 99999;
-            backdrop-filter: blur(22px) saturate(210%);
-            -webkit-backdrop-filter: blur(22px) saturate(210%);
-            background: rgba(12, 32, 54, 0.48);
-            border-top: 1px solid rgba(255, 255, 255, 0.42);
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 -2px 12px rgba(0,0,0,0.45);
+            backdrop-filter: blur(25px) saturate(220%);
+            -webkit-backdrop-filter: blur(25px) saturate(220%);
+            background: rgba(10, 26, 46, 0.52);
+            border-top: 1px solid rgba(255, 255, 255, 0.45);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 -2px 14px rgba(0,0,0,0.5);
         }
         .taskbar-left-zone {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
             height: 100%;
         }
-        /* Genuine 3D Glossy Windows 7 Sphere Start Orb */
+        /* High definition pixel asset tracking the genuine circular windows menu button */
         #w7-start-orb {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.55) 0%, transparent 60%),
-                        radial-gradient(circle at center, #1b6cd7 0%, #04265e 100%);
-            box-shadow: 0 1px 5px rgba(0,0,0,0.65), inset 0 1px 1px rgba(255,255,255,0.45);
-            border: 1px solid rgba(255,255,255,0.28);
-            cursor: pointer;
+            width: 38px;
+            height: 38px;
+            background: url('https://i.imgur.com/W2Yv68M.png') no-repeat center center;
+            background-size: contain;
+            cursor: url('https://cur.cursors-4u.net/computers/com-2/com117.cur'), pointer;
             position: relative;
-            transition: transform 0.1s;
+            transition: filter 0.1s, transform 0.1s;
         }
         #w7-start-orb:hover {
-            box-shadow: 0 0 15px #3cd6ff, inset 0 0 6px rgba(255,255,255,0.55);
-            transform: scale(1.05);
+            filter: drop-shadow(0 0 6px #5ccfff);
+            transform: scale(1.03);
         }
         #taskbar-tabs-layer {
             display: flex;
-            gap: 6px;
+            gap: 7px;
             align-items: center;
             height: 100%;
         }
         .w7-tab-item {
             height: 32px;
-            width: 54px;
-            border-radius: 3px;
-            border: 1px solid rgba(255,255,255,0.18);
-            background: rgba(255,255,255,0.09);
-            cursor: pointer;
+            width: 56px;
+            border-radius: 4px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.1);
+            cursor: url('https://cur.cursors-4u.net/computers/com-2/com117.cur'), pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 19px;
             transition: all 0.2s;
         }
-        .w7-tab-item:hover { background: rgba(255,255,255,0.22); border-color: rgba(255,255,255,0.42); }
+        .w7-tab-item img {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+        }
+        .w7-tab-item:hover { background: rgba(255,255,255,0.25); border-color: rgba(255,255,255,0.45); }
         .w7-tab-item.active {
-            background: rgba(255, 255, 255, 0.28);
-            border-color: rgba(0, 145, 255, 0.65);
-            box-shadow: inset 0 0 7px rgba(0, 145, 255, 0.4), 0 0 6px rgba(0,145,255,0.55);
+            background: rgba(255, 255, 255, 0.32);
+            border-color: rgba(0, 150, 255, 0.7);
+            box-shadow: inset 0 0 8px rgba(0, 150, 255, 0.45), 0 0 8px rgba(0,150,255,0.6);
         }
         
         .tray-area {
@@ -385,96 +393,101 @@
             font-size: 11px;
             padding-right: 4px;
             height: 100%;
-            border-left: 1px solid rgba(255,255,255,0.14);
+            border-left: 1px solid rgba(255,255,255,0.15);
         }
         #w7-tray-clock {
             text-align: center;
-            padding-left: 14px;
+            padding-left: 15px;
             line-height: 1.35;
             font-weight: 400;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.7);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.75);
         }
 
-        /* --- THE GENUINE WINDOWS 7 START MENU ENGINE --- */
+        /* --- PIXEL PERFECT WINDOWS 7 INTERACTIVE START PANEL MAP --- */
         #start-menu-panel {
             position: absolute;
             bottom: 46px; left: 6px;
-            width: 385px; height: 465px;
-            border-radius: 6px;
+            width: 390px; height: 470px;
+            border-radius: 7px;
             z-index: 100000;
             display: none;
-            padding: 6px;
-            box-shadow: 0 7px 35px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.5);
+            padding: 7px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.75), inset 0 1px 0 rgba(255,255,255,0.55);
         }
         .start-menu-inner {
             width: 100%; height: 100%;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 4px;
-            border: 1px solid rgba(0,0,0,0.38);
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 5px;
+            border: 1px solid rgba(0,0,0,0.4);
             display: flex;
         }
         .start-panel-left {
-            width: 64%; height: 100%;
-            padding: 10px 8px;
+            width: 63%; height: 100%;
+            padding: 12px 10px;
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 5px;
         }
         .start-panel-row {
             display: flex;
             align-items: center;
             gap: 12px;
-            padding: 6px 10px;
-            border-radius: 3px;
-            cursor: pointer;
+            padding: 7px 12px;
+            border-radius: 4px;
+            cursor: url('https://cur.cursors-4u.net/computers/com-2/com117.cur'), pointer;
             color: #111;
-            font-size: 12.5px;
+            font-size: 13px;
+        }
+        .start-panel-row img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
         }
         .start-panel-row:hover {
-            background: linear-gradient(to bottom, rgba(228,244,255,0.9) 0%, rgba(178,218,255,0.9) 100%);
-            border: 1px solid rgba(0,120,240,0.28);
-            padding: 5px 9px;
+            background: linear-gradient(to bottom, rgba(230,245,255,0.95) 0%, rgba(180,220,255,0.95) 100%);
+            border: 1px solid rgba(0,120,240,0.3);
+            padding: 6px 11px;
         }
         .start-panel-right {
-            width: 36%; height: 100%;
-            background: linear-gradient(to right, rgba(218,233,250,0.6) 0%, rgba(192,215,240,0.7) 100%);
-            border-left: 1px solid rgba(0,0,0,0.14);
-            border-radius: 0 3px 3px 0;
-            padding: 14px 10px;
+            width: 37%; height: 100%;
+            background: linear-gradient(to right, rgba(220,235,252,0.65) 0%, rgba(195,218,242,0.75) 100%);
+            border-left: 1px solid rgba(0,0,0,0.15);
+            border-radius: 0 4px 4px 0;
+            padding: 16px 12px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-        .start-right-group { display: flex; flex-direction: column; gap: 3px; }
+        .start-right-group { display: flex; flex-direction: column; gap: 4px; }
         .start-panel-link {
-            padding: 6px 8px;
-            color: #16293c;
-            font-size: 11.5px;
+            padding: 7px 10px;
+            color: #122436;
+            font-size: 12px;
             font-weight: 600;
-            border-radius: 3px;
-            cursor: pointer;
+            border-radius: 4px;
+            cursor: url('https://cur.cursors-4u.net/computers/com-2/com117.cur'), pointer;
         }
-        .start-panel-link:hover { background: rgba(255,255,255,0.55); }
+        .start-panel-link:hover { background: rgba(255,255,255,0.6); }
         .shutdown-flex-row { display: flex; justify-content: flex-end; }
         .shutdown-seven-btn {
-            background: linear-gradient(to bottom, #50a6f2 0%, #184c8e 100%);
-            border: 1px solid #0a2547;
-            color: #fff;
-            font-size: 11.5px;
+            background: linear-gradient(to bottom, #52aaff 0%, #1a5296 100%);
+            border: 1px solid #092242;
+            color: #ffffff;
+            font-size: 12px;
             font-weight: 600;
-            padding: 5px 16px;
+            padding: 6px 18px;
             border-radius: 3px;
-            cursor: pointer;
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.38);
+            cursor: url('https://cur.cursors-4u.net/computers/com-2/com117.cur'), pointer;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
         }
-        .shutdown-seven-btn:hover { box-shadow: 0 0 7px #50a6f2; }
+        .shutdown-seven-btn:hover { box-shadow: 0 0 8px #52aaff; }
 
-        /* --- DESKTOP VINTAGE BOTTOM MARQUEE BAR --- */
+        /* --- OVERALL FOOTER SYSTEM BANNER TRAILING TICKER --- */
         .vintage-marquee-strip {
             position: absolute;
             bottom: 40px; left: 0; width: 100%;
-            background-color: rgba(215, 210, 202, 0.88);
-            border-top: 1px solid rgba(255,255,255,0.6);
+            background-color: rgba(220, 215, 205, 0.9);
+            border-top: 1px solid rgba(255,255,255,0.65);
             color: #000;
             padding: 4px 0;
             font-size: 11px;
@@ -495,26 +508,29 @@
         
         <div id="desktop-grid">
             <div class="w7-icon-item" onclick="openWindow('about')">
-                <div class="art-render">🖥️</div>
-                <div class="label-render">about me</div>
+                <img src="https://i.imgur.com/8m5xZ2p.png" alt="My Computer">
+                <div class="label-render">Computer</div>
             </div>
             <div class="w7-icon-item" onclick="openWindow('media')">
-                <div class="art-render">🎵</div>
-                <div class="label-render">media player</div>
+                <img src="https://i.imgur.com/bW7vjsc.png" alt="Windows Media Player">
+                <div class="label-render">Media Player</div>
             </div>
             <div class="w7-icon-item" onclick="openWindow('links')">
-                <div class="art-render">🌐</div>
-                <div class="label-render">links stuff</div>
+                <img src="https://i.imgur.com/CguR8X6.png" alt="Internet Explorer">
+                <div class="label-render">Internet Explorer</div>
             </div>
             <div class="w7-icon-item" onclick="openWindow('guestbook')">
-                <div class="art-render">💬</div>
-                <div class="label-render">sign guestbook</div>
+                <img src="https://i.imgur.com/PshgRUr.png" alt="Users Directory">
+                <div class="label-render">Guestbook</div>
             </div>
         </div>
 
-        <div id="win-about" class="window aero-glass" style="top: 12%; left: 16%; display: none;" onmousedown="focusWindow('about')">
+        <div id="win-about" class="window aero-glass" style="top: 10%; left: 15%; display: none;" onmousedown="focusWindow('about')">
             <div class="window-titlebar" onmousedown="dragStart(event, 'about')">
-                <div class="window-title"><span>🖥️</span> System Properties - About Me</div>
+                <div class="window-title">
+                    <img src="https://i.imgur.com/8m5xZ2p.png" alt="computer-mini">
+                    <span>System Properties - About Me</span>
+                </div>
                 <div class="window-controls">
                     <button class="aero-btn" onclick="minimizeWindow('about')">_</button>
                     <button class="aero-btn btn-close-seven" onclick="closeWindow('about')">✕</button>
@@ -522,108 +538,129 @@
             </div>
             <div id="site-announcement" class="site-banner-box" style="display: none;"></div>
             <div class="window-body">
-                <p id="display-about" style="margin: 0; line-height: 1.55;">loading data template profile...</p>
+                <p id="display-about" style="margin: 0; line-height: 1.6;">loading data profile properties database stream...</p>
                 
-                <div style="margin-top: 16px; border: 1px dashed #777; padding: 7px; background: #fafafa; display: flex; align-items: center; gap: 8px;">
-                    <span style="width: 9px; height: 9px; background: #00ff00; border-radius: 50%; display: inline-block; box-shadow: 0 0 5px #00ff00;"></span>
-                    <div style="font-size: 11px; color:#222;"><b>Status:</b> Typing projects active on desktop.</div>
+                <div style="margin-top: 15px; border: 1px dashed #777; padding: 8px; background: #fafafa; display: flex; align-items: center; gap: 8px;">
+                    <span style="width: 10px; height: 10px; background: #00ff00; border-radius: 50%; display: inline-block; box-shadow: 0 0 6px #00ff00;"></span>
+                    <div style="font-size: 11px; color:#111;"><b>Status:</b> OS platform active. Typing items via desktop workspace.</div>
                 </div>
 
-                <div style="text-align: center; margin-top: 16px; border-top: 1px solid #ddd; padding-top: 12px;">
-                    <div style="font-size: 11px; font-weight: bold; color: #444; margin-bottom: 4px;">YOU ARE VISITOR NUMBER:</div>
+                <div style="text-align: center; margin-top: 18px; border-top: 1px solid #ddd; padding-top: 14px;">
+                    <div style="font-size: 11px; font-weight: bold; color: #444; margin-bottom: 5px;">YOU ARE VISITOR NUMBER:</div>
                     <div class="w7-counter-output" id="hit-counter">000000</div>
                 </div>
             </div>
         </div>
 
-        <div id="win-media" class="window aero-glass" style="top: 18%; left: 48%; display: none;" onmousedown="focusWindow('media')">
+        <div id="win-media" class="window aero-glass" style="top: 15%; left: 45%; display: none;" onmousedown="focusWindow('media')">
             <div class="window-titlebar" onmousedown="dragStart(event, 'media')">
-                <div class="window-title"><span>🎵</span> Windows Media Player</div>
+                <div class="window-title">
+                    <img src="https://i.imgur.com/bW7vjsc.png" alt="wmp-mini">
+                    <span>Windows Media Player</span>
+                </div>
                 <div class="window-controls">
                     <button class="aero-btn" onclick="minimizeWindow('media')">_</button>
                     <button class="aero-btn btn-close-seven" onclick="closeWindow('media')">✕</button>
                 </div>
             </div>
             <div class="window-body" style="text-align: center;">
-                <div style="background-color: #080808; color: #00ff00; font-family: monospace; padding: 12px; border: 2px inset #999; margin-bottom: 6px;">
+                <div style="background-color: #0a0a0a; color: #00ff00; font-family: monospace; padding: 12px; border: 2px inset #999; margin-bottom: 6px;">
                     <div id="media-status" style="font-weight: bold;">[CONNECTING]</div>
-                    <div id="media-title" style="font-size: 12px; margin-top: 5px;">connecting to live user api profile...</div>
+                    <div id="media-title" style="font-size: 12px; margin-top: 6px;">querying active network profile endpoint trackers...</div>
                 </div>
                 
                 <div class="lastfm-equalizer">
-                    <div class="eq-channel" style="animation-delay: 0.15s;"></div>
-                    <div class="eq-channel" style="animation-delay: 0.45s;"></div>
-                    <div class="eq-channel" style="animation-delay: 0.25s;"></div>
-                    <div class="eq-channel" style="animation-delay: 0.65s;"></div>
-                    <div class="eq-channel" style="animation-delay: 0.35s;"></div>
+                    <div class="eq-channel" style="animation-delay: 0.1s;"></div>
+                    <div class="eq-channel" style="animation-delay: 0.4s;"></div>
+                    <div class="eq-channel" style="animation-delay: 0.2s;"></div>
+                    <div class="eq-channel" style="animation-delay: 0.6s;"></div>
+                    <div class="eq-channel" style="animation-delay: 0.3s;"></div>
                 </div>
-                <div style="font-size: 11px; color: #555; text-align: left; margin-top: 10px;">
-                    * Live analytics pulled directly from the last.fm stream network.
+                <div style="font-size: 11px; color: #666; text-align: left; margin-top: 12px;">
+                    * Automated logs pulling live timeline updates directly via last.fm database.
                 </div>
             </div>
         </div>
 
-        <div id="win-links" class="window aero-glass" style="top: 38%; left: 22%; display: none;" onmousedown="focusWindow('links')">
+        <div id="win-links" class="window aero-glass" style="top: 35%; left: 20%; display: none;" onmousedown="focusWindow('links')">
             <div class="window-titlebar" onmousedown="dragStart(event, 'links')">
-                <div class="window-title"><span>🌐</span> Internet Explorer - Index Navigator</div>
+                <div class="window-title">
+                    <img src="https://i.imgur.com/CguR8X6.png" alt="ie-mini">
+                    <span>Internet Explorer - Navigation Index</span>
+                </div>
                 <div class="window-controls">
                     <button class="aero-btn" onclick="minimizeWindow('links')">_</button>
                     <button class="aero-btn btn-close-seven" onclick="closeWindow('links')">✕</button>
                 </div>
             </div>
             <div class="window-body explorer-links">
-                <a href="https://www.youtube.com/@yeci_.1" target="_blank">YouTube Channel</a>
-                <a href="https://www.roblox.com/users/4447690823/profile" target="_blank">Roblox Profile Hub</a>
-                <a href="https://www.last.fm/user/icy51" target="_blank">Last.fm Audio Profile</a>
-                <hr style="border: 0; border-top: 1px solid #ccc; margin: 10px 0;">
-                <div style="font-size: 12px; color: #444; margin-bottom: 12px;">Discord Handle: <strong>._icey1</strong></div>
+                <a href="https://www.youtube.com/@yeci_.1" target="_blank">My YouTube Channel</a>
+                <a href="https://www.roblox.com/users/4447690823/profile" target="_blank">Roblox Character Profile</a>
+                <a href="https://www.last.fm/user/icy51" target="_blank">Last.fm Audio Statistics Feed</a>
+                <hr style="border: 0; border-top: 1px solid #ccc; margin: 12px 0;">
+                <div style="font-size: 12px; color: #333; margin-bottom: 12px;">Discord User Identity: <strong>._icey1</strong></div>
                 
-                <div style="border-top: 1px solid #ddd; padding-top: 10px; text-align: center;">
-                    <div style="font-size: 10px; color: #555; margin-bottom: 6px; font-weight: bold;">WEB BADGE ARCHIVE EXCHANGES:</div>
-                    <div style="display: flex; justify-content: center; gap: 5px; flex-wrap: wrap;">
-                        <img src="https://web.archive.org/web/20091027052912im_/http://geocities.com/SunsetStrip/Studio/1002/ie_static.gif" alt="IE Badge" width="88" height="31">
-                        <img src="https://img.shields.io/badge/Made%20With-Notepad%2B%2B-007ACC?style=flat&logo=notepadplusplus&logoColor=white" alt="Editor Stamp" style="border:1px solid #888; width:88px; height:31px;">
+                <div style="border-top: 1px solid #ddd; padding-top: 12px; text-align: center;">
+                    <div style="font-size: 10px; color: #555; margin-bottom: 6px; font-weight: bold;">COLLECTIBLE ARCHIVE STAMPS:</div>
+                    <div style="display: flex; justify-content: center; gap: 6px; flex-wrap: wrap;">
+                        <img src="https://web.archive.org/web/20091027052912im_/http://geocities.com/SunsetStrip/Studio/1002/ie_static.gif" alt="IE Button Badge" width="88" height="31">
+                        <img src="https://img.shields.io/badge/Made%20With-Notepad%2B%2B-007ACC?style=flat&logo=notepadplusplus&logoColor=white" alt="Notepad Badge" style="border:1px solid #888; width:88px; height:31px;">
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="win-guestbook" class="window aero-glass" style="top: 22%; left: 52%; display: none;" onmousedown="focusWindow('guestbook')">
+        <div id="win-guestbook" class="window aero-glass" style="top: 20%; left: 50%; display: none;" onmousedown="focusWindow('guestbook')">
             <div class="window-titlebar" onmousedown="dragStart(event, 'guestbook')">
-                <div class="window-title"><span>💬</span> Guestbook Feed Explorer</div>
+                <div class="window-title">
+                    <img src="https://i.imgur.com/PshgRUr.png" alt="gb-mini">
+                    <span>Guestbook Registry Management Console</span>
+                </div>
                 <div class="window-controls">
                     <button class="aero-btn" onclick="minimizeWindow('guestbook')">_</button>
                     <button class="aero-btn btn-close-seven" onclick="closeWindow('guestbook')">✕</button>
                 </div>
             </div>
             <div class="window-body">
-                <div id="guestbook-list" style="max-height: 120px; overflow-y: auto; border: 1px solid #7a7a7a; padding: 6px; margin-bottom: 10px; background: #ffffff;"></div>
+                <div id="guestbook-list" style="max-height: 130px; overflow-y: auto; border: 1px solid #7c7c7c; padding: 6px; margin-bottom: 10px; background: #ffffff;"></div>
                 <div class="form-container">
-                    <input type="text" id="gb-name" placeholder="Enter Your Name">
-                    <input type="text" id="gb-msg" placeholder="Type message here...">
+                    <input type="text" id="gb-name" placeholder="Name / Alias">
+                    <input type="text" id="gb-msg" placeholder="Write inside message index block...">
                 </div>
                 
                 <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="light" style="margin-bottom: 8px;"></div>
                 
-                <button class="system-dialog-btn" onclick="submitGuestbookPending()">Submit Entry</button>
+                <button class="system-dialog-btn" onclick="submitGuestbookPending()">Submit Record Entry</button>
             </div>
         </div>
 
         <div class="vintage-marquee-strip">
-            <marquee id="live-ticker" scrollamount="4" behavior="scroll" direction="left">+++ loading global data ticker tape stream +++</marquee>
+            <marquee id="live-ticker" scrollamount="4" behavior="scroll" direction="left">+++ pulling database server index text arrays onto site stream ticker +++</marquee>
         </div>
 
         <div id="start-menu-panel" class="aero-glass">
             <div class="start-menu-inner">
                 <div class="start-panel-left">
-                    <div class="start-panel-row" onclick="openWindow('about'); toggleSevenMenu();">🖥️ <span>About Me</span></div>
-                    <div class="start-panel-row" onclick="openWindow('media'); toggleSevenMenu();">🎵 <span>Media Player</span></div>
-                    <div class="start-panel-row" onclick="openWindow('links'); toggleSevenMenu();">🌐 <span>Links Explorer</span></div>
-                    <div class="start-panel-row" onclick="openWindow('guestbook'); toggleSevenMenu();">💬 <span>Sign Guestbook</span></div>
+                    <div class="start-panel-row" onclick="openWindow('about'); toggleSevenMenu();">
+                        <img src="https://i.imgur.com/8m5xZ2p.png" alt="Computer">
+                        <span>Computer</span>
+                    </div>
+                    <div class="start-panel-row" onclick="openWindow('media'); toggleSevenMenu();">
+                        <img src="https://i.imgur.com/bW7vjsc.png" alt="WMP">
+                        <span>Media Player</span>
+                    </div>
+                    <div class="start-panel-row" onclick="openWindow('links'); toggleSevenMenu();">
+                        <img src="https://i.imgur.com/CguR8X6.png" alt="IE">
+                        <span>Internet Explorer</span>
+                    </div>
+                    <div class="start-panel-row" onclick="openWindow('guestbook'); toggleSevenMenu();">
+                        <img src="https://i.imgur.com/PshgRUr.png" alt="Users">
+                        <span>Guestbook Ledger</span>
+                    </div>
                 </div>
                 <div class="start-panel-right">
                     <div class="start-right-group">
-                        <div class="start-panel-link" onclick="window.open('https://www.last.fm/user/icy51','_blank')">Last.fm Page</div>
+                        <div class="start-panel-link" onclick="window.open('https://www.last.fm/user/icy51','_blank')">Last.fm Feed</div>
                         <div class="start-panel-link" style="color: #444; cursor: default;">User: ._icey1</div>
                     </div>
                     <div class="shutdown-flex-row">
@@ -646,7 +683,7 @@
     </div>
 
     <script>
-        // --- BOOT AND SHUTDOWN FLOW MANAGER ---
+        // --- BOOT AND SYSTEM LAUNCH PROCESS CONTROLLER ---
         window.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 const boot = document.getElementById('boot-screen');
@@ -655,15 +692,15 @@
                 desk.style.opacity = '1';
                 setTimeout(() => {
                     boot.style.display = 'none';
-                    // Automatically display and render the principal configuration window upon launch
+                    // Auto-spawns Computer properties system file onto screen at boot completion
                     openWindow('about');
                 }, 800);
-            }, 2500); // 2.5 second Seven loop processing delay
+            }, 2600); // Authentic 2.6 second orb light pulse loading routine
 
             renderLiveClock();
             setInterval(renderLiveClock, 1000);
 
-            // Safe global dismissal capture workflow for the Seven start panel
+            // Universal escape handling module dismissing start panel elements securely
             document.addEventListener('click', (e) => {
                 const menu = document.getElementById('start-menu-panel');
                 const orb = document.getElementById('w7-start-orb');
@@ -673,7 +710,7 @@
             });
         });
 
-        // --- SYSTEM TRAY METRIC TIME CONVERT ---
+        // --- CLOCK AND CALENDAR DATA TRAYS ---
         function renderLiveClock() {
             const now = new Date();
             let hours = now.getHours();
@@ -687,14 +724,14 @@
             document.getElementById('w7-tray-clock').innerHTML = `${timeStr}<br>${dateStr}`;
         }
 
-        // --- TOGGLE START BAR ---
+        // --- ACTION: TOGGLE START MENU ---
         function toggleSevenMenu(e) {
             if(e) e.stopPropagation();
             const menu = document.getElementById('start-menu-panel');
             menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
         }
 
-        // --- DRAGGABLE CORE ENGINE CONTROLLERS ---
+        // --- APPLICATION MANAGEMENT & DRAGGABILITY CONFIGS ---
         const activeWindowsSet = new Set();
         let targetDragWinInstance = null;
         let deltaX = 0, deltaY = 0;
@@ -754,12 +791,12 @@
                 tab.className = 'w7-tab-item';
                 tab.id = `tab-${id}`;
                 
-                let symbol = '🖥️';
-                if(id === 'media') symbol = '🎵';
-                if(id === 'links') symbol = '🌐';
-                if(id === 'guestbook') symbol = '💬';
+                let imgSrc = 'https://i.imgur.com/8m5xZ2p.png';
+                if(id === 'media') imgSrc = 'https://i.imgur.com/bW7vjsc.png';
+                if(id === 'links') imgSrc = 'https://i.imgur.com/CguR8X6.png';
+                if(id === 'guestbook') imgSrc = 'https://i.imgur.com/PshgRUr.png';
                 
-                tab.innerHTML = symbol;
+                tab.innerHTML = `<img src="${imgSrc}" alt="tab-icon">`;
                 tab.onclick = (e) => {
                     e.stopPropagation();
                     handleTabInteraction(id);
@@ -791,7 +828,7 @@
             document.removeEventListener('mouseup', dragTerminate);
         }
 
-        // --- PRESERVED ATOMIC DATA: RECONSTRUCT VISITOR HIT COUNTER ---
+        // --- PRESERVED LIVE INTEGRATION: RETRO TRACKING VISIT HIT COUNTER ---
         function executeCounterState() {
             var counterValue = localStorage.getItem('siteHits') || 2491;
             counterValue = parseInt(counterValue) + 1;
@@ -800,7 +837,7 @@
         }
         executeCounterState();
 
-        // --- PRESERVED ATOMIC DATA: REALLASTFM TRACK LISTENER STREAM ---
+        // --- PRESERVED LIVE INTEGRATION: LAST.FM PROFILE WEB POLLER ---
         var USERNAME_STREAM = "icy51";
         var SECURITY_HASH = "165952413aedf7410ea19baa387f2c00"; 
 
@@ -811,7 +848,7 @@
                 .then(payload => {
                     if (!payload.recenttracks || !payload.recenttracks.track || payload.recenttracks.track.length === 0) {
                         document.getElementById('media-status').innerText = "[STOPPED]";
-                        document.getElementById('media-title').innerText = "no history track listed";
+                        document.getElementById('media-title').innerText = "no listed activity timeline logs";
                         return;
                     }
                     var item = payload.recenttracks.track[0];
@@ -827,27 +864,27 @@
         setInterval(runMediaPollingUpdate, 30000);
         runMediaPollingUpdate();
 
-        // --- PRESERVED ATOMIC DATA: GUESTBOOK VALIDATION SUBMIT ENGINE ---
+        // --- PRESERVED LIVE INTEGRATION: CLOUDFLARE RESPONSE GUESTBOOK SUBMISSION ---
         function submitGuestbookPending() {
             var author = document.getElementById('gb-name').value.trim();
             var payloadStr = document.getElementById('gb-msg').value.trim();
             var passkey = turnstile.getResponse();
 
             if (author === "" || payloadStr === "") {
-                alert("Please fill out both Name and Message fields first.");
+                alert("Please input values into both Name and Message fields.");
                 return;
             }
             if (!passkey) {
-                alert("Security block verification challenge incomplete.");
+                alert("Security challenge signature response required.");
                 return;
             }
-            alert("Success! Entry delivered for dashboard moderator review.");
+            alert("Success! Entry delivered for dashboard moderator verification review.");
             document.getElementById('gb-name').value = "";
             document.getElementById('gb-msg').value = "";
             turnstile.reset();
         }
 
-        // --- PRESERVED ATOMIC DATA: DATA.JSON LOCAL READER INTEGRATION ---
+        // --- PRESERVED LIVE INTEGRATION: DATA.JSON RETRIEVAL MODULE ---
         function executeDataSync() {
             fetch('data.json?cache=' + new Date().getTime())
                 .then(r => r.json())
