@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IceyOS - Windows 7 Ultimate</title>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <style>
-        /* --- CORE SYSTEM & RESET --- */
+        /* --- AUTHENTIC WINDOWS 7 SEGOE ENGINE & CUSTOM AERO CURSOR --- */
         * {
             box-sizing: border-box;
             user-select: none;
@@ -17,227 +18,302 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
             background-color: #000;
+            /* Direct Windows 7 Transparent Glass arrow cursor fallback configuration */
+            cursor: url('https://cur.cursors-4u.net/computers/com-2/com117.cur'), default;
         }
 
-        /* --- VISTA / W7 BOOT SCREEN --- */
+        /* --- STAGE 1: NATIVE SEVEN ANIMATED BOOTUP SEGMENT --- */
         #boot-screen {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             background: #000;
-            z-index: 99999;
+            z-index: 999999;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            transition: opacity 1s ease-in-out;
+            transition: opacity 0.8s ease-in-out;
         }
-        .boot-logo {
-            width: 120px;
-            height: 120px;
+        .w7-boot-container {
+            width: 160px;
+            height: 160px;
             position: relative;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
-        /* Glowing 4-color W7 orb placeholder using CSS gradients */
-        .boot-orb {
+        /* Mathematical Windows 7 Quad-Color Swirling Plasma Light Orb */
+        .w7-orb {
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 50%),
-                        radial-gradient(circle at 30% 70%, #0080ff 0%, rgba(0,128,255,0) 60%),
-                        radial-gradient(circle at 70% 30%, #ff3333 0%, rgba(255,51,51,0) 60%),
-                        radial-gradient(circle at 70% 70%, #ffcc00 0%, rgba(255,204,0) 60%),
-                        radial-gradient(circle at 30% 30%, #33cc33 0%, rgba(51,204,51,0) 60%);
-            filter: blur(4px);
-            animation: orb-glow 3s ease-in-out infinite alternate;
+            background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 45%),
+                        radial-gradient(circle at 25% 75%, #0066ff 0%, rgba(0,102,255,0) 55%),
+                        radial-gradient(circle at 75% 25%, #ff2222 0%, rgba(255,34,34,0) 55%),
+                        radial-gradient(circle at 75% 75%, #ffcc00 0%, rgba(255,204,0,0) 55%),
+                        radial-gradient(circle at 25% 25%, #2ecc71 0%, rgba(46,204,113,0) 55%);
+            filter: blur(6px);
+            animation: w7-boot-spin 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
         }
-        @keyframes orb-glow {
-            0% { transform: scale(0.95); filter: blur(5px); opacity: 0.6; }
-            100% { transform: scale(1.05); filter: blur(2px); opacity: 1; }
+        @keyframes w7-boot-spin {
+            0% { transform: scale(0.82) rotate(0deg); opacity: 0.4; filter: blur(7px); }
+            50% { filter: blur(3px); opacity: 0.85; }
+            100% { transform: scale(1.06) rotate(360deg); opacity: 1; filter: blur(4px); }
         }
-        .boot-text {
-            color: #fff;
+        .boot-subtext {
+            color: #ffffff;
             font-size: 14px;
-            letter-spacing: 2px;
             font-weight: 300;
-            animation: pulse 2s infinite;
+            letter-spacing: 2.5px;
+            text-shadow: 0 0 10px rgba(255,255,255,0.7);
+            animation: bootGlow 1.8s infinite ease-in-out;
         }
-        @keyframes pulse {
-            0%, 100% { opacity: 0.4; }
-            50% { opacity: 1; }
+        @keyframes bootGlow {
+            0%, 100% { opacity: 0.35; text-shadow: 0 0 4px rgba(255,255,255,0.3); }
+            50% { opacity: 1; text-shadow: 0 0 12px rgba(255,255,255,0.8); }
         }
 
-        /* --- DESKTOP ENVIRONMENT --- */
+        /* --- STAGE 2: LIVE WINDOWS 7 ULTIMATE DESKTOP ENVIRONMENT --- */
         #desktop {
             width: 100%;
             height: 100%;
             position: relative;
-            /* Authentic Frutiger Aero custom generative CSS background: Aurora rays, organic curves, vibrant blues and greens */
-            background: radial-gradient(circle at 80% 20%, rgba(30, 200, 255, 0.4) 0%, transparent 50%),
-                        radial-gradient(circle at 20% 90%, rgba(50, 230, 100, 0.3) 0%, transparent 60%),
-                        linear-gradient(135deg, #0b609c 0%, #06396b 40%, #026b68 80%, #149c68 100%);
+            /* Official Windows 7 Bliss/Aurora custom layered generative CSS wallpaper blend */
+            background: radial-gradient(circle at 85% 15%, rgba(0, 180, 255, 0.45) 0%, transparent 45%),
+                        radial-gradient(circle at 15% 85%, rgba(0, 240, 140, 0.35) 0%, transparent 55%),
+                        linear-gradient(135deg, #0d69b3 0%, #073f77 35%, #015250 75%, #0f8558 100%);
             background-size: cover;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             opacity: 0;
-            transition: opacity 1.5s ease-in-out;
+            transition: opacity 1.2s ease-in-out;
         }
 
-        /* --- FRUTIGER AERO GLASS STYLING (THE SHELL) --- */
+        /* --- SYSTEM SPECIFICATION: TRUE SEVEN AERO GLASS WINDOW LAYER --- */
         .aero-glass {
-            background: rgba(225, 235, 245, 0.35);
-            backdrop-filter: blur(15px) saturate(160%);
-            -webkit-backdrop-filter: blur(15px) saturate(160%);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            border-top: 1px solid rgba(255, 255, 255, 0.7);
-            box-shadow: 0 0 12px rgba(0, 0, 0, 0.25),
-                        inset 0 1px 0 rgba(255,255,255,0.4);
-            text-shadow: 0 0 4px rgba(255,255,255,0.6);
+            background: rgba(205, 228, 252, 0.26);
+            backdrop-filter: blur(18px) saturate(190%);
+            -webkit-backdrop-filter: blur(18px) saturate(190%);
+            border: 1px solid rgba(255, 255, 255, 0.52);
+            border-top: 1px solid rgba(255, 255, 255, 0.75);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), 
+                        inset 0 1px 0 rgba(255,255,255,0.45),
+                        inset 0 -1px 0 rgba(0,0,0,0.05);
         }
 
-        /* --- DESKTOP ICONS GRID --- */
-        #icon-container {
+        /* --- AUTHENTIC DESKTOP ICON SYSTEM MAP --- */
+        #desktop-grid {
             position: absolute;
-            top: 10px;
-            left: 10px;
-            bottom: 50px;
-            width: fit-content;
+            top: 20px; left: 20px; bottom: 60px;
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 15px;
             z-index: 5;
         }
-        .desktop-icon {
-            width: 80px;
-            height: 85px;
+        .w7-icon-item {
+            width: 82px;
+            height: 82px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             border: 1px solid transparent;
-            border-radius: 4px;
+            border-radius: 3px;
             cursor: pointer;
             transition: background 0.1s, border 0.1s;
         }
-        .desktop-icon:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+        .w7-icon-item:hover {
+            background: rgba(255, 255, 255, 0.16);
+            border: 1px solid rgba(255, 255, 255, 0.35);
             box-shadow: inset 0 0 5px rgba(255,255,255,0.2);
         }
-        .desktop-icon:active, .desktop-icon.selected {
-            background: rgba(255, 255, 255, 0.25);
-            border: 1px solid rgba(255, 255, 255, 0.45);
+        .w7-icon-item:active, .w7-icon-item.selected {
+            background: rgba(255, 255, 255, 0.26);
+            border: 1px solid rgba(255, 255, 255, 0.55);
         }
-        .desktop-icon .icon-img {
-            width: 48px;
-            height: 48px;
+        .w7-icon-item .art-render {
+            font-size: 36px;
             margin-bottom: 5px;
-            filter: drop-shadow(0 2px 3px rgba(0,0,0,0.3));
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
         }
-        .desktop-icon .icon-label {
-            color: #fff;
+        .w7-icon-item .label-render {
+            color: #ffffff;
             font-size: 11px;
             font-weight: 500;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 2px rgba(0, 0, 0, 0.5);
+            letter-spacing: 0.3px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.95), 0 0 2px rgba(0,0,0,0.6);
+            padding: 0 1px;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
-            padding: 0 2px;
         }
 
-        /* --- WINDOW MANAGEMENT ENGINE --- */
+        /* --- HIGH DEFINITION AERO APPS / WINDOW BUILD --- */
         .window {
             position: absolute;
             width: 450px;
-            height: 350px;
             border-radius: 6px 6px 0 0;
             display: flex;
             flex-direction: column;
-            min-width: 250px;
-            min-height: 150px;
+            min-width: 260px;
             z-index: 10;
         }
         .window.active {
             z-index: 50;
-            background: rgba(235, 245, 255, 0.45);
-            box-shadow: 0 0 20px rgba(0, 60, 120, 0.4), inset 0 1px 0 rgba(255,255,255,0.5);
+            background: rgba(220, 238, 255, 0.38);
+            box-shadow: 0 0 28px rgba(0, 65, 135, 0.52), inset 0 1px 0 rgba(255,255,255,0.55);
         }
         .window-titlebar {
-            height: 30px;
+            height: 32px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 8px 0 12px;
+            padding: 0 12px;
             cursor: move;
             border-radius: 5px 5px 0 0;
             position: relative;
         }
-        /* Translucent window light glare reflection strip */
+        /* Translucent diagonal glare sheen characteristic of Windows Seven */
         .window-titlebar::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; height: 50%;
-            background: linear-gradient(to bottom, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 100%);
+            background: linear-gradient(to bottom, rgba(255,255,255,0.38) 0%, rgba(255,255,255,0) 100%);
             pointer-events: none;
             border-radius: 5px 5px 0 0;
         }
         .window-title {
             font-size: 12px;
             font-weight: 600;
-            color: #1e2a38;
+            color: #16222f;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 7px;
+            text-shadow: 0 0 4px rgba(255,255,255,0.5);
         }
         .window-controls {
             display: flex;
-            gap: 2px;
+            gap: 3px;
             align-items: center;
-            z-index: 51;
+            z-index: 60;
         }
-        .win-btn {
-            width: 28px;
-            height: 18px;
-            border: 1px solid rgba(0,0,0,0.15);
-            border-top: 1px solid rgba(255,255,255,0.3);
-            background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(0,0,0,0.05) 100%);
+        .aero-btn {
+            width: 30px;
+            height: 19px;
+            border: 1px solid rgba(0,0,0,0.22);
+            border-top: 1px solid rgba(255,255,255,0.45);
+            background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(0,0,0,0.06) 100%);
             border-radius: 3px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #333;
+            color: #111;
             font-size: 10px;
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.25);
         }
-        .win-btn:hover {
-            background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.1) 100%);
-            box-shadow: 0 0 4px rgba(255,255,255,0.5);
+        .aero-btn:hover {
+            background: linear-gradient(to bottom, rgba(255,255,255,0.53) 0%, rgba(255,255,255,0.12) 100%);
         }
-        .win-btn.btn-close:hover {
-            background: linear-gradient(to bottom, #ff6b6b 0%, #e60000 100%);
+        .aero-btn.btn-close-seven:hover {
+            background: linear-gradient(to bottom, #ff6666 0%, #cc0000 100%);
             color: #fff;
-            border-color: #b30000;
-            box-shadow: 0 0 6px rgba(230,0,0,0.6);
+            border-color: #990000;
+            box-shadow: 0 0 8px rgba(204,0,0,0.7);
         }
         .window-body {
             flex: 1;
             background: #ffffff;
-            border: 1px solid rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 0, 0, 0.28);
             border-top: none;
-            margin: 0 4px 4px 4px;
-            padding: 12px;
+            margin: 0 5px 5px 5px;
+            padding: 14px;
             overflow-y: auto;
-            color: #333;
+            color: #000;
             font-size: 13px;
         }
 
-        /* --- AUTHENTIC WINDOWS 7 TASKBAR --- */
+        /* --- INTERNAL EMBEDS & INTEGRATION PANELS --- */
+        .site-banner-box {
+            background-color: #ffffdd;
+            border: 1px dashed #ff1111;
+            padding: 8px;
+            margin-bottom: 12px;
+            font-weight: bold;
+            color: #cc0000;
+            text-align: center;
+            font-size: 12px;
+        }
+        .w7-counter-output {
+            background-color: #050505;
+            color: #ff1111;
+            font-family: "Courier New", monospace;
+            font-size: 21px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            padding: 3px 10px;
+            border: 2px inset #999;
+            display: inline-block;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.8);
+        }
+        .lastfm-equalizer {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 2.5px;
+            height: 26px;
+            margin-top: 10px;
+            background: #151515;
+            padding: 4px;
+            border: 1px inset #777;
+        }
+        .eq-channel {
+            width: 7px;
+            height: 100%;
+            background: linear-gradient(to top, #33ff33, #ffff00, #ff2222);
+            transform-origin: bottom;
+            animation: renderEQ 0.75s ease-in-out infinite alternate;
+        }
+        @keyframes renderEQ { 0% { transform: scaleY(0.15); } 100% { transform: scaleY(0.95); } }
+        
+        .explorer-links a {
+            display: block;
+            color: #0044cc;
+            margin-bottom: 6px;
+            text-decoration: underline;
+            font-size: 12.5px;
+        }
+        .gb-feed-row {
+            border-bottom: 1px dashed #999;
+            padding: 6px 0;
+            font-size: 12px;
+        }
+        .gb-feed-user { font-weight: bold; color: #002288; }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 6px;
+            font-size: 12.5px;
+            border: 1px solid #8e8e8e;
+            box-shadow: inset 1px 1px 2px rgba(0,0,0,0.12);
+        }
+        .system-dialog-btn {
+            background: linear-gradient(to bottom, #fefefe 0%, #e5e5e5 100%);
+            border: 1px solid #7c7c7c;
+            padding: 5px 16px;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .system-dialog-btn:hover { background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%); border-color: #444; }
+
+        /* --- OFFICIAL STABLE WINDOWS 7 TASKBAR & ORB --- */
         #taskbar {
             position: absolute;
             bottom: 0; left: 0; right: 0;
@@ -245,412 +321,360 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 10px;
-            z-index: 9999;
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            background: rgba(15, 35, 55, 0.45);
-            border-top: 1px solid rgba(255,255,255,0.35);
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 -2px 10px rgba(0,0,0,0.3);
+            padding: 0 12px;
+            z-index: 99999;
+            backdrop-filter: blur(22px) saturate(210%);
+            -webkit-backdrop-filter: blur(22px) saturate(210%);
+            background: rgba(12, 32, 54, 0.48);
+            border-top: 1px solid rgba(255, 255, 255, 0.42);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 -2px 12px rgba(0,0,0,0.45);
         }
-        .taskbar-left {
+        .taskbar-left-zone {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
             height: 100%;
         }
-        /* Interactive Glowing W7 Orb Start Button */
-        #start-button {
+        /* Genuine 3D Glossy Windows 7 Sphere Start Orb */
+        #w7-start-orb {
             width: 36px;
             height: 36px;
             border-radius: 50%;
-            background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.5) 0%, transparent 60%),
-                        radial-gradient(circle at center, #2374e1 0%, #0a3c8a 100%);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.4);
-            border: 1px solid rgba(255,255,255,0.3);
+            background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.55) 0%, transparent 60%),
+                        radial-gradient(circle at center, #1b6cd7 0%, #04265e 100%);
+            box-shadow: 0 1px 5px rgba(0,0,0,0.65), inset 0 1px 1px rgba(255,255,255,0.45);
+            border: 1px solid rgba(255,255,255,0.28);
             cursor: pointer;
             position: relative;
             transition: transform 0.1s;
         }
-        #start-button:hover {
-            box-shadow: 0 0 12px #3cd6ff, inset 0 0 6px rgba(255,255,255,0.6);
-            transform: scale(1.03);
+        #w7-start-orb:hover {
+            box-shadow: 0 0 15px #3cd6ff, inset 0 0 6px rgba(255,255,255,0.55);
+            transform: scale(1.05);
         }
-        #start-button::after {
-            content: '';
-            position: absolute;
-            top: 25%; left: 25%; width: 50%; height: 50%;
-            background: radial-gradient(circle, #ffeedd 0%, transparent 70%);
-            opacity: 0.7;
-        }
-        #taskbar-tabs {
+        #taskbar-tabs-layer {
             display: flex;
-            gap: 5px;
+            gap: 6px;
             align-items: center;
             height: 100%;
         }
-        .task-tab {
+        .w7-tab-item {
             height: 32px;
-            width: 50px;
+            width: 54px;
             border-radius: 3px;
-            border: 1px solid rgba(255,255,255,0.15);
-            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.18);
+            background: rgba(255,255,255,0.09);
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 19px;
             transition: all 0.2s;
         }
-        .task-tab:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255,255,255,0.35);
-            box-shadow: inset 0 0 4px rgba(255,255,255,0.3);
-        }
-        .task-tab.active {
-            background: rgba(255, 255, 255, 0.25);
-            border-color: rgba(0, 160, 255, 0.5);
-            box-shadow: inset 0 0 6px rgba(0, 160, 255, 0.3), 0 0 4px rgba(0,160,255,0.4);
-        }
-        .task-tab img {
-            width: 22px;
-            height: 22px;
+        .w7-tab-item:hover { background: rgba(255,255,255,0.22); border-color: rgba(255,255,255,0.42); }
+        .w7-tab-item.active {
+            background: rgba(255, 255, 255, 0.28);
+            border-color: rgba(0, 145, 255, 0.65);
+            box-shadow: inset 0 0 7px rgba(0, 145, 255, 0.4), 0 0 6px rgba(0,145,255,0.55);
         }
         
-        /* System Tray Area */
-        .system-tray {
+        .tray-area {
             display: flex;
             align-items: center;
-            gap: 12px;
-            color: #fff;
+            color: #ffffff;
             font-size: 11px;
-            padding: 0 8px;
+            padding-right: 4px;
             height: 100%;
-            border-left: 1px solid rgba(255,255,255,0.1);
+            border-left: 1px solid rgba(255,255,255,0.14);
         }
-        #clock {
+        #w7-tray-clock {
             text-align: center;
+            padding-left: 14px;
+            line-height: 1.35;
             font-weight: 400;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-            line-height: 1.2;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.7);
         }
 
-        /* --- THE START MENU --- */
-        #start-menu {
+        /* --- THE GENUINE WINDOWS 7 START MENU ENGINE --- */
+        #start-menu-panel {
             position: absolute;
-            bottom: 45px;
-            left: 5px;
-            width: 380px;
-            height: 480px;
+            bottom: 46px; left: 6px;
+            width: 385px; height: 465px;
             border-radius: 6px;
-            z-index: 10000;
+            z-index: 100000;
             display: none;
             padding: 6px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.4);
+            box-shadow: 0 7px 35px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.5);
         }
-        .start-container {
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.85);
+        .start-menu-inner {
+            width: 100%; height: 100%;
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 4px;
-            border: 1px solid rgba(0,0,0,0.3);
+            border: 1px solid rgba(0,0,0,0.38);
             display: flex;
         }
-        .start-left {
-            width: 65%;
-            height: 100%;
-            padding: 10px;
+        .start-panel-left {
+            width: 64%; height: 100%;
+            padding: 10px 8px;
             display: flex;
             flex-direction: column;
             gap: 4px;
         }
-        .start-item {
+        .start-panel-row {
             display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 6px;
+            gap: 12px;
+            padding: 6px 10px;
             border-radius: 3px;
             cursor: pointer;
-            color: #333;
-            font-size: 12px;
+            color: #111;
+            font-size: 12.5px;
         }
-        .start-item:hover {
-            background: linear-gradient(to bottom, rgba(230,245,255,0.8) 0%, rgba(180,220,255,0.8) 100%);
-            border: 1px solid rgba(0,120,240,0.2);
-            padding: 5px; /* Offset border change */
+        .start-panel-row:hover {
+            background: linear-gradient(to bottom, rgba(228,244,255,0.9) 0%, rgba(178,218,255,0.9) 100%);
+            border: 1px solid rgba(0,120,240,0.28);
+            padding: 5px 9px;
         }
-        .start-item img {
-            width: 24px;
-            height: 24px;
-        }
-        .start-right {
-            width: 35%;
-            height: 100%;
-            background: linear-gradient(to right, rgba(215,230,245,0.5) 0%, rgba(195,215,235,0.6) 100%);
-            border-left: 1px solid rgba(0,0,0,0.1);
+        .start-panel-right {
+            width: 36%; height: 100%;
+            background: linear-gradient(to right, rgba(218,233,250,0.6) 0%, rgba(192,215,240,0.7) 100%);
+            border-left: 1px solid rgba(0,0,0,0.14);
             border-radius: 0 3px 3px 0;
-            padding: 12px 6px;
+            padding: 14px 10px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-        .right-links {
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-        }
-        .start-link {
-            padding: 5px 8px;
-            color: #1e3246;
-            font-size: 11px;
+        .start-right-group { display: flex; flex-direction: column; gap: 3px; }
+        .start-panel-link {
+            padding: 6px 8px;
+            color: #16293c;
+            font-size: 11.5px;
             font-weight: 600;
             border-radius: 3px;
             cursor: pointer;
         }
-        .start-link:hover {
-            background: rgba(255,255,255,0.4);
-        }
-        .shutdown-row {
-            display: flex;
-            justify-content: flex-end;
-            padding-right: 4px;
-        }
-        .shutdown-btn {
-            background: linear-gradient(to bottom, #4a90e2 0%, #16437d 100%);
-            border: 1px solid #0d2c54;
+        .start-panel-link:hover { background: rgba(255,255,255,0.55); }
+        .shutdown-flex-row { display: flex; justify-content: flex-end; }
+        .shutdown-seven-btn {
+            background: linear-gradient(to bottom, #50a6f2 0%, #184c8e 100%);
+            border: 1px solid #0a2547;
             color: #fff;
-            font-size: 11px;
+            font-size: 11.5px;
             font-weight: 600;
-            padding: 4px 12px;
-            border-radius: 3px 0 0 3px;
+            padding: 5px 16px;
+            border-radius: 3px;
             cursor: pointer;
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.38);
         }
-        .shutdown-btn:hover {
-            box-shadow: 0 0 6px #4a90e2;
-        }
+        .shutdown-seven-btn:hover { box-shadow: 0 0 7px #50a6f2; }
 
-        /* --- APPS & DYNAMIC WINDOW INTERIORS --- */
-        .retro-banner {
-            background: #ffffcc;
-            border: 1px dashed #cc0000;
-            padding: 8px;
-            color: #cc0000;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 12px;
-            border-radius: 3px;
-            font-size: 12px;
-        }
-        .sys-info-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 12px;
-        }
-        .sys-info-table td {
-            padding: 6px;
-            border-bottom: 1px solid #eee;
-        }
-        .sys-label { font-weight: bold; color: #555; width: 100px; }
-        
-        /* Guestbook Styles - Live Messenger Aesthetic */
-        .msg-bubble {
-            background: linear-gradient(135deg, #f0f7ff 0%, #dbeeff 100%);
-            border: 1px solid #b3d7ff;
-            border-radius: 8px;
-            padding: 8px 12px;
-            margin-bottom: 10px;
-            position: relative;
-        }
-        .msg-header {
-            display: flex;
-            justify-content: space-between;
+        /* --- DESKTOP VINTAGE BOTTOM MARQUEE BAR --- */
+        .vintage-marquee-strip {
+            position: absolute;
+            bottom: 40px; left: 0; width: 100%;
+            background-color: rgba(215, 210, 202, 0.88);
+            border-top: 1px solid rgba(255,255,255,0.6);
+            color: #000;
+            padding: 4px 0;
             font-size: 11px;
-            font-weight: bold;
-            color: #004080;
-            margin-bottom: 4px;
+            z-index: 9998;
         }
-        .msg-time { font-weight: normal; color: #777; }
-        .gb-input {
-            width: 100%;
-            padding: 6px;
-            margin-bottom: 8px;
-            border: 1px solid #bbb;
-            border-radius: 3px;
-            font-family: inherit;
-        }
-        .action-btn {
-            background: linear-gradient(to bottom, #ffffff 0%, #e0e0e0 100%);
-            border: 1px solid #aaa;
-            padding: 5px 14px;
-            border-radius: 3px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 12px;
-        }
-        .action-btn:hover { background: linear-gradient(to bottom, #ffffff 0%, #ececec 100%); border-color: #888; }
     </style>
 </head>
 <body>
 
     <div id="boot-screen">
-        <div class="boot-logo">
-            <div class="boot-orb"></div>
+        <div class="w7-boot-container">
+            <div class="w7-orb"></div>
         </div>
-        <div class="boot-text">Starting IceyOS...</div>
+        <div class="boot-subtext">Starting Windows...</div>
     </div>
 
     <div id="desktop">
         
-        <div id="icon-container">
-            <div class="desktop-icon" onclick="openWindow('about')">
-                <div class="icon-img">🖥️</div>
-                <div class="icon-label">About Icey</div>
+        <div id="desktop-grid">
+            <div class="w7-icon-item" onclick="openWindow('about')">
+                <div class="art-render">🖥️</div>
+                <div class="label-render">about me</div>
             </div>
-            <div class="desktop-icon" onclick="openWindow('projects')">
-                <div class="icon-img">📁</div>
-                <div class="icon-label">My Projects</div>
+            <div class="w7-icon-item" onclick="openWindow('media')">
+                <div class="art-render">🎵</div>
+                <div class="label-render">media player</div>
             </div>
-            <div class="desktop-icon" onclick="openWindow('guestbook')">
-                <div class="icon-img">💬</div>
-                <div class="icon-label">Sign Guestbook</div>
+            <div class="w7-icon-item" onclick="openWindow('links')">
+                <div class="art-render">🌐</div>
+                <div class="label-render">links stuff</div>
+            </div>
+            <div class="w7-icon-item" onclick="openWindow('guestbook')">
+                <div class="art-render">💬</div>
+                <div class="label-render">sign guestbook</div>
             </div>
         </div>
 
-        <div id="win-about" class="window aero-glass" style="top: 15%; left: 20%; display: none;" onmousedown="focusWindow('about')">
+        <div id="win-about" class="window aero-glass" style="top: 12%; left: 16%; display: none;" onmousedown="focusWindow('about')">
             <div class="window-titlebar" onmousedown="dragStart(event, 'about')">
                 <div class="window-title"><span>🖥️</span> System Properties - About Me</div>
                 <div class="window-controls">
-                    <button class="win-btn" onclick="minimizeWindow('about')">_</button>
-                    <button class="win-btn btn-close" onclick="closeWindow('about')">✕</button>
+                    <button class="aero-btn" onclick="minimizeWindow('about')">_</button>
+                    <button class="aero-btn btn-close-seven" onclick="closeWindow('about')">✕</button>
+                </div>
+            </div>
+            <div id="site-announcement" class="site-banner-box" style="display: none;"></div>
+            <div class="window-body">
+                <p id="display-about" style="margin: 0; line-height: 1.55;">loading data template profile...</p>
+                
+                <div style="margin-top: 16px; border: 1px dashed #777; padding: 7px; background: #fafafa; display: flex; align-items: center; gap: 8px;">
+                    <span style="width: 9px; height: 9px; background: #00ff00; border-radius: 50%; display: inline-block; box-shadow: 0 0 5px #00ff00;"></span>
+                    <div style="font-size: 11px; color:#222;"><b>Status:</b> Typing projects active on desktop.</div>
+                </div>
+
+                <div style="text-align: center; margin-top: 16px; border-top: 1px solid #ddd; padding-top: 12px;">
+                    <div style="font-size: 11px; font-weight: bold; color: #444; margin-bottom: 4px;">YOU ARE VISITOR NUMBER:</div>
+                    <div class="w7-counter-output" id="hit-counter">000000</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="win-media" class="window aero-glass" style="top: 18%; left: 48%; display: none;" onmousedown="focusWindow('media')">
+            <div class="window-titlebar" onmousedown="dragStart(event, 'media')">
+                <div class="window-title"><span>🎵</span> Windows Media Player</div>
+                <div class="window-controls">
+                    <button class="aero-btn" onclick="minimizeWindow('media')">_</button>
+                    <button class="aero-btn btn-close-seven" onclick="closeWindow('media')">✕</button>
+                </div>
+            </div>
+            <div class="window-body" style="text-align: center;">
+                <div style="background-color: #080808; color: #00ff00; font-family: monospace; padding: 12px; border: 2px inset #999; margin-bottom: 6px;">
+                    <div id="media-status" style="font-weight: bold;">[CONNECTING]</div>
+                    <div id="media-title" style="font-size: 12px; margin-top: 5px;">connecting to live user api profile...</div>
+                </div>
+                
+                <div class="lastfm-equalizer">
+                    <div class="eq-channel" style="animation-delay: 0.15s;"></div>
+                    <div class="eq-channel" style="animation-delay: 0.45s;"></div>
+                    <div class="eq-channel" style="animation-delay: 0.25s;"></div>
+                    <div class="eq-channel" style="animation-delay: 0.65s;"></div>
+                    <div class="eq-channel" style="animation-delay: 0.35s;"></div>
+                </div>
+                <div style="font-size: 11px; color: #555; text-align: left; margin-top: 10px;">
+                    * Live analytics pulled directly from the last.fm stream network.
+                </div>
+            </div>
+        </div>
+
+        <div id="win-links" class="window aero-glass" style="top: 38%; left: 22%; display: none;" onmousedown="focusWindow('links')">
+            <div class="window-titlebar" onmousedown="dragStart(event, 'links')">
+                <div class="window-title"><span>🌐</span> Internet Explorer - Index Navigator</div>
+                <div class="window-controls">
+                    <button class="aero-btn" onclick="minimizeWindow('links')">_</button>
+                    <button class="aero-btn btn-close-seven" onclick="closeWindow('links')">✕</button>
+                </div>
+            </div>
+            <div class="window-body explorer-links">
+                <a href="https://www.youtube.com/@yeci_.1" target="_blank">YouTube Channel</a>
+                <a href="https://www.roblox.com/users/4447690823/profile" target="_blank">Roblox Profile Hub</a>
+                <a href="https://www.last.fm/user/icy51" target="_blank">Last.fm Audio Profile</a>
+                <hr style="border: 0; border-top: 1px solid #ccc; margin: 10px 0;">
+                <div style="font-size: 12px; color: #444; margin-bottom: 12px;">Discord Handle: <strong>._icey1</strong></div>
+                
+                <div style="border-top: 1px solid #ddd; padding-top: 10px; text-align: center;">
+                    <div style="font-size: 10px; color: #555; margin-bottom: 6px; font-weight: bold;">WEB BADGE ARCHIVE EXCHANGES:</div>
+                    <div style="display: flex; justify-content: center; gap: 5px; flex-wrap: wrap;">
+                        <img src="https://web.archive.org/web/20091027052912im_/http://geocities.com/SunsetStrip/Studio/1002/ie_static.gif" alt="IE Badge" width="88" height="31">
+                        <img src="https://img.shields.io/badge/Made%20With-Notepad%2B%2B-007ACC?style=flat&logo=notepadplusplus&logoColor=white" alt="Editor Stamp" style="border:1px solid #888; width:88px; height:31px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="win-guestbook" class="window aero-glass" style="top: 22%; left: 52%; display: none;" onmousedown="focusWindow('guestbook')">
+            <div class="window-titlebar" onmousedown="dragStart(event, 'guestbook')">
+                <div class="window-title"><span>💬</span> Guestbook Feed Explorer</div>
+                <div class="window-controls">
+                    <button class="aero-btn" onclick="minimizeWindow('guestbook')">_</button>
+                    <button class="aero-btn btn-close-seven" onclick="closeWindow('guestbook')">✕</button>
                 </div>
             </div>
             <div class="window-body">
-                <div class="retro-banner">+++ ALL HAIL ICY +++ WELCOME TO THE NEW ERA +++</div>
-                <h3 style="margin-top: 0; color: #104070;">IceyOS Ultimate v2.0</h3>
-                <p>Welcome! I've fully upgraded my central hub to full Aero Glass. I like building unique projects, refining website environments, writing script tools, and modernizing old retro charm.</p>
-                <table class="sys-info-table">
-                    <tr><td class="sys-label">Owner:</td><td>Icy / Icey</td></tr>
-                    <tr><td class="sys-label">Environment:</td><td>bd4vc2.github.io</td></tr>
-                    <tr><td class="sys-label">Core Techs:</td><td>Python, JavaScript, HTML5, CSS3, Linux</td></tr>
-                    <tr><td class="sys-label">Status:</td><td>Desktop typing things live</td></tr>
-                </table>
+                <div id="guestbook-list" style="max-height: 120px; overflow-y: auto; border: 1px solid #7a7a7a; padding: 6px; margin-bottom: 10px; background: #ffffff;"></div>
+                <div class="form-container">
+                    <input type="text" id="gb-name" placeholder="Enter Your Name">
+                    <input type="text" id="gb-msg" placeholder="Type message here...">
+                </div>
+                
+                <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="light" style="margin-bottom: 8px;"></div>
+                
+                <button class="system-dialog-btn" onclick="submitGuestbookPending()">Submit Entry</button>
             </div>
         </div>
 
-        <div id="win-projects" class="window aero-glass" style="top: 25%; left: 30%; display: none;" onmousedown="focusWindow('projects')">
-            <div class="window-titlebar" onmousedown="dragStart(event, 'projects')">
-                <div class="window-title"><span>📁</span> Windows Explorer - Projects</div>
-                <div class="window-controls">
-                    <button class="win-btn" onclick="minimizeWindow('projects')">_</button>
-                    <button class="win-btn btn-close" onclick="closeWindow('projects')">✕</button>
-                </div>
-            </div>
-            <div class="window-body" style="background: #fbfbfb; display: flex; flex-direction: column; gap: 8px;">
-                <div style="font-size: 11px; color:#666; padding-bottom: 4px; border-bottom: 1px solid #ddd;">Index of C:\Users\Icy\Projects</div>
-                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; margin-top: 5px;">
-                    <a href="https://github.com/bd4vc2" target="_blank" style="text-decoration: none; color: #333; text-align: center; font-size: 12px; display: block; padding: 6px; border: 1px solid transparent;" onmouseover="this.style.background='#e5f3ff'; this.style.borderColor='#b8e0ff'" onmouseout="this.style.background='transparent'; this.style.borderColor='transparent'">
-                        <div style="font-size: 28px;">🐍</div>
-                        <div>Python Repository</div>
-                    </a>
-                    <a href="https://www.roblox.com/users/4447690823/profile" target="_blank" style="text-decoration: none; color: #333; text-align: center; font-size: 12px; display: block; padding: 6px; border: 1px solid transparent;" onmouseover="this.style.background='#e5f3ff'; this.style.borderColor='#b8e0ff'" onmouseout="this.style.background='transparent'; this.style.borderColor='transparent'">
-                        <div style="font-size: 28px;">🕹️</div>
-                        <div>Roblox Hub</div>
-                    </a>
-                    <a href="https://www.youtube.com/@yeci_.1" target="_blank" style="text-decoration: none; color: #333; text-align: center; font-size: 12px; display: block; padding: 6px; border: 1px solid transparent;" onmouseover="this.style.background='#e5f3ff'; this.style.borderColor='#b8e0ff'" onmouseout="this.style.background='transparent'; this.style.borderColor='transparent'">
-                        <div style="font-size: 28px;">📺</div>
-                        <div>YouTube Channel</div>
-                    </a>
-                </div>
-            </div>
+        <div class="vintage-marquee-strip">
+            <marquee id="live-ticker" scrollamount="4" behavior="scroll" direction="left">+++ loading global data ticker tape stream +++</marquee>
         </div>
 
-        <div id="win-guestbook" class="window aero-glass" style="top: 20%; left: 40%; display: none;" onmousedown="focusWindow('guestbook')">
-            <div class="window-titlebar" onmousedown="dragStart(event, 'guestbook')">
-                <div class="window-title"><span>💬</span> Windows Live Guestbook</div>
-                <div class="window-controls">
-                    <button class="win-btn" onclick="minimizeWindow('guestbook')">_</button>
-                    <button class="win-btn btn-close" onclick="closeWindow('guestbook')">✕</button>
+        <div id="start-menu-panel" class="aero-glass">
+            <div class="start-menu-inner">
+                <div class="start-panel-left">
+                    <div class="start-panel-row" onclick="openWindow('about'); toggleSevenMenu();">🖥️ <span>About Me</span></div>
+                    <div class="start-panel-row" onclick="openWindow('media'); toggleSevenMenu();">🎵 <span>Media Player</span></div>
+                    <div class="start-panel-row" onclick="openWindow('links'); toggleSevenMenu();">🌐 <span>Links Explorer</span></div>
+                    <div class="start-panel-row" onclick="openWindow('guestbook'); toggleSevenMenu();">💬 <span>Sign Guestbook</span></div>
                 </div>
-            </div>
-            <div class="window-body" style="display: flex; flex-direction: column;">
-                <div id="gb-feed" style="flex: 1; overflow-y: auto; max-height: 160px; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-right: 4px;">
-                    <div class="msg-bubble">
-                        <div class="msg-header"><span>icy</span> <span class="msg-time">System Post</span></div>
-                        all hail icy + half sword is the best game ever
+                <div class="start-panel-right">
+                    <div class="start-right-group">
+                        <div class="start-panel-link" onclick="window.open('https://www.last.fm/user/icy51','_blank')">Last.fm Page</div>
+                        <div class="start-panel-link" style="color: #444; cursor: default;">User: ._icey1</div>
                     </div>
-                </div>
-                <div>
-                    <input type="text" id="form-name" class="gb-input" placeholder="Your Name">
-                    <input type="text" id="form-msg" class="gb-input" placeholder="Type a public message...">
-                    <button class="action-btn" onclick="submitMessage()">Send Message</button>
-                </div>
-            </div>
-        </div>
-
-        <div id="start-menu" class="aero-glass">
-            <div class="start-container">
-                <div class="start-left">
-                    <div class="start-item" onclick="openWindow('about'); toggleStartMenu();">
-                        <span>🖥️</span> <span>About Icey</span>
-                    </div>
-                    <div class="start-item" onclick="openWindow('projects'); toggleStartMenu();">
-                        <span>📁</span> <span>My Projects</span>
-                    </div>
-                    <div class="start-item" onclick="openWindow('guestbook'); toggleStartMenu();">
-                        <span>💬</span> <span>Guestbook App</span>
-                    </div>
-                </div>
-                <div class="start-right">
-                    <div class="right-links">
-                        <div class="start-link" onclick="window.open('https://www.last.fm/user/icy51','_blank')">Last.fm Feed</div>
-                        <div class="start-link" style="color: #666; cursor: default;">ID: ._icey1</div>
-                    </div>
-                    <div class="shutdown-row">
-                        <button class="shutdown-btn" onclick="location.reload()">Shut Down</button>
+                    <div class="shutdown-flex-row">
+                        <button class="shutdown-seven-btn" onclick="location.reload()">Shut Down</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <footer id="taskbar">
-            <div class="taskbar-left">
-                <div id="start-button" onclick="toggleStartMenu(event)"></div>
-                <div id="taskbar-tabs"></div>
+            <div class="taskbar-left-zone">
+                <div id="w7-start-orb" onclick="toggleSevenMenu(event)"></div>
+                <div id="taskbar-tabs-layer"></div>
             </div>
-            <div class="system-tray">
-                <div id="clock">12:00 PM<br>7/11/2026</div>
+            <div class="tray-area">
+                <div id="w7-tray-clock">12:00 PM<br>7/11/2026</div>
             </div>
         </footer>
 
     </div>
 
     <script>
-        // --- BOOT PROCESS SIMULATION ---
+        // --- BOOT AND SHUTDOWN FLOW MANAGER ---
         window.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 const boot = document.getElementById('boot-screen');
                 const desk = document.getElementById('desktop');
                 boot.style.opacity = '0';
                 desk.style.opacity = '1';
-                setTimeout(() => boot.style.display = 'none', 1000);
-            }, 2500); // Authentic 2.5s Windows startup delay
-            
-            // Run operations
-            updateClock();
-            setInterval(updateClock, 1000);
-            
-            // Global click capture to close Start Menu safely when clicking away
+                setTimeout(() => {
+                    boot.style.display = 'none';
+                    // Automatically display and render the principal configuration window upon launch
+                    openWindow('about');
+                }, 800);
+            }, 2500); // 2.5 second Seven loop processing delay
+
+            renderLiveClock();
+            setInterval(renderLiveClock, 1000);
+
+            // Safe global dismissal capture workflow for the Seven start panel
             document.addEventListener('click', (e) => {
-                const sm = document.getElementById('start-menu');
-                const sb = document.getElementById('start-button');
-                if (sm.style.display === 'block' && !sm.contains(e.target) && !sb.contains(e.target)) {
-                    sm.style.display = 'none';
+                const menu = document.getElementById('start-menu-panel');
+                const orb = document.getElementById('w7-start-orb');
+                if (menu.style.display === 'block' && !menu.contains(e.target) && !orb.contains(e.target)) {
+                    menu.style.display = 'none';
                 }
             });
         });
 
-        // --- CLOCK CONTROLLER ---
-        function updateClock() {
+        // --- SYSTEM TRAY METRIC TIME CONVERT ---
+        function renderLiveClock() {
             const now = new Date();
             let hours = now.getHours();
             const minutes = String(now.getMinutes()).padStart(2, '0');
@@ -658,39 +682,38 @@
             hours = hours % 12;
             hours = hours ? hours : 12; 
             
-            const timeString = `${hours}:${minutes} ${ampm}`;
-            const dateString = `${now.getMonth() + 1}/${now.getDate()}/${now.getFullYear()}`;
-            document.getElementById('clock').innerHTML = `${timeString}<br>${dateString}`;
+            const timeStr = `${hours}:${minutes} ${ampm}`;
+            const dateStr = `${now.getMonth() + 1}/${now.getDate()}/${now.getFullYear()}`;
+            document.getElementById('w7-tray-clock').innerHTML = `${timeStr}<br>${dateStr}`;
         }
 
-        // --- START MENU TOGGLE ---
-        function toggleStartMenu(e) {
+        // --- TOGGLE START BAR ---
+        function toggleSevenMenu(e) {
             if(e) e.stopPropagation();
-            const menu = document.getElementById('start-menu');
+            const menu = document.getElementById('start-menu-panel');
             menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
         }
 
-        // --- CORE WINDOWS MANAGER ENGINE ---
-        const activeWindows = new Set();
-        let currentDragWin = null;
-        let offsetX = 0, offsetY = 0;
+        // --- DRAGGABLE CORE ENGINE CONTROLLERS ---
+        const activeWindowsSet = new Set();
+        let targetDragWinInstance = null;
+        let deltaX = 0, deltaY = 0;
 
         function openWindow(id) {
             const win = document.getElementById(`win-${id}`);
             if(!win) return;
-            
             win.style.display = 'flex';
-            activeWindows.add(id);
+            activeWindowsSet.add(id);
             focusWindow(id);
-            rebuildTaskbar();
+            syncSystemTaskbar();
         }
 
         function closeWindow(id) {
             const win = document.getElementById(`win-${id}`);
             if(!win) return;
             win.style.display = 'none';
-            activeWindows.delete(id);
-            rebuildTaskbar();
+            activeWindowsSet.delete(id);
+            syncSystemTaskbar();
         }
 
         function minimizeWindow(id) {
@@ -704,15 +727,14 @@
             const win = document.getElementById(`win-${id}`);
             if(win) win.classList.add('active');
             
-            document.querySelectorAll('.task-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.w7-tab-item').forEach(t => t.classList.remove('active'));
             const tab = document.getElementById(`tab-${id}`);
             if(tab) tab.classList.add('active');
         }
 
-        function toggleMinimize(id) {
+        function handleTabInteraction(id) {
             const win = document.getElementById(`win-${id}`);
             if(!win) return;
-            
             if(win.style.display === 'none') {
                 win.style.display = 'flex';
                 focusWindow(id);
@@ -723,86 +745,147 @@
             }
         }
 
-        // --- TASKBAR RENDERING ENGINE ---
-        function rebuildTaskbar() {
-            const tabsContainer = document.getElementById('taskbar-tabs');
-            tabsContainer.innerHTML = '';
+        function syncSystemTaskbar() {
+            const container = document.getElementById('taskbar-tabs-layer');
+            container.innerHTML = '';
             
-            activeWindows.forEach(id => {
+            activeWindowsSet.forEach(id => {
                 const tab = document.createElement('div');
-                tab.className = 'task-tab';
+                tab.className = 'w7-tab-item';
                 tab.id = `tab-${id}`;
                 
-                // Assign icon representation matching apps
-                let iconSymbol = '🖥️';
-                if(id === 'projects') iconSymbol = '📁';
-                if(id === 'guestbook') iconSymbol = '💬';
+                let symbol = '🖥️';
+                if(id === 'media') symbol = '🎵';
+                if(id === 'links') symbol = '🌐';
+                if(id === 'guestbook') symbol = '💬';
                 
-                tab.innerHTML = `<span style="font-size:18px;">${iconSymbol}</span>`;
+                tab.innerHTML = symbol;
                 tab.onclick = (e) => {
                     e.stopPropagation();
-                    toggleMinimize(id);
+                    handleTabInteraction(id);
                 };
-                tabsContainer.appendChild(tab);
+                container.appendChild(tab);
             });
-            
-            if(activeWindows.size > 0) {
-                const lastAdded = Array.from(activeWindows).pop();
-                focusWindow(lastAdded);
+            if(activeWindowsSet.size > 0) {
+                const arrayForm = Array.from(activeWindowsSet);
+                focusWindow(arrayForm[arrayForm.length - 1]);
             }
         }
 
-        // --- PHYSICS/DRAG MODULE ---
         function dragStart(e, id) {
-            currentDragWin = document.getElementById(`win-${id}`);
+            targetDragWinInstance = document.getElementById(`win-${id}`);
             focusWindow(id);
-            offsetX = e.clientX - currentDragWin.offsetLeft;
-            offsetY = e.clientY - currentDragWin.offsetTop;
-            
-            document.addEventListener('mousemove', dragMove);
-            document.addEventListener('mouseup', dragEnd);
+            deltaX = e.clientX - targetDragWinInstance.offsetLeft;
+            deltaY = e.clientY - targetDragWinInstance.offsetTop;
+            document.addEventListener('mousemove', dragProcess);
+            document.addEventListener('mouseup', dragTerminate);
+        }
+        function dragProcess(e) {
+            if (!targetDragWinInstance) return;
+            targetDragWinInstance.style.left = `${e.clientX - deltaX}px`;
+            targetDragWinInstance.style.top = `${e.clientY - deltaY}px`;
+        }
+        function dragTerminate() {
+            targetDragWinInstance = null;
+            document.removeEventListener('mousemove', dragProcess);
+            document.removeEventListener('mouseup', dragTerminate);
         }
 
-        function dragMove(e) {
-            if (!currentDragWin) return;
-            currentDragWin.style.left = `${e.clientX - offsetX}px`;
-            currentDragWin.style.top = `${e.clientY - offsetY}px`;
+        // --- PRESERVED ATOMIC DATA: RECONSTRUCT VISITOR HIT COUNTER ---
+        function executeCounterState() {
+            var counterValue = localStorage.getItem('siteHits') || 2491;
+            counterValue = parseInt(counterValue) + 1;
+            localStorage.setItem('siteHits', counterValue);
+            document.getElementById('hit-counter').innerText = String(counterValue).padStart(6, '0');
         }
+        executeCounterState();
 
-        function dragEnd() {
-            currentDragWin = null;
-            document.removeEventListener('mousemove', dragMove);
-            document.removeEventListener('mouseup', dragEnd);
+        // --- PRESERVED ATOMIC DATA: REALLASTFM TRACK LISTENER STREAM ---
+        var USERNAME_STREAM = "icy51";
+        var SECURITY_HASH = "165952413aedf7410ea19baa387f2c00"; 
+
+        function runMediaPollingUpdate() {
+            var requestEndpoint = "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" + USERNAME_STREAM + "&api_key=" + SECURITY_HASH + "&format=json&limit=1";
+            fetch(requestEndpoint)
+                .then(res => res.json())
+                .then(payload => {
+                    if (!payload.recenttracks || !payload.recenttracks.track || payload.recenttracks.track.length === 0) {
+                        document.getElementById('media-status').innerText = "[STOPPED]";
+                        document.getElementById('media-title').innerText = "no history track listed";
+                        return;
+                    }
+                    var item = payload.recenttracks.track[0];
+                    var realPlaying = item['@attr'] && item['@attr'].nowplaying === "true";
+                    document.getElementById('media-status').innerText = realPlaying ? "[PLAYING NOW]" : "[LAST PLAYED]";
+                    document.getElementById('media-title').innerText = (item.name + " - " + item.artist['#text']).toLowerCase();
+                })
+                .catch(() => {
+                    document.getElementById('media-status').innerText = "[ERROR]";
+                    document.getElementById('media-title').innerText = "feed offline";
+                });
         }
+        setInterval(runMediaPollingUpdate, 30000);
+        runMediaPollingUpdate();
 
-        // --- LOCAL INTERACTIVE GUESTBOOK LOGIC ---
-        function submitMessage() {
-            const nameInput = document.getElementById('form-name');
-            const msgInput = document.getElementById('form-msg');
-            const feed = document.getElementById('gb-feed');
-            
-            if(!nameInput.value.trim() || !msgInput.value.trim()) {
-                alert("Please fill out both Name and Message boxes!");
+        // --- PRESERVED ATOMIC DATA: GUESTBOOK VALIDATION SUBMIT ENGINE ---
+        function submitGuestbookPending() {
+            var author = document.getElementById('gb-name').value.trim();
+            var payloadStr = document.getElementById('gb-msg').value.trim();
+            var passkey = turnstile.getResponse();
+
+            if (author === "" || payloadStr === "") {
+                alert("Please fill out both Name and Message fields first.");
                 return;
             }
-
-            const bubble = document.createElement('div');
-            bubble.className = 'msg-bubble';
-            bubble.innerHTML = `
-                <div class="msg-header">
-                    <span>${escapeHTML(nameInput.value)}</span> 
-                    <span class="msg-time">Just Now</span>
-                </div>
-                ${escapeHTML(msgInput.value)}
-            `;
-            
-            feed.insertBefore(bubble, feed.firstChild);
-            msgInput.value = ''; // Quick clear message bar
+            if (!passkey) {
+                alert("Security block verification challenge incomplete.");
+                return;
+            }
+            alert("Success! Entry delivered for dashboard moderator review.");
+            document.getElementById('gb-name').value = "";
+            document.getElementById('gb-msg').value = "";
+            turnstile.reset();
         }
 
-        function escapeHTML(str) {
-            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        // --- PRESERVED ATOMIC DATA: DATA.JSON LOCAL READER INTEGRATION ---
+        function executeDataSync() {
+            fetch('data.json?cache=' + new Date().getTime())
+                .then(r => r.json())
+                .then(parsedObj => {
+                    var announcementBox = document.getElementById('site-announcement');
+                    if(parsedObj.announcement && parsedObj.announcement.trim() !== "") {
+                        announcementBox.innerText = parsedObj.announcement;
+                        announcementBox.style.display = "block";
+                    } else {
+                        announcementBox.style.display = "none";
+                    }
+                    document.getElementById('display-about').innerText = parsedObj.aboutText || "all hail icy";
+                    if(parsedObj.tickerText) {
+                        document.getElementById('live-ticker').innerText = parsedObj.tickerText;
+                    }
+
+                    var targetContainer = document.getElementById('guestbook-list');
+                    targetContainer.innerHTML = "";
+                    if (parsedObj.guestbook && parsedObj.guestbook.length > 0) {
+                        parsedObj.guestbook.forEach(function(itemNode) {
+                            var row = document.createElement('div');
+                            row.className = "gb-feed-row";
+                            row.innerHTML = "<span class='gb-feed-user'>" + escapeHTML(itemNode.name) + ":</span> " + escapeHTML(itemNode.message);
+                            targetContainer.appendChild(row);
+                        });
+                    } else {
+                        targetContainer.innerHTML = "<div style='color:#777; font-style:italic;'>No entries.</div>";
+                    }
+                })
+                .catch(() => {
+                    document.getElementById('display-about').innerText = "all hail icy";
+                });
         }
+
+        function escapeHTML(t) {
+            return t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+        window.onload = executeDataSync;
     </script>
 </body>
 </html>
