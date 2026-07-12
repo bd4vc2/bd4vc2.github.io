@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>icy website - Luna XP Workstation Ultimate Edition</title>
+    <title>icy workstation - Windows XP Professional</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+f/5+fn/+fn58An5+f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfn5//39/f/9/f3//f39//39/f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfn5//39/f/7Gxsf+xsfH/39/f/9/f3/+fn5//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+f/9/f3//f39//39/f/9/f3//f39//n5+f/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ+fn//f39//39/f/9/f3//f39//39/f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfn5//39/f/7Gxsf+xsfH/39/f/9/f3/+fn5//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+f/9/f3//f39//39/f/9/f3//f39//n5+f/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ+fn//f39//39/f/9/f3//f39//39/f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfn5//39/f/9/f3//f39//39/f/9/f3/+fn5//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+f/5+fn/+fn58An5+f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <style>
@@ -25,7 +25,7 @@
             overflow-x: hidden;
         }
 
-        /* --- DESKTOP ARRANGEMENT --- */
+        /* --- DESKTOP LAYOUT --- */
         #desktop-container {
             display: flex;
             gap: 20px;
@@ -34,7 +34,7 @@
             align-items: flex-start;
         }
 
-        /* --- RECYCLING / SYSTEM ICON COLUMNS --- */
+        /* --- DESKTOP RETRO SHORTCUT ICONS --- */
         #desktop-icons {
             display: flex;
             flex-direction: column;
@@ -66,7 +66,7 @@
             border-radius: 2px;
         }
 
-        /* CSS-drawn Retro Icons */
+        /* Pure CSS Drawn Desktop Hardware Icons */
         .ico-computer {
             width: 32px; height: 24px; background: #ece9d8; border: 2px solid #808080; border-radius: 2px; position: relative;
         }
@@ -158,11 +158,7 @@
             box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.5), 1px 1px 1px rgba(0, 0, 0, 0.2);
             text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
         }
-        .title-bar-controls .btn-min {
-            background: linear-gradient(to bottom, #3c9bfd 0%, #0c61eb 100%);
-            border-color: #003399;
-        }
-        .title-bar-controls .btn-max {
+        .title-bar-controls .btn-min, .title-bar-controls .btn-max {
             background: linear-gradient(to bottom, #3c9bfd 0%, #0c61eb 100%);
             border-color: #003399;
         }
@@ -178,13 +174,13 @@
         .window-body {
             padding: 12px;
             background-color: #ffffff;
-            border: 1px solid #7f9db9; /* Standardized bluish-gray border edge mapping */
+            border: 1px solid #7f9db9; 
             margin: 4px;
             overflow-y: auto;
             flex: 1;
         }
 
-        /* --- WINDOW TOOLBARS / MENUS --- */
+        /* --- WINDOW TOOLBAR MENUS --- */
         .window-menu {
             display: flex;
             gap: 10px;
@@ -220,7 +216,7 @@
             margin-bottom: 10px;
         }
 
-        input[type="text"], select, textarea {
+        input[type="text"] {
             width: 100%;
             box-sizing: border-box;
             font-family: inherit;
@@ -230,11 +226,11 @@
             background-color: #ffffff;
             outline: none;
         }
-        input[type="text"]:focus, select:focus, textarea:focus {
+        input[type="text"]:focus {
             border-color: #1d62c4;
         }
 
-        /* Sleek Blue/Beige Textured Windows XP Interface Button */
+        /* Textured Windows XP Style Interface Button */
         button.win-btn {
             background: linear-gradient(to bottom, #ffffff 0%, #eaeaea 10%, #dcd9d2 45%, #c7c3b9 85%, #b3ae24 100%);
             border: 1px solid #7f9db9;
@@ -248,10 +244,6 @@
         button.win-btn:hover {
             background: linear-gradient(to bottom, #fff6e0 0%, #ffebbc 15%, #ffdf91 45%, #ffcb61 85%, #ffbd40 100%);
             border-color: #ff9d00;
-        }
-        button.win-btn:active {
-            background: linear-gradient(to bottom, #dcd9d2 0%, #ffffff 100%);
-            border-color: #7f9db9;
         }
 
         .link-list a {
@@ -292,7 +284,7 @@
         /* Custom Dashboard Dynamic Monitor Display Readout */
         .counter-box {
             background-color: #000000;
-            color: #33ff33; /* Neon green terminal screen readout upgrade */
+            color: #33ff33; 
             font-family: "Courier New", monospace;
             font-size: 22px;
             font-weight: bold;
@@ -304,41 +296,18 @@
             box-shadow: inset 0 0 5px rgba(0,255,0,0.5);
         }
 
-        /* --- SYSTEM CLOG REPLICAS & METERS --- */
-        .sys-meter-bg {
-            background: #e0e0e0;
-            border: 1px solid #7f9db9;
-            height: 14px;
-            border-radius: 1px;
-            overflow: hidden;
-            margin-top: 4px;
-        }
-        .sys-meter-bar {
-            height: 100%;
-            background: linear-gradient(90deg, #32cd32, #00ff00);
-            width: 35%;
-            transition: width 0.5s ease;
-        }
-
-        /* --- THE ULTIMATE BRIGHT-BLUE RUNTIME TASKBAR FOOTER --- */
+        /* --- THE SYSTEM TASKBAR FOOTER --- */
         .retro-marquee {
             position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 38px;
+            bottom: 0; left: 0; width: 100%; height: 38px;
             background: linear-gradient(to bottom, #245edb 0%, #3f8cf3 9%, #245edb 20%, #1b4ec3 85%, #1946b9 100%);
             border-top: 1px solid #1742ad;
             box-shadow: 0 -2px 6px rgba(0,0,0,0.35);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            z-index: 9999;
-            padding-left: 105px;
-            padding-right: 120px;
+            display: flex; align-items: center; justify-content: space-between;
+            z-index: 9999; padding-left: 105px; padding-right: 125px;
         }
 
-        /* Intricate Vector Map Rendering of the iconic Green Start Button */
+        /* Green Start Button Engine Component */
         .start-button {
             position: absolute;
             left: 0; top: 0; bottom: 0; width: 95px;
@@ -346,59 +315,37 @@
             border-right: 1px solid #245816;
             border-radius: 0 12px 12px 0;
             box-shadow: inset -1px 1px 2px #98f06f, 2px 0 5px rgba(0,0,0,0.2);
-            color: #ffffff;
-            font-family: "Tahoma", sans-serif;
-            font-weight: bold;
-            font-style: italic;
-            font-size: 16px;
+            color: #ffffff; font-family: "Tahoma", sans-serif;
+            font-weight: bold; font-style: italic; font-size: 16px;
             display: flex; align-items: center; justify-content: center;
-            text-shadow: 1px 1px 2px #183c0f;
-            cursor: pointer;
-            user-select: none;
+            text-shadow: 1px 1px 2px #183c0f; cursor: pointer; user-select: none;
         }
         .start-button:hover {
             background: linear-gradient(to bottom, #72d650 0%, #9bf271 10%, #6ec54b 30%, #44992b 85%, #327a1f 100%);
         }
 
         #live-ticker {
-            color: #ffffff;
-            font-weight: bold;
-            font-size: 12px;
-            text-shadow: 1px 1px 1px #113388;
-            flex-grow: 1;
-            margin: 0 15px;
+            color: #ffffff; font-weight: bold; font-size: 12px;
+            text-shadow: 1px 1px 1px #113388; flex-grow: 1; margin: 0 15px;
         }
 
         /* --- SYSTEM TRAY INDEX --- */
         .system-tray {
-            position: absolute;
-            right: 0; top: 0; bottom: 0;
+            position: absolute; right: 0; top: 0; bottom: 0;
             background: linear-gradient(to bottom, #0c82e9 0%, #0054e3 100%);
             border-left: 1px solid #1060dd;
             box-shadow: inset 1px 0 2px rgba(255,255,255,0.3);
-            display: flex;
-            align-items: center;
-            padding: 0 12px;
-            color: #ffffff;
-            font-size: 11px;
-            gap: 8px;
+            display: flex; align-items: center; padding: 0 12px;
+            color: #ffffff; font-size: 11px; gap: 8px;
         }
 
         /* --- THE COMPACT COGNAC AUDIO MEDIA VISUALIZER EQ --- */
         .eq-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            gap: 2px;
-            height: 32px;
-            margin-top: 8px;
-            background: #050505;
-            padding: 4px;
-            border: 2px inset #7f9db9;
+            display: flex; justify-content: center; align-items: flex-end; gap: 2px;
+            height: 32px; margin-top: 8px; background: #050505; padding: 4px; border: 2px inset #7f9db9;
         }
         .eq-bar {
-            width: 7px;
-            height: 100%;
+            width: 7px; height: 100%;
             background: linear-gradient(to top, #33ff33, #ffff00, #ff3333);
             transform-origin: bottom;
             animation: bounceEQ 0.8s ease-in-out infinite alternate;
@@ -408,38 +355,55 @@
             100% { transform: scaleY(0.95); }
         }
 
-        /* Windows Media Player 11 Interactive Deck Layout Elements */
         .wmp-hardware-tray {
-            background: #1c1c1c;
-            border: 1px solid #3a3a3a;
-            border-radius: 4px;
-            padding: 6px;
-            margin-top: 8px;
+            background: #1c1c1c; border: 1px solid #3a3a3a; border-radius: 4px; padding: 6px; margin-top: 8px;
         }
         .wmp-interface-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 4px;
+            display: flex; justify-content: center; gap: 8px; margin-top: 4px;
         }
         .wmp-btn {
             background: linear-gradient(to bottom, #4a4a4a 0%, #222222 100%);
-            border: 1px solid #000;
-            color: #bbb;
-            border-radius: 50%;
-            width: 22px; height: 22px;
-            font-size: 9px;
-            cursor: pointer;
+            border: 1px solid #000; color: #bbb; border-radius: 50%;
+            width: 22px; height: 22px; font-size: 9px; cursor: pointer;
             display: flex; align-items: center; justify-content: center;
         }
         .wmp-btn:hover { color: #fff; background: linear-gradient(to bottom, #5f5f5f 0%, #2d2d2d 100%); }
+
+        /* --- RETRO ADS STYLING FRAMEWORKS --- */
+        .messenger-ad-card {
+            border: 1px inset #7f9db9;
+            padding: 8px;
+            margin-top: 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .msn-bg {
+            background: linear-gradient(135deg, #eff7ff 0%, #cce5ff 100%);
+            border-left: 4px solid #0054e3;
+        }
+        .yahoo-bg {
+            background: linear-gradient(135deg, #fbf5ff 0%, #ecd6ff 100%);
+            border-left: 4px solid #6001d2;
+        }
+        .ad-tag {
+            font-size: 9px;
+            background: #ff8c00;
+            color: #fff;
+            padding: 1px 3px;
+            font-weight: bold;
+            border-radius: 2px;
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body>
 
     <div style="text-align: center; margin-bottom: 25px;">
-        <h1 style="color: #ffffff; font-family: 'Tahoma', sans-serif; font-weight: bold; margin: 5px 0; font-size: 28px; text-shadow: 2px 2px 4px #002ca3;">icey's central workstation</h1>
-        <div style="color: #ffffff; font-size: 11px; font-weight: bold; text-shadow: 1px 1px 2px #002ca3;">Microsoft Windows XP Professional [Version 5.1.2600]</div>
+        <h1 style="color: #ffffff; font-family: 'Tahoma', sans-serif; font-weight: bold; margin: 5px 0; font-size: 28px; text-shadow: 2px 2px 4px #002ca3;">icey's central hub</h1>
+        <div style="color: #ffffff; font-size: 12px; font-weight: bold; text-shadow: 1px 1px 2px #002ca3;">Microsoft Windows XP Professional [Version 5.1.2600]</div>
     </div>
 
     <div id="site-announcement" class="announcement-banner" style="display: none;"></div>
@@ -463,8 +427,7 @@
                 <div class="title-bar">
                     <span class="title-bar-text"><span class="title-icon-folder"></span>about me</span>
                     <div class="title-bar-controls">
-                        <button class="btn-min">_</button>
-                        <button class="btn-max">[]</button>
+                        <button class="btn-min">_</button><button class="btn-max">[]</button>
                         <button class="btn-close" onclick="this.closest('.window').style.display='none'">X</button>
                     </div>
                 </div>
@@ -481,7 +444,18 @@
                             <span style="width: 8px; height: 8px; background: #33ff33; border-radius: 50%; display: inline-block; box-shadow: 0 0 5px #33ff33;"></span>
                             <div style="color:#222;"><b>status:</b> engine profile processing</div>
                         </div>
-                        <div style="color: #777; font-size: 10px; padding-left: 16px;">sys.core: half-sword physics rendering loop [v1.02]</div>
+                        <div style="color: #777; font-size: 10px; padding-left: 16px;">sys.core: half-sword physics rendering loop [v1.01]</div>
+                    </div>
+
+                    <div class="messenger-ad-card msn-bg">
+                        <div style="font-size: 20px;">👥</div>
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 5px;">
+                                <strong>MSN Messenger 6.0</strong> <span class="ad-tag">Ad</span>
+                            </div>
+                            <div style="color: #444; font-size: 10px;">Don't text blindly! See when friends are online, share dynamic custom emoticons, and play games live.</div>
+                            <a href="https://www.roblox.com/users/4447690823/profile" target="_blank" style="color: #0054e3; font-weight: bold; text-decoration: underline; font-size: 10px;">Download Free Extension Now</a>
+                        </div>
                     </div>
 
                     <hr style="margin-top: 15px; border: 0; border-top: 1px solid #7f9db9;">
@@ -496,8 +470,7 @@
                 <div class="title-bar">
                     <span class="title-bar-text"><span class="title-icon-folder"></span>my media player</span>
                     <div class="title-bar-controls">
-                        <button class="btn-min">_</button>
-                        <button class="btn-max">[]</button>
+                        <button class="btn-min">_</button><button class="btn-max">[]</button>
                         <button class="btn-close" onclick="this.closest('.window').style.display='none'">X</button>
                     </div>
                 </div>
@@ -528,6 +501,17 @@
                             <button class="wmp-btn" onclick="alert('Audio framework log updates paused.')">Ⅱ</button>
                         </div>
                     </div>
+
+                    <div class="messenger-ad-card yahoo-bg">
+                        <div style="font-size: 20px;">💡</div>
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 5px;">
+                                <strong>Yahoo! Messenger</strong> <span class="ad-tag">Ad</span>
+                            </div>
+                            <div style="color: #444; font-size: 10px;">Get interactive stock alerts, customized audibles audio alerts, and webcam streams directly inside your workspace desktop.</div>
+                            <a href="https://www.last.fm/user/icy51" target="_blank" style="color: #6001d2; font-weight: bold; text-decoration: underline; font-size: 10px;">Get Yahoo! Companion Bar</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -535,8 +519,7 @@
                 <div class="title-bar">
                     <span class="title-bar-text"><span class="title-icon-folder"></span>links stuff</span>
                     <div class="title-bar-controls">
-                        <button class="btn-min">_</button>
-                        <button class="btn-max">[]</button>
+                        <button class="btn-min">_</button><button class="btn-max">[]</button>
                         <button class="btn-close" onclick="this.closest('.window').style.display='none'">X</button>
                     </div>
                 </div>
@@ -562,40 +545,16 @@
                 </div>
             </div>
 
-            <div class="window">
-                <div class="title-bar">
-                    <span class="title-bar-text"><span class="title-icon-folder"></span>task manager gadgets</span>
-                    <div class="title-bar-controls">
-                        <button class="btn-min">_</button>
-                        <button class="btn-max">[]</button>
-                        <button class="btn-close" onclick="this.closest('.window').style.display='none'">X</button>
-                    </div>
-                </div>
-                <div class="window-body" style="font-size: 11px;">
-                    <div><strong>CPU Usage Core:</strong> <span id="cpu-digits">24%</span></div>
-                    <div class="sys-meter-bg"><div class="sys-meter-bar" id="cpu-bar" style="width: 24%"></div></div>
-                    
-                    <div style="margin-top: 8px;"><strong>PF Usage Matrix:</strong> <span>412 MB / 1240 MB</span></div>
-                    <div class="sys-meter-bg"><div class="sys-meter-bar" style="width: 33%; background: linear-gradient(90deg, #0054e3, #3c9bfd)"></div></div>
-
-                    <div style="margin-top: 10px; border-top: 1px solid #7f9db9; padding-top: 6px;">
-                        <table style="width:100%; font-size:10px; color:#444;">
-                            <tr><td>Processes:</td><td style="text-align:right;">37</td></tr>
-                            <tr><td>Thread Index:</td><td style="text-align:right;">412</td></tr>
-                            <tr><td>System Uptime:</td><td style="text-align:right;" id="uptime-clock">00:04:12</td></tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
             <div class="window" style="grid-column: 1 / -1;">
                 <div class="title-bar">
                     <span class="title-bar-text"><span class="title-icon-folder"></span>sign my guestbook database</span>
                     <div class="title-bar-controls">
-                        <button class="btn-min">_</button>
-                        <button class="btn-max">[]</button>
+                        <button class="btn-min">_</button><button class="btn-max">[]</button>
                         <button class="btn-close" onclick="this.closest('.window').style.display='none'">X</button>
                     </div>
+                </div>
+                <div class="window-menu">
+                    <span>Options</span>
                 </div>
                 <div class="window-body">
                     <div id="guestbook-list" style="max-height: 120px; overflow-y: auto; border: 1px solid #7f9db9; padding: 6px; margin-bottom: 10px; background: #fff;"></div>
@@ -636,25 +595,6 @@
         }
         setInterval(updateClock, 1000);
         updateClock();
-
-        // Simulated Performance Monitor Engine Widget
-        function updatePerfWidgets() {
-            var cpuVal = Math.floor(Math.random() * (45 - 12 + 1)) + 12;
-            document.getElementById('cpu-digits').innerText = cpuVal + "%";
-            document.getElementById('cpu-bar').style.width = cpuVal + "%";
-        }
-        setInterval(updatePerfWidgets, 2000);
-
-        // System Runtime Track Up Counter
-        var startUptime = Date.now();
-        function updateUptime() {
-            var diff = Math.floor((Date.now() - startUptime) / 1000);
-            var hrs = String(Math.floor(diff / 3600)).padStart(2, '0');
-            var mins = String(Math.floor((diff % 3600) / 60)).padStart(2, '0');
-            var secs = String(diff % 60).padStart(2, '0');
-            document.getElementById('uptime-clock').innerText = hrs + ":" + mins + ":" + secs;
-        }
-        setInterval(updateUptime, 1000);
 
         function updateHitCounter() {
             var currentHits = localStorage.getItem('siteHits') || 2491;
