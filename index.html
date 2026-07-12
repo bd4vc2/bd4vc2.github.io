@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>icy workstation - Windows XP Professional</title>
+    <title>icy website</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+f/5+fn/+fn58An5+f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfn5//39/f/9/f3//f39//39/f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfn5//39/f/7Gxsf+xsfH/39/f/9/f3/+fn5//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+f/9/f3//f39//39/f/9/f3//f39//n5+f/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ+fn//f39//39/f/9/f3//f39//39/f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfn5//39/f/7Gxsf+xsfH/39/f/9/f3/+fn5//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+f/9/f3//f39//39/f/9/f3//f39//n5+f/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ+fn//f39//39/f/9/f3//f39//39/f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfn5//39/f/9/f3//f39//39/f/9/f3/+fn5//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+f/5+fn/+fn58An5+f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <style>
@@ -11,15 +11,15 @@
             box-sizing: border-box;
         }
         body {
-            background: linear-gradient(to bottom, #5296e6 0%, #7ba6e7 45%, #b3cbfa 60%, #8dbd42 63%, #539423 85%, #3d7313 100%);
-            background-attachment: fixed;
-            background-size: cover;
+            background-color: #008080; /* Authentic 1995 Teal Desktop backdrop */
             color: #000000;
             font-family: Tahoma, "MS Sans Serif", Geneva, sans-serif;
             font-size: 12px;
             margin: 0;
             padding: 20px 15px 85px 15px;
             overflow-x: hidden;
+            -webkit-font-smoothing: none; /* Disables font anti-aliasing for raw 90s pixels */
+            -moz-osx-font-smoothing: none;
         }
 
         /* --- DESKTOP LAYOUT --- */
@@ -51,32 +51,30 @@
         .desktop-icon-text {
             color: #ffffff;
             font-size: 11px;
-            text-shadow: 1px 1px 2px #000000;
             margin-top: 5px;
             padding: 2px 4px;
-            border: 1px solid transparent;
+            border: 1px dotted transparent;
         }
-        .desktop-icon:hover .desktop-icon-text {
-            background-color: rgba(49, 106, 197, 0.6);
-            border: 1px solid #316ac5;
-            border-radius: 2px;
+        .desktop-icon:focus .desktop-icon-text, .desktop-icon:active .desktop-icon-text {
+            background-color: #000080;
+            border: 1px dotted #ffff00;
         }
 
-        /* Pure CSS Drawn Desktop Hardware Icons */
+        /* Pure CSS Drawn Desktop Hardware Icons from 1995 */
         .ico-computer {
-            width: 32px; height: 24px; background: #ece9d8; border: 2px solid #808080; border-radius: 2px; position: relative;
+            width: 32px; height: 26px; background: #d4d0c8; border: 2px solid #ffffff; border-right-color: #808080; border-bottom-color: #808080; position: relative; box-shadow: 1px 1px 0 0 #000000;
         }
         .ico-computer::after {
-            content: ''; position: absolute; bottom: -6px; left: 10px; width: 8px; height: 5px; background: #808080;
+            content: ''; position: absolute; bottom: -6px; left: 10px; width: 8px; height: 5px; background: #808080; border: 1px solid #000;
         }
         .ico-computer::before {
-            content: ''; position: absolute; bottom: -8px; left: 4px; width: 20px; height: 3px; background: #d4d0c8; border-bottom: 1px solid #000;
+            content: ''; position: absolute; bottom: -9px; left: 4px; width: 20px; height: 4px; background: #d4d0c8; border: 1px solid #fff; border-right-color: #808080; border-bottom-color: #808080; box-shadow: 1px 1px 0 0 #000;
         }
         .ico-recycle {
-            width: 26px; height: 30px; border: 2px solid #008000; background: #e0f0e0; border-radius: 4px; position: relative;
+            width: 24px; height: 28px; border: 2px solid #808080; background: #fff; position: relative; box-shadow: inset 1px 1px 0 #000;
         }
         .ico-recycle::before {
-            content: '♻'; font-size: 16px; color: #008000; position: absolute; top: 3px; left: 3px;
+            content: '♻'; font-size: 16px; color: #008000; position: absolute; top: 2px; left: 2px;
         }
 
         /* --- CONTENT GRID STRUCTURE --- */
@@ -87,53 +85,52 @@
             flex-grow: 1;
         }
 
-        /* --- THE LEGENDARY LUNA WINDOW FRAME SHELL --- */
+        /* --- THE LEGENDARY WINDOW 95 CLASSIC 3D FRAME --- */
         .window {
-            background-color: #ece9d8; /* Distinct soft beige Windows XP frame hue */
-            border: 3px solid #0054e3;
-            border-top: none;
-            border-radius: 7px 7px 0 0;
-            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.35);
+            background-color: #d4d0c8; /* Classic gray finish */
+            border-top: 2px solid #ffffff;
+            border-left: 2px solid #ffffff;
+            border-right: 2px solid #808080;
+            border-bottom: 2px solid #808080;
+            box-shadow: 1px 1px 0 0 #000000;
+            padding: 3px;
             display: flex;
             flex-direction: column;
             overflow: hidden;
         }
 
-        /* --- RADIANT GLOSS-BLUE LUNA TITLE BAR --- */
+        /* --- HIGH CONTRAST DARK BLUE CLASSIC TITLE BAR --- */
         .title-bar {
-            background: linear-gradient(to bottom, #0058e6 0%, #2488ff 6%, #0054e3 25%, #003cc7 88%, #002ca3 100%);
+            background: linear-gradient(to right, #000080 0%, #1084d0 100%);
             color: #ffffff;
             font-weight: bold;
-            font-size: 13px;
-            padding: 5px 8px;
+            font-size: 12px;
+            padding: 3px 4px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            text-shadow: 1px 1px 1px #001a6b;
-            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4);
-            height: 30px;
+            height: 20px;
             user-select: none;
         }
 
         .title-bar-text {
-            letter-spacing: 0.4px;
+            letter-spacing: 0.5px;
             text-transform: lowercase;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 4px;
         }
 
         /* Pure CSS System Explorer Folders */
         .title-icon-folder {
-            width: 14px; height: 11px;
-            background: #ffcc66; border-radius: 1px;
-            position: relative; border: 1px solid #c6931e;
+            width: 14px; height: 10px;
+            background: #ffcc66; border: 1px solid #000;
+            position: relative; margin-top: 2px;
         }
         .title-icon-folder::before {
             content: ''; position: absolute;
             top: -3px; left: 0; width: 5px; height: 3px;
-            background: #ffcc66; border-radius: 1px 1px 0 0;
-            border: 1px solid #c6931e; border-bottom: none;
+            background: #ffcc66; border: 1px solid #000; border-bottom: none;
         }
 
         /* --- WINDOW MANAGEMENT CONTROLS --- */
@@ -142,36 +139,34 @@
             gap: 2px;
         }
         .title-bar-controls button {
-            border: 1px solid #7a1500;
-            border-radius: 3px;
-            color: #ffffff;
+            background: #d4d0c8;
+            border-top: 1px solid #fff;
+            border-left: 1px solid #fff;
+            border-right: 1px solid #808080;
+            border-bottom: 1px solid #808080;
+            box-shadow: 1px 1px 0 0 #000;
+            color: #000000;
             font-weight: bold;
-            font-size: 11px;
-            width: 21px; height: 21px;
-            padding: 0 0 2px 0;
+            font-size: 9px;
+            font-family: monospace;
+            width: 16px; height: 14px;
+            padding: 0;
             cursor: pointer;
             display: flex; align-items: center; justify-content: center;
-            box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.5), 1px 1px 1px rgba(0, 0, 0, 0.2);
-            text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
         }
-        .title-bar-controls .btn-min, .title-bar-controls .btn-max {
-            background: linear-gradient(to bottom, #3c9bfd 0%, #0c61eb 100%);
-            border-color: #003399;
-        }
-        /* --- VIBRANT ORANGE GLOSSY CLOSE BUTTON --- */
-        .title-bar-controls .btn-close {
-            background: linear-gradient(to bottom, #fe7d52 0%, #fe6230 15%, #f24103 45%, #ca2e00 85%, #9e2400 100%);
-        }
-        .title-bar-controls .btn-close:hover {
-            background: linear-gradient(to bottom, #ff9d7d 0%, #ff7d52 15%, #ff521a 45%, #e63500 85%, #b32a00 100%);
+        .title-bar-controls button:active {
+            border: 1px solid #808080;
+            border-right-color: #fff;
+            border-bottom-color: #fff;
+            box-shadow: none;
+            padding-top: 1px; padding-left: 1px;
         }
 
-        /* --- THE INDOOR CONTAINER WHITE PANEL CANVAS --- */
+        /* --- THE INSIDE WINDOW CANVAS PANEL --- */
         .window-body {
-            padding: 12px;
-            background-color: #ffffff;
-            border: 1px solid #7f9db9; 
-            margin: 4px;
+            padding: 10px;
+            background-color: #d4d0c8; 
+            margin-top: 4px;
             overflow-y: auto;
             flex: 1;
         }
@@ -179,33 +174,32 @@
         /* --- WINDOW TOOLBAR MENUS --- */
         .window-menu {
             display: flex;
-            gap: 10px;
-            padding: 2px 8px;
-            background-color: #ece9d8;
-            border-bottom: 1px solid #dcd9d2;
+            gap: 2px;
+            padding: 2px 2px 0 2px;
             font-size: 11px;
             user-select: none;
+            border-bottom: 1px solid #808080;
         }
         .window-menu span {
             cursor: pointer;
-            padding: 2px 5px;
+            padding: 2px 6px;
         }
         .window-menu span:hover {
-            background-color: #316ac5;
+            background-color: #000080;
             color: #ffffff;
         }
 
-        /* --- COMPONENT STYLING FOR DIALOG CONTROL ELEMENTS --- */
+        /* --- STYLING FOR DIALOG CONTROL ELEMENTS --- */
         .announcement-banner {
-            background-color: #ffffe1; /* Authentic yellow tooltip popup background */
+            background-color: #ffffcc;
             border: 1px solid #000000;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
-            padding: 10px;
+            padding: 8px;
             margin: 0 auto 20px auto;
             max-width: 1400px;
             font-weight: bold;
             color: #000000;
             text-align: center;
+            box-shadow: 1px 1px 0 0 #000;
         }
 
         .form-group {
@@ -217,29 +211,35 @@
             box-sizing: border-box;
             font-family: inherit;
             font-size: 12px;
-            padding: 5px;
-            border: 1px solid #7f9db9;
+            padding: 4px;
             background-color: #ffffff;
+            color: #000;
+            border-top: 2px solid #808080;
+            border-left: 2px solid #808080;
+            border-right: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
             outline: none;
         }
-        input[type="text"]:focus {
-            border-color: #1d62c4;
-        }
 
-        /* Textured Windows XP Style Interface Button */
+        /* Beveled Classic Interface Button */
         button.win-btn {
-            background: linear-gradient(to bottom, #ffffff 0%, #eaeaea 10%, #dcd9d2 45%, #c7c3b9 85%, #b3ae24 100%);
-            border: 1px solid #7f9db9;
-            border-radius: 3px;
+            background: #d4d0c8;
+            border-top: 2px solid #ffffff;
+            border-left: 2px solid #ffffff;
+            border-right: 2px solid #808080;
+            border-bottom: 2px solid #808080;
+            box-shadow: 1px 1px 0 0 #000;
             font-family: inherit;
-            padding: 5px 14px;
+            font-size: 11px;
+            padding: 4px 12px;
             cursor: pointer;
             color: #000000;
-            box-shadow: inset 0 1px 1px #fff;
         }
-        button.win-btn:hover {
-            background: linear-gradient(to bottom, #fff6e0 0%, #ffebbc 15%, #ffdf91 45%, #ffcb61 85%, #ffbd40 100%);
-            border-color: #ff9d00;
+        button.win-btn:active {
+            border: 2px solid #808080;
+            border-right-color: #ffffff;
+            border-bottom-color: #ffffff;
+            box-shadow: none;
         }
 
         .link-list a {
@@ -254,22 +254,32 @@
             color: #800080;
         }
 
-        /* Internet Explorer Explorer Navigation Bullet Link */
+        /* Classic Browser Navigation Link Bullet icon */
         .ie-bullet {
-            width: 12px; height: 12px;
-            border: 2px solid #0066cc; border-radius: 50%;
+            width: 10px; height: 10px;
+            border: 1px solid #000; background: #fff;
             position: relative; display: inline-block;
             flex-shrink: 0;
         }
         .ie-bullet::after {
             content: ""; position: absolute;
-            top: 1px; left: -2px; width: 12px; height: 4px;
-            background: #e68a00; transform: rotate(-25deg);
+            top: 3px; left: 2px; width: 4px; height: 2px;
+            background: #0000ff;
+        }
+
+        /* Inner Document Box Frame */
+        .document-well {
+            background-color: #ffffff;
+            border-top: 2px solid #808080;
+            border-left: 2px solid #808080;
+            border-right: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+            padding: 8px;
         }
 
         .guestbook-entry {
-            border-bottom: 1px dashed #7f9db9;
-            padding: 6px 0;
+            border-bottom: 1px dotted #808080;
+            padding: 4px 0;
             font-size: 11px;
         }
         .guestbook-name {
@@ -280,69 +290,86 @@
         /* Custom Dashboard Dynamic Monitor Display Readout */
         .counter-box {
             background-color: #000000;
-            color: #33ff33; 
+            color: #00ff00; 
             font-family: "Courier New", monospace;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
-            letter-spacing: 4px;
-            padding: 4px 12px;
-            border: 2px inset #7f9db9;
+            letter-spacing: 3px;
+            padding: 3px 8px;
+            border-top: 2px solid #808080;
+            border-left: 2px solid #808080;
+            border-right: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
             display: inline-block;
             margin-top: 5px;
-            box-shadow: inset 0 0 5px rgba(0,255,0,0.5);
         }
 
         /* --- THE SYSTEM TASKBAR FOOTER --- */
         .retro-marquee {
             position: fixed;
-            bottom: 0; left: 0; width: 100%; height: 38px;
-            background: linear-gradient(to bottom, #245edb 0%, #3f8cf3 9%, #245edb 20%, #1b4ec3 85%, #1946b9 100%);
-            border-top: 1px solid #1742ad;
-            box-shadow: 0 -2px 6px rgba(0,0,0,0.35);
+            bottom: 0; left: 0; width: 100%; height: 30px;
+            background: #d4d0c8;
+            border-top: 2px solid #ffffff;
+            box-shadow: 0 -1px 0 0 #808080;
             display: flex; align-items: center; justify-content: space-between;
-            z-index: 9999; padding-left: 105px; padding-right: 125px;
+            z-index: 9999; padding-left: 65px; padding-right: 95px;
         }
 
-        /* Green Start Button Engine Component */
+        /* Classic Gray/Black Start Button Engine Component */
         .start-button {
             position: absolute;
-            left: 0; top: 0; bottom: 0; width: 95px;
-            background: linear-gradient(to bottom, #60be41 0%, #87dd5c 10%, #5cae3b 30%, #398223 85%, #2a661a 100%);
-            border-right: 1px solid #245816;
-            border-radius: 0 12px 12px 0;
-            box-shadow: inset -1px 1px 2px #98f06f, 2px 0 5px rgba(0,0,0,0.2);
-            color: #ffffff; font-family: "Tahoma", sans-serif;
-            font-weight: bold; font-style: italic; font-size: 16px;
+            left: 2px; top: 2px; bottom: 2px; width: 58px;
+            background: #d4d0c8;
+            border-top: 2px solid #ffffff;
+            border-left: 2px solid #ffffff;
+            border-right: 2px solid #808080;
+            border-bottom: 2px solid #808080;
+            box-shadow: 1px 1px 0 0 #000;
+            color: #000000; font-family: "Tahoma", sans-serif;
+            font-weight: bold; font-size: 12px;
             display: flex; align-items: center; justify-content: center;
-            text-shadow: 1px 1px 2px #183c0f; cursor: pointer; user-select: none;
+            cursor: pointer; user-select: none; gap: 3px;
         }
-        .start-button:hover {
-            background: linear-gradient(to bottom, #72d650 0%, #9bf271 10%, #6ec54b 30%, #44992b 85%, #327a1f 100%);
+        .start-button::before {
+            content: '❖'; font-size: 11px;
+        }
+        .start-button:active {
+            border: 2px solid #808080;
+            border-right-color: #ffffff;
+            border-bottom-color: #ffffff;
+            box-shadow: none;
+            padding-top: 1px; padding-left: 1px;
         }
 
         #live-ticker {
-            color: #ffffff; font-weight: bold; font-size: 12px;
-            text-shadow: 1px 1px 1px #113388; flex-grow: 1; margin: 0 15px;
+            color: #000; font-weight: normal; font-size: 12px;
+            flex-grow: 1; margin: 0 15px;
+            background: #fff;
+            border-top: 1px solid #808080; border-left: 1px solid #808080;
+            border-right: 1px solid #fff; border-bottom: 1px solid #fff;
+            padding: 2px 4px;
+            height: 20px;
         }
 
         /* --- SYSTEM TRAY INDEX --- */
         .system-tray {
-            position: absolute; right: 0; top: 0; bottom: 0;
-            background: linear-gradient(to bottom, #0c82e9 0%, #0054e3 100%);
-            border-left: 1px solid #1060dd;
-            box-shadow: inset 1px 0 2px rgba(255,255,255,0.3);
-            display: flex; align-items: center; padding: 0 12px;
-            color: #ffffff; font-size: 11px; gap: 8px;
+            position: absolute; right: 2px; top: 2px; bottom: 2px;
+            background: #d4d0c8;
+            border-top: 1px solid #808080; border-left: 1px solid #808080;
+            border-right: 1px solid #fff; border-bottom: 1px solid #fff;
+            display: flex; align-items: center; padding: 0 6px;
+            color: #000; font-size: 11px; gap: 6px;
         }
 
         /* --- THE COMPACT COGNAC AUDIO MEDIA VISUALIZER EQ --- */
         .eq-container {
             display: flex; justify-content: center; align-items: flex-end; gap: 2px;
-            height: 32px; margin-top: 8px; background: #050505; padding: 4px; border: 2px inset #7f9db9;
+            height: 32px; margin-top: 8px; background: #000; padding: 4px; 
+            border-top: 2px solid #808080; border-left: 2px solid #808080; border-right: 2px solid #fff; border-bottom: 2px solid #fff;
         }
         .eq-bar {
             width: 7px; height: 100%;
-            background: linear-gradient(to top, #33ff33, #ffff00, #ff3333);
+            background: #00ff00;
             transform-origin: bottom;
             animation: bounceEQ 0.8s ease-in-out infinite alternate;
         }
@@ -352,36 +379,38 @@
         }
 
         .wmp-hardware-tray {
-            background: #1c1c1c; border: 1px solid #3a3a3a; border-radius: 4px; padding: 6px; margin-top: 8px;
+            background: #d4d0c8; padding: 6px; margin-top: 8px;
+            border: 1px solid #808080;
         }
         .wmp-interface-buttons {
-            display: flex; justify-content: center; gap: 8px; margin-top: 4px;
+            display: flex; justify-content: center; gap: 4px; margin-top: 4px;
         }
         .wmp-btn {
-            background: linear-gradient(to bottom, #4a4a4a 0%, #222222 100%);
-            border: 1px solid #000; color: #bbb; border-radius: 50%;
-            width: 22px; height: 22px; font-size: 9px; cursor: pointer;
-            display: flex; align-items: center; justify-content: center;
+            background: #d4d0c8;
+            border-top: 1px solid #fff; border-left: 1px solid #fff; border-right: 1px solid #808080; border-bottom: 1px solid #808080;
+            color: #000; font-size: 10px; cursor: pointer;
+            width: 22px; height: 18px; display: flex; align-items: center; justify-content: center;
         }
-        .wmp-btn:hover { color: #fff; background: linear-gradient(to bottom, #5f5f5f 0%, #2d2d2d 100%); }
+        .wmp-btn:active {
+            border: 1px solid #808080; border-right-color: #fff; border-bottom-color: #fff;
+        }
 
         /* --- RETRO ADS STYLING FRAMEWORKS --- */
         .messenger-ad-card {
-            border: 1px inset #7f9db9;
+            border-top: 2px solid #808080; border-left: 2px solid #808080; border-right: 2px solid #fff; border-bottom: 2px solid #fff;
             padding: 8px;
             margin-top: 10px;
-            border-radius: 4px;
             font-size: 11px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
         .msn-bg {
-            background: linear-gradient(135deg, #eff7ff 0%, #cce5ff 100%);
-            border-left: 4px solid #0054e3;
+            background: #eff7ff;
+            border-left: 4px solid #000080;
         }
         .yahoo-bg {
-            background: linear-gradient(135deg, #fbf5ff 0%, #ecd6ff 100%);
+            background: #fbf5ff;
             border-left: 4px solid #6001d2;
         }
         .ad-tag {
@@ -390,7 +419,6 @@
             color: #fff;
             padding: 1px 3px;
             font-weight: bold;
-            border-radius: 2px;
             text-transform: uppercase;
         }
     </style>
@@ -398,8 +426,8 @@
 <body>
 
     <div style="text-align: center; margin-bottom: 25px;">
-        <h1 style="color: #ffffff; font-family: 'Tahoma', sans-serif; font-weight: bold; margin: 5px 0; font-size: 28px; text-shadow: 2px 2px 4px #002ca3;">icey's central hub</h1>
-        <div style="color: #ffffff; font-size: 12px; font-weight: bold; text-shadow: 1px 1px 2px #002ca3;">Microsoft Windows XP Professional [Version 5.1.2600]</div>
+        <h1 style="color: #ffffff; font-family: 'Tahoma', sans-serif; font-weight: bold; margin: 5px 0; font-size: 28px; text-shadow: 2px 2px 0px #000000;">icey's central hub</h1>
+        <div style="color: #ffffff; font-size: 12px; font-weight: bold; text-shadow: 1px 1px 0px #000000;">Microsoft Windows XP Professional [Version 5.1.2600]</div>
     </div>
 
     <div id="site-announcement" class="announcement-banner" style="display: none;"></div>
@@ -407,7 +435,7 @@
     <div id="desktop-container">
         
         <div id="desktop-icons">
-            <div class="desktop-icon" onclick="alert('My Computer\\Local Disk (C:)\\hail_icy.sys properties loaded.')">
+            <div class="desktop-icon" tabindex="0" onclick="alert('My Computer\\Local Disk (C:)\\hail_icy.sys properties loaded.')">
                 <div class="ico-computer"></div>
                 <span class="desktop-icon-text">my computer</span>
             </div>
@@ -423,40 +451,40 @@
                 <div class="title-bar">
                     <span class="title-bar-text"><span class="title-icon-folder"></span>about me</span>
                     <div class="title-bar-controls">
-                        <button class="btn-min">_</button><button class="btn-max">[]</button>
-                        <button class="btn-close" onclick="this.closest('.window').style.display='none'">X</button>
+                        <button class="btn-min">_</button><button class="btn-max">▢</button>
+                        <button class="btn-close" onclick="this.closest('.window').style.display='none'">✕</button>
                     </div>
                 </div>
                 <div class="window-menu">
                     <span>File</span><span>Edit</span><span>View</span><span>Help</span>
                 </div>
                 <div class="window-body">
-                    <p id="display-about" style="margin: 0; line-height: 1.6; text-transform: lowercase;">
+                    <div class="document-well" style="min-height: 60px; line-height: 1.6; text-transform: lowercase;" id="display-about">
                         loading...
-                    </p>
+                    </div>
                     
-                    <div style="margin-top: 15px; border: 1px dotted #7f9db9; padding: 7px; background: #fafafa; font-size: 11px;">
+                    <div style="margin-top: 15px; border: 1px dashed #808080; padding: 7px; background: #d4d0c8; font-size: 11px;">
                         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 3px;">
-                            <span style="width: 8px; height: 8px; background: #33ff33; border-radius: 50%; display: inline-block; box-shadow: 0 0 5px #33ff33;"></span>
-                            <div style="color:#222;"><b>status:</b> engine profile processing</div>
+                            <span style="width: 8px; height: 8px; background: #00ff00; border: 1px solid #000; display: inline-block;"></span>
+                            <div style="color:#000;"><b>status:</b> engine profile processing</div>
                         </div>
-                        <div style="color: #777; font-size: 10px; padding-left: 16px;">sys.core: half-sword physics rendering loop [v1.01]</div>
+                        <div style="color: #444; font-size: 10px; padding-left: 16px;">sys.core: half-sword physics rendering loop [v1.01]</div>
                     </div>
 
                     <div class="messenger-ad-card msn-bg">
-                        <div style="font-size: 20px;">:MSN_Logo:</div>
+                        <div style="font-size: 16px; font-weight: bold; color: #000080;">(H)</div>
                         <div>
                             <div style="display: flex; align-items: center; gap: 5px;">
                                 <strong>MSN Messenger 7.0</strong> <span class="ad-tag">Ad</span>
                             </div>
-                            <div style="color: #444; font-size: 10px;">Don't text blindly! See when friends are online, share dynamic custom emoticons, and play games live.</div>
-                            <a href="https://www.roblox.com/users/4447690823/profile" target="_blank" style="color: #0054e3; font-weight: bold; text-decoration: underline; font-size: 10px;">Download Free Extension Now</a>
+                            <div style="color: #222; font-size: 10px;">Use our shitty messaging app!</div>
+                            <a href="https://www.roblox.com/users/4447690823/profile" target="_blank" style="color: #0000ff; font-weight: bold; text-decoration: underline; font-size: 10px;">Download Free Extension Now</a>
                         </div>
                     </div>
 
-                    <hr style="margin-top: 15px; border: 0; border-top: 1px solid #7f9db9;">
+                    <hr style="margin-top: 15px; border: 0; border-top: 2px inset #fff;">
                     <div style="text-align: center; margin-top: 10px;">
-                        <div style="font-size: 10px; font-weight: bold; color: #555;">YOU ARE VISITOR NUMBER:</div>
+                        <div style="font-size: 10px; font-weight: bold; color: #000;">YOU ARE VISITOR NUMBER:</div>
                         <div class="counter-box" id="hit-counter">000000</div>
                     </div>
                 </div>
@@ -466,15 +494,15 @@
                 <div class="title-bar">
                     <span class="title-bar-text"><span class="title-icon-folder"></span>my media player</span>
                     <div class="title-bar-controls">
-                        <button class="btn-min">_</button><button class="btn-max">[]</button>
-                        <button class="btn-close" onclick="this.closest('.window').style.display='none'">X</button>
+                        <button class="btn-min">_</button><button class="btn-max">▢</button>
+                        <button class="btn-close" onclick="this.closest('.window').style.display='none'">✕</button>
                     </div>
                 </div>
                 <div class="window-menu">
                     <span>Play</span><span>Tools</span><span>View</span>
                 </div>
                 <div class="window-body">
-                    <div style="background-color: #000000; color: #33ff33; font-family: monospace; padding: 12px; border: 2px inset #7f9db9; box-shadow: inset 0 0 4px rgba(0,255,0,0.2);">
+                    <div style="background-color: #000000; color: #00ff00; font-family: monospace; padding: 12px; border-top: 2px solid #808080; border-left: 2px solid #808080; border-right: 2px solid #fff; border-bottom: 2px solid #fff;">
                         <div id="media-status" style="font-weight: bold; font-size: 11px;">[CONNECTING]</div>
                         <div id="media-title" style="font-size: 11px; margin-top: 4px; text-transform: lowercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">querying last.fm stream logs...</div>
                     </div>
@@ -488,8 +516,8 @@
                     </div>
 
                     <div class="wmp-hardware-tray">
-                        <div style="height: 4px; background: #050505; border-radius: 2px; position: relative; margin-bottom: 6px;">
-                            <div style="position: absolute; left: 40%; top: -2px; width: 8px; height: 8px; background: #bbb; border-radius: 50%;"></div>
+                        <div style="height: 4px; background: #808080; position: relative; margin-bottom: 6px; border-bottom: 1px solid #fff;">
+                            <div style="position: absolute; left: 40%; top: -3px; width: 6px; height: 10px; background: #d4d0c8; border: 1px solid #000; box-shadow: inset 1px 1px 0 #fff;"></div>
                         </div>
                         <div class="wmp-interface-buttons">
                             <button class="wmp-btn" onclick="alert('Playback control isolated by host thread.')">■</button>
@@ -499,12 +527,12 @@
                     </div>
 
                     <div class="messenger-ad-card yahoo-bg">
-                        <div style="font-size: 20px;">💡</div>
+                        <div style="font-size: 16px;">💡</div>
                         <div>
                             <div style="display: flex; align-items: center; gap: 5px;">
                                 <strong>Yahoo! Widgets</strong> <span class="ad-tag">Ad</span>
                             </div>
-                            <div style="color: #444; font-size: 10px;">Get awesome, great cool, widgets to help you customize your old ass browser!.</div>
+                            <div style="color: #222; font-size: 10px;">Get awesome, great cool, widgets to help you customize your old ass browser!.</div>
                             <a href="https://www.last.fm/user/icy51" target="_blank" style="color: #6001d2; font-weight: bold; text-decoration: underline; font-size: 10px;">Get Yahoo! Widgets</a>
                         </div>
                     </div>
@@ -515,27 +543,29 @@
                 <div class="title-bar">
                     <span class="title-bar-text"><span class="title-icon-folder"></span>links stuff</span>
                     <div class="title-bar-controls">
-                        <button class="btn-min">_</button><button class="btn-max">[]</button>
-                        <button class="btn-close" onclick="this.closest('.window').style.display='none'">X</button>
+                        <button class="btn-min">_</button><button class="btn-max">▢</button>
+                        <button class="btn-close" onclick="this.closest('.window').style.display='none'">✕</button>
                     </div>
                 </div>
                 <div class="window-menu">
                     <span>Favorites</span><span>Tools</span>
                 </div>
                 <div class="window-body link-list">
-                    <a href="https://www.youtube.com/@yeci_.1" target="_blank" style="text-transform: lowercase;"><span class="ie-bullet"></span>my youtube channel</a>
-                    <a href="https://www.roblox.com/users/4447690823/profile" target="_blank" style="text-transform: lowercase;"><span class="ie-bullet"></span>my roblox profile</a>
-                    <a href="https://www.last.fm/user/icy51" target="_blank" style="text-transform: lowercase;"><span class="ie-bullet"></span>my last.fm page</a>
-                    
-                    <hr style="border:0; border-top: 1px solid #7f9db9; margin: 12px 0;">
-                    <div style="font-size: 11px; color: #444; margin-bottom: 12px; text-transform: lowercase; padding-left: 2px;">discord user handle: <strong>._icey1</strong></div>
-                    
-                    <div style="border-top: 1px solid #7f9db9; padding-top: 8px; text-align: center;">
-                        <div style="font-size: 9px; color: #666; margin-bottom: 8px; font-weight: bold; letter-spacing: 0.5px;">COLLECTIBLE WEB STAMPS:</div>
-                        <div style="display: flex; justify-content: center; gap: 6px; flex-wrap: wrap;">
-                            <img src="https://img.shields.io/badge/Made%20With-Notepad%2B%2B-007ACC?style=flat&logo=notepadplusplus&logoColor=white" alt="Made with Notepad++" style="border:1px solid #7f9db9; width:88px; height:31px; image-rendering: pixelated;">
-                            
-                            <div style="background: #5c8e32; color: #fff; font-family: monospace; font-size: 9px; width: 88px; height: 31px; display: flex; align-items: center; justify-content: center; border: 1px solid #3a5f20; line-height: 1.1; text-align: center; box-shadow: 1px 1px 1px rgba(0,0,0,0.15);">world spawn<br>xyz: 64.-12.256</div>
+                    <div class="document-well">
+                        <a href="https://www.youtube.com/@yeci_.1" target="_blank" style="text-transform: lowercase;"><span class="ie-bullet"></span>my youtube channel</a>
+                        <a href="https://www.roblox.com/users/4447690823/profile" target="_blank" style="text-transform: lowercase;"><span class="ie-bullet"></span>my roblox profile</a>
+                        <a href="https://www.last.fm/user/icy51" target="_blank" style="text-transform: lowercase;"><span class="ie-bullet"></span>my last.fm page</a>
+                        
+                        <hr style="border:0; border-top: 2px inset #fff; margin: 12px 0;">
+                        <div style="font-size: 11px; color: #000; margin-bottom: 12px; text-transform: lowercase; padding-left: 2px;">discord user handle: <strong>._icey1</strong></div>
+                        
+                        <div style="border-top: 1px solid #808080; padding-top: 8px; text-align: center;">
+                            <div style="font-size: 9px; color: #444; margin-bottom: 8px; font-weight: bold; letter-spacing: 0.5px;">COLLECTIBLE WEB STAMPS:</div>
+                            <div style="display: flex; justify-content: center; gap: 6px; flex-wrap: wrap;">
+                                <img src="https://img.shields.io/badge/Made%20With-Notepad%2B%2B-007ACC?style=flat&logo=notepadplusplus&logoColor=white" alt="Made with Notepad++" style="border:1px solid #808080; width:88px; height:31px; image-rendering: pixelated;">
+                                
+                                <div style="background: #3a5f20; color: #fff; font-family: monospace; font-size: 9px; width: 88px; height: 31px; display: flex; align-items: center; justify-content: center; border-top: 1px solid #fff; border-left: 1px solid #fff; border-right: 1px solid #000; border-bottom: 1px solid #000; line-height: 1.1; text-align: center;">world spawn<br>xyz: 64.-12.256</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -545,15 +575,15 @@
                 <div class="title-bar">
                     <span class="title-bar-text"><span class="title-icon-folder"></span>sign my guestbook database</span>
                     <div class="title-bar-controls">
-                        <button class="btn-min">_</button><button class="btn-max">[]</button>
-                        <button class="btn-close" onclick="this.closest('.window').style.display='none'">X</button>
+                        <button class="btn-min">_</button><button class="btn-max">▢</button>
+                        <button class="btn-close" onclick="this.closest('.window').style.display='none'">✕</button>
                     </div>
                 </div>
                 <div class="window-menu">
                     <span>Options</span>
                 </div>
                 <div class="window-body">
-                    <div id="guestbook-list" style="max-height: 120px; overflow-y: auto; border: 1px solid #7f9db9; padding: 6px; margin-bottom: 10px; background: #fff;"></div>
+                    <div id="guestbook-list" class="document-well" style="max-height: 120px; overflow-y: auto; margin-bottom: 10px;"></div>
                     <div class="form-group" style="display: flex; gap: 10px;">
                         <input type="text" id="gb-name" placeholder="your name / user alias" style="width: 30%;">
                         <input type="text" id="gb-msg" placeholder="write record entry parameter content string..." style="width: 70%;">
@@ -561,7 +591,7 @@
                     
                     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
                         <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="light"></div>
-                        <button class="win-btn" onclick="submitGuestbookPending()" style="text-transform: lowercase; font-weight: bold; height: 32px;">submit entry message</button>
+                        <button class="win-btn" onclick="submitGuestbookPending()" style="text-transform: lowercase; font-weight: bold; height: 26px;">submit entry message</button>
                     </div>
                 </div>
             </div>
@@ -569,7 +599,7 @@
         </main>
     </div>
 
-    <div style="text-align: center; margin-top: 30px; padding: 10px; color: #ffffff; font-size:11px; font-weight:bold; text-shadow:1px 1px 2px #002ca3; text-transform: lowercase;">
+    <div style="text-align: center; margin-top: 30px; padding: 10px; color: #ffffff; font-size:11px; font-weight:bold; text-shadow:1px 1px 0px #000000; text-transform: lowercase;">
         optimized for internet explorer 5.0 at 1024x768 resolution
     </div>
 
@@ -676,7 +706,7 @@
                             list.appendChild(entry);
                         });
                     } else {
-                        list.innerHTML = "<div style='color:#777; font-style:italic;'>ledger currently empty. enter a record above.</div>";
+                        list.innerHTML = "<div style='color:#777; font-style:italic;'>no entries yet. be the first!</div>";
                     }
                 })
                 .catch(err => {
