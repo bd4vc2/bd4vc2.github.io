@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>icy website - Luna XP Edition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>icy's workstation - home workspace</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+f/5+fn/+fn58An5+f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfn5//39/f/9/f3//f39//39/f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfn5//39/f/7Gxsf+xsfH/39/f/9/f3/+fn5//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+f/9/f3//f39//39/f/9/f3//f39//n5+f/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ+fn//f39//39/f/9/f3//f39//39/f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfn5//39/f/7Gxsf+xsfH/39/f/9/f3/+fn5//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+f/9/f3//f39//39/f/9/f3//f39//n5+f/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ+fn//f39//39/f/9/f3//f39//39/f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfn5//39/f/9/f3//f39//39/f/9/f3/+fn5//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+f/5+fn/+fn58An5+f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <style>
         /* --- GLOBAL WIN XP SYSTEMS CONFIGURATION --- */
@@ -10,24 +12,32 @@
             box-sizing: border-box;
         }
         body {
-            /* Pure CSS ultra-stable structural replica of the iconic Bliss Wallpaper */
+            /* Pure CSS structural replica of the iconic Bliss Wallpaper */
             background: linear-gradient(to bottom, #5296e6 0%, #7ba6e7 40%, #b3cbfa 60%, #8dbd42 63%, #539423 85%, #3d7313 100%);
             background-attachment: fixed;
             background-size: cover;
             color: #000000;
-            /* Authentic Windows XP Core Desktop Font Family */
             font-family: Tahoma, "MS Sans Serif", Geneva, sans-serif;
             font-size: 12px;
             margin: 0;
-            padding: 20px 15px 60px 15px;
+            padding: 20px 15px 80px 15px;
+            transition: background 0.3s ease;
         }
 
-        /* --- THE ORIGINAL CONTENT GRID STRUCTURE (PRESERVED) --- */
+        /* Alternate Retro Display Profiles */
+        body.classic-teal {
+            background: #008080 !important;
+        }
+        body.silver-metallic {
+            background: linear-gradient(135deg, #708090 0%, #c0c0c0 50%, #708090 100%) !important;
+        }
+
+        /* --- CONTENT GRID STRUCTURE --- */
         #desktop-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 20px;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
@@ -37,10 +47,11 @@
             border: 3px solid #0054e3;
             border-top: none;
             border-radius: 7px 7px 0 0;
-            box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.35);
+            box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.4);
             display: flex;
             flex-direction: column;
             overflow: hidden;
+            margin-bottom: 5px;
         }
 
         /* --- ICONIC LUNA GLOSS BLUE TITLE BAR --- */
@@ -56,11 +67,28 @@
             text-shadow: 1px 1px 1px #001a6b;
             box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4);
             height: 30px;
+            user-select: none;
         }
 
         .title-bar-text {
             letter-spacing: 0.5px;
             text-transform: lowercase;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Pure CSS System Folder Icon Component */
+        .title-icon-folder {
+            width: 14px; height: 11px;
+            background: #ffcc66; border-radius: 1px;
+            position: relative; border: 1px solid #c6931e;
+        }
+        .title-icon-folder::before {
+            content: ''; position: absolute;
+            top: -3px; left: 0; width: 5px; height: 3px;
+            background: #ffcc66; border-radius: 1px 1px 0 0;
+            border: 1px solid #c6931e; border-bottom: none;
         }
 
         /* --- ORANGE GLOSSY CLOSE BUTTON ACCELERATOR --- */
@@ -71,98 +99,97 @@
             color: #ffffff;
             font-weight: bold;
             font-size: 11px;
-            width: 21px;
-            height: 21px;
+            width: 21px; height: 21px;
             padding: 0 0 2px 0;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.5), 1px 1px 1px rgba(0, 0, 0, 0.2);
             text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
         }
-
         .title-bar-controls button:hover {
             background: linear-gradient(to bottom, #ff9d7d 0%, #ff7d52 15%, #ff521a 45%, #e63500 85%, #b32a00 100%);
-        }
-
-        .title-bar-controls button:active {
-            background: linear-gradient(to bottom, #aa2200 0%, #ca2e00 100%);
         }
 
         /* --- WINDOW INTERNAL CANVAS BODY --- */
         .window-body {
             padding: 12px;
             background-color: #ffffff;
-            border: 1px solid #7f9db9; /* Standard XP input/frame border color */
+            border: 1px solid #7f9db9;
             margin: 4px;
             overflow-y: auto;
             flex: 1;
         }
 
-        /* --- HARDWARE-ACCURATE XP COMPONENT DIALOGS --- */
+        /* --- HARDWARE-ACCURATE COMPONENT DIALOGS --- */
         .announcement-banner {
             background-color: #ffffe1; /* XP tool-tip yellow background */
             border: 1px solid #000000;
-            box-shadow: 2px 2px 4px rgba(0,0,0,0.15);
-            padding: 8px;
-            margin: 0 auto 15px auto;
-            max-width: 1200px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            padding: 10px;
+            margin: 0 auto 20px auto;
+            max-width: 1400px;
             font-weight: bold;
             color: #000000;
-            text-align: center;
+            position: relative;
+            padding-left: 35px;
+        }
+        .announcement-banner::before {
+            content: "i";
+            position: absolute; left: 10px; top: 8px;
+            width: 16px; height: 16px;
+            background: #1653cc; color: #fff;
+            border-radius: 50%; text-align: center;
+            font-family: "Times New Roman", serif; font-weight: bold; font-size: 12px;
+            line-height: 16px;
         }
 
-        .form-group {
-            margin-bottom: 10px;
-        }
-
-        /* XP Classic Inset Style Fields */
-        input[type="text"] {
+        input[type="text"], textarea {
             width: 100%;
             box-sizing: border-box;
             font-family: inherit;
             font-size: 12px;
-            padding: 4px;
+            padding: 5px;
             border: 1px solid #7f9db9;
             background-color: #ffffff;
             outline: none;
         }
-        input[type="text"]:focus {
-            border-color: #1d62c4;
-        }
 
-        /* Rounded Gradient Silver/Blue System Action Button */
         button.win-btn {
             background: linear-gradient(to bottom, #ffffff 0%, #eaeaea 10%, #dcd9d2 45%, #c7c3b9 85%, #b3ae24 100%);
             border: 1px solid #7f9db9;
             border-radius: 3px;
             font-family: inherit;
-            padding: 4px 14px;
+            padding: 5px 14px;
             cursor: pointer;
             color: #000000;
             box-shadow: inset 0 1px 1px #fff;
         }
-
         button.win-btn:hover {
             background: linear-gradient(to bottom, #fff6e0 0%, #ffebbc 15%, #ffdf91 45%, #ffcb61 85%, #ffbd40 100%);
             border-color: #ff9d00;
         }
 
-        button.win-btn:active {
-            background: linear-gradient(to bottom, #dcd9d2 0%, #ffffff 100%);
-            border-color: #7f9db9;
-        }
-
         .link-list a {
-            display: block;
+            display: flex;
+            align-items: center;
+            gap: 6px;
             color: #0000ff;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             text-decoration: underline;
         }
+        .link-list a:visited { color: #800080; }
 
-        .link-list a:visited {
-            color: #800080;
+        /* Pure CSS Internet Explorer Bullet Component */
+        .ie-bullet {
+            width: 12px; height: 12px;
+            border: 2px solid #0066cc; border-radius: 50%;
+            position: relative; display: inline-block;
+            flex-shrink: 0;
+        }
+        .ie-bullet::after {
+            content: ""; position: absolute;
+            top: 1px; left: -2px; width: 12px; height: 4px;
+            background: #e68a00; transform: rotate(-25deg);
         }
 
         .guestbook-entry {
@@ -170,72 +197,52 @@
             padding: 6px 0;
             font-size: 11px;
         }
+        .guestbook-name { font-weight: bold; color: #000080; }
 
-        .guestbook-name {
-            font-weight: bold;
-            color: #000080;
-        }
-
-        /* XP Dashboard Visual Widget Counter Style */
         .counter-box {
             background-color: #000000;
-            color: #33ff33; /* Upgraded to retro radar green for terminal readout feel */
+            color: #33ff33;
             font-family: "Courier New", monospace;
             font-size: 22px;
             font-weight: bold;
             letter-spacing: 4px;
-            padding: 3px 10px;
+            padding: 4px 12px;
             border: 2px inset #7f9db9;
             display: inline-block;
             margin-top: 5px;
             box-shadow: inset 0 0 5px rgba(0,255,0,0.5);
         }
 
-        /* --- THE SIGNATURE WINDOWS XP TASKBAR FOOTER --- */
+        /* --- WINDOWS XP TASKBAR FOOTER --- */
         .retro-marquee {
             position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 30px;
+            bottom: 0; left: 0; width: 100%; height: 35px;
             background: linear-gradient(to bottom, #245edb 0%, #3f8cf3 9%, #245edb 20%, #1b4ec3 85%, #1946b9 100%);
             border-top: 1px solid #1742ad;
-            box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+            box-shadow: 0 -2px 6px rgba(0,0,0,0.4);
             display: flex;
             align-items: center;
             z-index: 9999;
-            padding-left: 100px; /* Leaves clear space for the Start Button overlay */
+            padding-left: 110px;
         }
 
-        /* Pure CSS Render Map of the Famous Green Start Button */
+        /* Green Start Button Engine Component */
         .retro-marquee::before {
             content: "start";
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 90px;
+            position: absolute; left: 0; top: 0; bottom: 0; width: 95px;
             background: linear-gradient(to bottom, #60be41 0%, #87dd5c 10%, #5cae3b 30%, #398223 85%, #2a661a 100%);
             border-right: 1px solid #245816;
-            border-radius: 0 10px 10px 0;
-            box-shadow: inset -1px 1px 2px #98f06f, 2px 0 5px rgba(0,0,0,0.2);
-            color: #ffffff;
-            font-family: "Tahoma", sans-serif;
-            font-weight: bold;
-            font-style: italic;
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-shadow: 1px 1px 2px #183c0f;
-            cursor: pointer;
+            border-radius: 0 12px 12px 0;
+            box-shadow: inset -1px 1px 2px #98f06f, 2px 0 5px rgba(0,0,0,0.25);
+            color: #ffffff; font-family: "Tahoma", sans-serif;
+            font-weight: bold; font-style: italic; font-size: 16px;
+            display: flex; align-items: center; justify-content: center;
+            text-shadow: 1px 1px 2px #183c0f; cursor: pointer;
         }
-
         .retro-marquee::before:hover {
             background: linear-gradient(to bottom, #72d650 0%, #9bf271 10%, #6ec54b 30%, #44992b 85%, #327a1f 100%);
         }
 
-        /* Continuous text element stream matching your tracking specs */
         #live-ticker {
             color: #ffffff;
             font-weight: bold;
@@ -243,21 +250,42 @@
             text-shadow: 1px 1px 1px #113388;
         }
 
-        /* --- HIGH-GLOSS CYBER MEDIA EQ BAR REPLICAS --- */
+        /* --- AUTOMATED MEDIA PLAYER COMPONENTS --- */
+        .wmp-hardware-tray {
+            background: #202020;
+            border: 1px solid #404040;
+            border-radius: 4px;
+            padding: 8px;
+            margin-top: 10px;
+        }
+        .wmp-interface-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 6px;
+        }
+        .wmp-btn {
+            background: linear-gradient(to bottom, #505050 0%, #2a2a2a 100%);
+            border: 1px solid #111;
+            color: #ccc;
+            border-radius: 50%;
+            width: 24px; height: 24px;
+            font-size: 10px;
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .wmp-btn:hover { color: #fff; background: linear-gradient(to bottom, #666 0%, #333 100%); }
+
         .eq-container {
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            gap: 2px;
-            height: 30px;
-            margin-top: 8px;
-            background: #111;
-            padding: 4px;
-            border: 2px inset #7f9db9;
+            gap: 2px; height: 32px;
+            margin-top: 8px; background: #050505;
+            padding: 4px; border: 2px inset #7f9db9;
         }
         .eq-bar {
-            width: 8px;
-            height: 100%;
+            width: 8px; height: 100%;
             background: linear-gradient(to top, #33ff33, #ffff00, #ff3333);
             transform-origin: bottom;
             animation: bounceEQ 0.8s ease-in-out infinite alternate;
@@ -266,12 +294,21 @@
             0% { transform: scaleY(0.1); }
             100% { transform: scaleY(0.95); }
         }
+
+        /* Widget Dashboard Tooling Styles */
+        .system-dropdown {
+            width: 100%;
+            padding: 4px;
+            font-family: inherit;
+            border: 1px solid #7f9db9;
+            margin-bottom: 8px;
+        }
     </style>
 </head>
 <body>
 
     <div style="text-align: center; margin-bottom: 25px;">
-        <h1 style="color: #ffffff; font-family: 'Tahoma', sans-serif; font-weight: bold; margin: 5px 0; font-size: 28px; text-shadow: 2px 2px 4px #002ca3;">icey's central hub</h1>
+        <h1 style="color: #ffffff; font-family: 'Tahoma', sans-serif; font-weight: bold; margin: 5px 0; font-size: 30px; text-shadow: 2px 2px 4px #002ca3;">icy's central hub</h1>
         <div style="color: #ffffff; font-size: 12px; font-weight: bold; text-shadow: 1px 1px 2px #002ca3;" id="browser-clock"></div>
     </div>
 
@@ -281,36 +318,39 @@
 
         <div class="window">
             <div class="title-bar">
-                <span class="title-bar-text">about me</span>
-                <div class="title-bar-controls"><button>X</button></div>
+                <span class="title-bar-text"><span class="title-icon-folder"></span>about me</span>
+                <div class="title-bar-controls"><button onclick="this.closest('.window').style.display='none'">X</button></div>
             </div>
             <div class="window-body">
-                <p id="display-about" style="margin: 0; line-height: 1.5; text-transform: lowercase;">
+                <p id="display-about" style="margin: 0; line-height: 1.6; text-transform: lowercase;">
                     loading...
                 </p>
                 
-                <div style="margin-top: 15px; border: 1px dotted #7f9db9; padding: 6px; background: #fafafa; display: flex; align-items: center; gap: 8px;">
-                    <span style="width: 8px; height: 8px; background: #33ff33; border-radius: 50%; display: inline-block; box-shadow: 0 0 5px #33ff33;"></span>
-                    <div style="font-size: 11px; color:#333;"><b>status:</b> current location: desktop typing things</div>
+                <div style="margin-top: 15px; border: 1px dotted #7f9db9; padding: 8px; background: #fafafa; font-size: 11px;">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+                        <span style="width: 8px; height: 8px; background: #33ff33; border-radius: 50%; display: inline-block; box-shadow: 0 0 5px #33ff33;"></span>
+                        <div style="color:#222;"><b>status:</b> engine runtime online</div>
+                    </div>
+                    <div style="color: #777; font-size: 10px; padding-left: 16px;">sys.render: half-sword physics core v1.02 [active]</div>
                 </div>
 
                 <hr style="margin-top: 15px; border: 0; border-top: 1px solid #7f9db9;">
                 <div style="text-align: center; margin-top: 10px;">
                     <div style="font-size: 10px; font-weight: bold; color: #444;">YOU ARE VISITOR NUMBER:</div>
-                    <div class="counter-box" id="hit-counter">002491</div>
+                    <div class="counter-box" id="hit-counter">000000</div>
                 </div>
             </div>
         </div>
 
         <div class="window">
             <div class="title-bar">
-                <span class="title-bar-text">my media player</span>
-                <div class="title-bar-controls"><button>X</button></div>
+                <span class="title-bar-text"><span class="title-icon-folder"></span>my media player</span>
+                <div class="title-bar-controls"><button onclick="this.closest('.window').style.display='none'">X</button></div>
             </div>
-            <div class="window-body" style="text-align: center;">
-                <div style="background-color: #000000; color: #33ff33; font-family: monospace; padding: 10px; border: 2px inset #7f9db9; margin-bottom: 5px; box-shadow: inset 0 0 4px rgba(0,255,0,0.2);">
-                    <div id="media-status" style="font-weight: bold;">[CONNECTING]</div>
-                    <div id="media-title" style="font-size: 11px; margin-top: 4px; text-transform: lowercase;">querying last.fm feed...</div>
+            <div class="window-body">
+                <div style="background-color: #000000; color: #33ff33; font-family: monospace; padding: 12px; border: 2px inset #7f9db9; box-shadow: inset 0 0 4px rgba(0,255,0,0.2);">
+                    <div id="media-status" style="font-weight: bold; font-size: 11px;">[CONNECTING]</div>
+                    <div id="media-title" style="font-size: 11px; margin-top: 4px; text-transform: lowercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">querying last.fm stream logs...</div>
                 </div>
                 
                 <div class="eq-container">
@@ -321,29 +361,14 @@
                     <div class="eq-bar" style="animation-delay: 0.3s;"></div>
                 </div>
 
-                <div style="font-size: 10px; color: #666; text-align: left; padding: 2px; margin-top: 8px;">
-                    * synchronized live with last.fm desktop/mobile scrobbler.
-                </div>
-            </div>
-        </div>
-
-        <div class="window">
-            <div class="title-bar">
-                <span class="title-bar-text">links stuff</span>
-                <div class="title-bar-controls"><button>X</button></div>
-            </div>
-            <div class="window-body link-list">
-                <a href="https://www.youtube.com/@yeci_.1" target="_blank" style="text-transform: lowercase;">my youtube channel</a>
-                <a href="https://www.roblox.com/users/4447690823/profile" target="_blank" style="text-transform: lowercase;">my roblox profile</a>
-                <a href="https://www.last.fm/user/icy51" target="_blank" style="text-transform: lowercase;">my last.fm page</a>
-                <hr style="border:0; border-top: 1px solid #7f9db9; margin: 10px 0;">
-                <div style="font-size: 11px; color: #444; margin-bottom: 10px; text-transform: lowercase;">discord id: <strong>._icey1</strong></div>
-                
-                <div style="border-top: 1px solid #7f9db9; padding-top: 8px; text-align: center;">
-                    <div style="font-size: 9px; color: #666; margin-bottom: 8px; font-weight: bold;">WEB STAMP COLLECTIBLES:</div>
-                    <div style="display: flex; justify-content: center; gap: 6px; flex-wrap: wrap;">
-                        <div style="background:#004eaf; color:#fff; font-family:'Courier New',monospace; font-weight:bold; font-size:10px; padding:6px; border:1px solid #fff; box-shadow:1px 1px 2px #000;">IE CHROME PRO</div>
-                        <img src="https://img.shields.io/badge/Made%20With-Notepad%2B%2B-007ACC?style=flat&logo=notepadplusplus&logoColor=white" alt="Made with Notepad++" style="border:1px solid #7f9db9; width:88px; height:31px; image-rendering: pixelated;">
+                <div class="wmp-hardware-tray">
+                    <div style="height: 4px; background: #111; border-radius: 2px; position: relative; margin-bottom: 6px;">
+                        <div style="position: absolute; left: 45%; top: -2px; width: 8px; height: 8px; background: #ccc; border-radius: 50%;"></div>
+                    </div>
+                    <div class="wmp-interface-buttons">
+                        <button class="wmp-btn" onclick="alert('Playback engine frozen inside browser context.')">■</button>
+                        <button class="wmp-btn" onclick="updateMediaPlayer()">▶</button>
+                        <button class="wmp-btn" onclick="alert('Stream stream execution suspended.')">Ⅱ</button>
                     </div>
                 </div>
             </div>
@@ -351,31 +376,78 @@
 
         <div class="window">
             <div class="title-bar">
-                <span class="title-bar-text">sign my guestbook</span>
-                <div class="title-bar-controls"><button>X</button></div>
+                <span class="title-bar-text"><span class="title-icon-folder"></span>links stuff</span>
+                <div class="title-bar-controls"><button onclick="this.closest('.window').style.display='none'">X</button></div>
+            </div>
+            <div class="window-body link-list">
+                <a href="https://www.youtube.com/@yeci_.1" target="_blank" style="text-transform: lowercase;"><span class="ie-bullet"></span>my youtube channel</a>
+                <a href="https://www.roblox.com/users/4447690823/profile" target="_blank" style="text-transform: lowercase;"><span class="ie-bullet"></span>my roblox profile</a>
+                <a href="https://www.last.fm/user/icy51" target="_blank" style="text-transform: lowercase;"><span class="ie-bullet"></span>my last.fm page</a>
+                
+                <hr style="border:0; border-top: 1px solid #7f9db9; margin: 12px 0;">
+                <div style="font-size: 11px; color: #333; margin-bottom: 12px; text-transform: lowercase; padding-left: 4px;">discord registration tag: <strong>._icey1</strong></div>
+                
+                <div style="border-top: 1px solid #7f9db9; padding-top: 10px; text-align: center;">
+                    <div style="font-size: 9px; color: #666; margin-bottom: 8px; font-weight: bold; letter-spacing: 0.5px;">COLLECTIBLE ARCHIVE BUTTONS:</div>
+                    <div style="display: flex; justify-content: center; gap: 8px; flex-wrap: wrap;">
+                        <img src="https://img.shields.io/badge/Made%20With-Notepad%2B%2B-007ACC?style=flat&logo=notepadplusplus&logoColor=white" alt="Made with Notepad++" style="border:1px solid #7f9db9; width:88px; height:31px; image-rendering: pixelated;">
+                        
+                        <div style="background: #5c8e32; color: #fff; font-family: monospace; font-size: 9px; width: 88px; height: 31px; display: flex; align-items: center; justify-content: center; border: 1px solid #3a5f20; line-height: 1.1; text-align: center; box-shadow: 1px 1px 1px rgba(0,0,0,0.2);">seed locator<br>xyz [64.-12.256]</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="window">
+            <div class="title-bar">
+                <span class="title-bar-text"><span class="title-icon-folder"></span>desktop accessories</span>
+                <div class="title-bar-controls"><button onclick="this.closest('.window').style.display='none'">X</button></div>
             </div>
             <div class="window-body">
-                <div id="guestbook-list" style="max-height: 110px; overflow-y: auto; border: 1px solid #7f9db9; padding: 5px; margin-bottom: 10px; background: #fff;"></div>
-                <div class="form-group">
-                    <input type="text" id="gb-name" placeholder="your name" style="margin-bottom: 5px;">
-                    <input type="text" id="gb-msg" placeholder="your message" style="margin-bottom: 8px;">
+                <div style="font-weight: bold; margin-bottom: 4px; font-size: 11px; color: #555;">system theme configuration:</div>
+                <select class="system-dropdown" onchange="changeThemeConfig(this.value)">
+                    <option value="bliss">Windows XP (Default Bliss)</option>
+                    <option value="teal">Windows 95 (Classic Teal)</option>
+                    <option value="silver">Windows XP (Metallic Silver)</option>
+                </select>
+
+                <div style="margin-top: 10px;">
+                    <div style="background: #ebeadb; border: 1px solid #7f9db9; border-bottom: none; padding: 2px 6px; font-size: 11px; font-weight: bold; color: #333;">Notepad.exe</div>
+                    <textarea id="notepad-widget" rows="4" style="resize: vertical; font-family: monospace; border-radius: 0;" placeholder="type quick desktop notes here... (saves locally)"></textarea>
+                    <div style="text-align: right; margin-top: 4px;">
+                        <button class="win-btn" style="font-size: 10px; padding: 2px 8px;" onclick="saveNotepadMemory()">save file</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="window" style="grid-column: 1 / -1;">
+            <div class="title-bar">
+                <span class="title-bar-text"><span class="title-icon-folder"></span>sign my guestbook database</span>
+                <div class="title-bar-controls"><button onclick="this.closest('.window').style.display='none'">X</button></div>
+            </div>
+            <div class="window-body">
+                <div id="guestbook-list" style="max-height: 140px; overflow-y: auto; border: 1px solid #7f9db9; padding: 8px; margin-bottom: 12px; background: #fff;"></div>
+                <div class="form-group" style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px;">
+                    <input type="text" id="gb-name" placeholder="your name / handle alias">
+                    <input type="text" id="gb-msg" placeholder="write entry inside ledger matrix string...">
                 </div>
                 
-                <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="light" style="margin-bottom: 8px;"></div>
-                
-                <button class="win-btn" onclick="submitGuestbookPending()" style="text-transform: lowercase;">submit message</button>
-                <div style="font-size: 10px; color: #666; margin-top: 5px; text-transform: lowercase;">* all posts require admin verification before going live.</div>
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 5px;">
+                    <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="light"></div>
+                    <button class="win-btn" onclick="submitGuestbookPending()" style="text-transform: lowercase; font-weight: bold; height: 35px; padding: 0 20px;">submit message entry</button>
+                </div>
             </div>
         </div>
 
     </main>
 
-    <div style="text-align: center; margin-top: 30px; padding: 10px; color: #ffffff; font-size:11px; font-weight:bold; text-shadow:1px 1px 2px #002ca3;">
-        <span style="text-transform: lowercase;">optimized for internet explorer 6.0 at 1024x768 monitor resolution.</span>
+    <div style="text-align: center; margin-top: 30px; padding: 10px; color: #ffffff; font-size:11px; font-weight:bold; text-shadow:1px 1px 2px #002ca3; text-transform: lowercase;">
+        optimized for internet explorer 6.0 engine platforms at 1024x768 monitor resolution index.
     </div>
 
     <div class="retro-marquee">
-        <marquee id="live-ticker" scrollamount="4" behavior="scroll" direction="left">+++ loading ticker text stream +++</marquee>
+        <marquee id="live-ticker" scrollamount="4" behavior="scroll" direction="left">+++ processing data streams from client cluster index arrays +++</marquee>
     </div>
 
     <script>
@@ -404,7 +476,7 @@
                 .then(data => {
                     if (!data.recenttracks || !data.recenttracks.track || data.recenttracks.track.length === 0) {
                         document.getElementById('media-status').innerText = "[STOPPED]";
-                        document.getElementById('media-title').innerText = "no track history found";
+                        document.getElementById('media-title').innerText = "no active track log history";
                         return;
                     }
                     var track = data.recenttracks.track[0];
@@ -416,12 +488,24 @@
                     titleEl.innerText = (track.name + " - " + track.artist['#text']).toLowerCase();
                 })
                 .catch(err => {
-                    document.getElementById('media-status').innerText = "[ERROR]";
-                    document.getElementById('media-title').innerText = "offline";
+                    document.getElementById('media-status').innerText = "[OFFLINE]";
+                    document.getElementById('media-title').innerText = "endpoint lookup timeout";
                 });
         }
         setInterval(updateMediaPlayer, 30000);
         updateMediaPlayer();
+
+        function changeThemeConfig(mode) {
+            document.body.className = "";
+            if (mode === "teal") document.body.classList.add("classic-teal");
+            if (mode === "silver") document.body.classList.add("silver-metallic");
+        }
+
+        function saveNotepadMemory() {
+            var txt = document.getElementById('notepad-widget').value;
+            localStorage.setItem('xp_notepad_data', txt);
+            alert("File system flushed: notes cached successfully to local hardware storage.");
+        }
 
         function submitGuestbookPending() {
             var name = document.getElementById('gb-name').value.trim();
@@ -429,21 +513,25 @@
             var token = turnstile.getResponse();
 
             if (name === "" || msg === "") {
-                alert("please fill out your name and message!");
+                alert("please fill out both input block fields to submit text parameters.");
                 return;
             }
             if (!token) {
-                alert("please complete the cloudflare security validation box first!");
+                alert("security token empty. please verify the cloudflare gateway challenge.");
                 return;
             }
 
-            alert("thank you! your entry has been received and is waiting in the admin panel for moderation approval.");
+            alert("success! entry stored and routed for administrator dashboard moderation checks.");
             document.getElementById('gb-name').value = "";
             document.getElementById('gb-msg').value = "";
             turnstile.reset();
         }
 
         function loadSavedData() {
+            // Restore notepad memory if existing
+            var savedNotes = localStorage.getItem('xp_notepad_data');
+            if(savedNotes) document.getElementById('notepad-widget').value = savedNotes;
+
             fetch('data.json?t=' + new Date().getTime())
                 .then(response => response.json())
                 .then(data => {
@@ -470,7 +558,7 @@
                             list.appendChild(entry);
                         });
                     } else {
-                        list.innerHTML = "<div style='color:#777; font-style:italic;'>no entries yet. be the first!</div>";
+                        list.innerHTML = "<div style='color:#777; font-style:italic;'>ledger currently empty. enter a record above.</div>";
                     }
                 })
                 .catch(err => {
