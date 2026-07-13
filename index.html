@@ -5,15 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>icey's central hub</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+f/5+fn/+fn58An5+f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfn5//39/f/9/f3//f39//39/f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfn5//39/f/7Gxsf+xsfH/39/f/9/f3/+fn5//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+f/9/f3//f39//39/f/9/f3//f39//n5+f/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ+fn//f39//39/f/9/f3//f39//39/f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfn5//39/f/7Gxsf+xsfH/39/f/9/f3/+fn5//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+f/9/f3//f39//39/f/9/f3//f39//n5+f/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ+fn//f39//39/f/9/f3//f39//39/f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfn5//39/f/9/f3//f39//39/f/9/f3/+fn5//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+f/5+fn/+fn58An5+f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA">
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <style>
         * {
             box-sizing: border-box;
         }
         body {
-            /* The Legendary Bliss / Desktop Backdrop Theme */
-            background: #245edb url('https://i.imgur.com/8Fk79V6.png') no-repeat fixed center;
-            background-size: cover;
+            background: #245edb linear-gradient(to bottom, #5b8de2 0%, #245edb 100%) fixed;
             color: #000000;
             font-family: Tahoma, "MS Sans Serif", sans-serif;
             font-size: 12px;
@@ -23,7 +20,6 @@
             overflow-x: hidden;
         }
 
-        /* --- INTERNET EXPLORER TOP FRAME HEADER --- */
         #ie-header {
             background: #edf3fe;
             border-bottom: 2px solid #99b6ed;
@@ -62,7 +58,6 @@
             flex-grow: 1;
         }
 
-        /* --- TOP WINDOW MENU NAVIGATION BAR --- */
         .xp-nav-bar {
             background: #f1f1f1;
             border-bottom: 1px solid #d6d3ce;
@@ -84,7 +79,6 @@
             color: #fff;
         }
 
-        /* --- WEBSITE MAIN CONTAINER STRUCTURE --- */
         #main-layout {
             display: flex;
             max-width: 1300px;
@@ -94,7 +88,6 @@
             align-items: flex-start;
         }
 
-        /* --- LEFT EXPLORER SIDEBAR --- */
         #xp-sidebar {
             width: 260px;
             flex-shrink: 0;
@@ -103,7 +96,6 @@
             gap: 15px;
         }
 
-        /* XP Foldable Sidebar Panels */
         .sidebar-panel {
             background: linear-gradient(to bottom, #fcfcfc 0%, #d6e4ff 100%);
             border: 1px solid #4f73ce;
@@ -125,7 +117,6 @@
             padding: 10px;
         }
 
-        /* --- MAIN CONTENT CANVAS WINDOWS --- */
         #content-area {
             flex-grow: 1;
             display: flex;
@@ -133,7 +124,6 @@
             gap: 25px;
         }
 
-        /* Authentic Windows XP Luna Window Wrapper */
         .xp-window {
             background-color: #f1f1f1;
             border: 3px solid #0053e2;
@@ -205,34 +195,12 @@
             overflow-y: auto;
         }
 
-        /* --- INNER COMPONENT STYLES --- */
         .document-well {
             background-color: #ffffff;
             border: 1px solid #7f9db9;
             padding: 10px;
         }
 
-        /* MSN Messenger Bubble Theme for Guestbook */
-        .msn-bubble {
-            background: linear-gradient(to bottom, #f3f8ff 0%, #e1edff 100%);
-            border: 1px solid #a3bfe8;
-            border-radius: 8px;
-            padding: 8px 12px;
-            margin-bottom: 10px;
-            position: relative;
-            box-shadow: 1px 1px 2px rgba(0,0,0,0.05);
-        }
-        .msn-meta {
-            font-size: 11px;
-            font-weight: bold;
-            color: #245edb;
-            margin-bottom: 4px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        /* Explorer-Style Task Files Grid */
         .explorer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -252,7 +220,6 @@
             background: #faffff;
         }
 
-        /* Counter Readout Block */
         .counter-box {
             background-color: #000000;
             color: #00ff00; 
@@ -265,7 +232,6 @@
             display: inline-block;
         }
 
-        /* --- VINTAGE ERA FAKE ADVERTISEMENTS --- */
         .vintage-banner-ad {
             width: 468px;
             height: 60px;
@@ -305,7 +271,6 @@
             text-decoration: none;
         }
 
-        /* --- XP LUNA TASKBAR FOOTER --- */
         .xp-taskbar {
             position: fixed;
             bottom: 0; left: 0; width: 100%; height: 30px;
@@ -318,7 +283,7 @@
             padding: 0 15px;
             background: linear-gradient(to bottom, #66b132 0%, #38841a 100%);
             color: white; font-family: "Tahoma", sans-serif;
-            font-weight: bold; font-size: 14px; italic;
+            font-weight: bold; font-size: 14px;
             display: flex; align-items: center; justify-content: center;
             cursor: pointer; border-top-right-radius: 8px; border-bottom-right-radius: 8px;
             box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
@@ -337,7 +302,6 @@
             box-shadow: inset 1px 0px 2px rgba(0,0,0,0.2);
         }
 
-        /* Windows Media Player Reskin styling */
         .wmp-frame {
             background: #08183a;
             border: 2px solid #3a75ef;
@@ -369,14 +333,6 @@
             border-radius: 2px;
         }
 
-        /* Simple form styling override */
-        input[type="text"] {
-            border: 1px solid #7f9db9;
-            padding: 4px;
-            font-family: inherit;
-            font-size: 12px;
-            outline: none;
-        }
         .win-btn {
             background: linear-gradient(to bottom, #fff 0%, #ece9d8 100%);
             border: 1px solid #7f9db9;
@@ -392,7 +348,7 @@
     <div id="ie-header">
         <div class="ie-titlebar">
             <span>Microsoft Internet Explorer 6.0</span>
-            <div style="font-size: 10px; color:#555;">[ icey-homepage-v2.tpl ]</div>
+            <div style="font-size: 10px; color:#555;">[ icy-homepage-v2.tpl ]</div>
         </div>
         <div class="ie-address-bar">
             <span class="ie-address-label">Address</span>
@@ -401,11 +357,10 @@
     </div>
 
     <div class="xp-nav-bar">
-        <a href="#about" class="xp-nav-item">📁 Home</a>
-        <a href="#projects" class="xp-nav-item">📁 Projects</a>
-        <a href="#downloads" class="xp-nav-item">📁 Downloads</a>
-        <a href="#guestbook" class="xp-nav-item">📁 Guestbook</a>
-        <a href="#links" class="xp-nav-item">📁 Links</a>
+        <a href="#about" class="xp-nav-item">📁 home</a>
+        <a href="#projects" class="xp-nav-item">📁 projects</a>
+        <a href="#downloads" class="xp-nav-item">📁 downloads</a>
+        <a href="#links" class="xp-nav-item">📁 links</a>
     </div>
 
     <a class="vintage-banner-ad" href="https://www.roblox.com" target="_blank">
@@ -423,8 +378,8 @@
                 </div>
                 <div class="sidebar-body" style="text-align: center;">
                     <div style="width: 48px; height: 48px; background: #e06010; border-radius: 4px; margin: 0 auto 8px auto; border: 2px solid #fff; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:bold; font-size:24px;">♟</div>
-                    <div style="font-weight: bold; color: #245edb;">icey user node</div>
-                    <div style="font-size: 10px; color: #555; margin-top: 2px;">Last Updated: July 2026</div>
+                    <div style="font-weight: bold; color: #245edb;">icy user node</div>
+                    <div style="font-size: 10px; color: #555; margin-top: 2px;">last updated: july 2026</div>
                 </div>
             </div>
 
@@ -433,9 +388,9 @@
                     <span>System Status</span>
                 </div>
                 <div class="sidebar-body" style="font-size: 11px; display: flex; flex-direction: column; gap: 5px;">
-                    <div>🟢 <strong>Status:</strong> online & chillin</div>
-                    <div>🎯 <strong>AIM ScreenName:</strong> icey_core_x</div>
-                    <div>📍 <strong>Location:</strong> matrix grid hub</div>
+                    <div>🟢 <strong>status:</strong> online & chillin</div>
+                    <div>🎯 <strong>AIM ScreenName:</strong> icy_core_x</div>
+                    <div>📍 <strong>location:</strong> matrix grid hub</div>
                 </div>
             </div>
 
@@ -465,11 +420,11 @@
 
             <div class="xp-window" id="about">
                 <div class="xp-titlebar">
-                    <span class="xp-title-text">📄 About Icey's Corner</span>
+                    <span class="xp-title-text">📄 about icy's corner</span>
                     <div class="xp-controls">
                         <div class="xp-btn xp-btn-min">_</div>
                         <div class="xp-btn xp-btn-max">▢</div>
-                        <div class="xp-btn xp-btn-close" onclick="alert('System window locked by administrator kernel core parameters.')">✕</div>
+                        <div class="xp-btn xp-btn-close" onclick="alert('window locked')">✕</div>
                     </div>
                 </div>
                 <div class="xp-window-menu">
@@ -482,7 +437,7 @@
                     
                     <div style="margin-top: 15px; background: #ffffe1; border: 1px solid #e2b215; border-radius: 4px; padding: 8px; display: flex; gap: 8px; align-items: center; font-size: 11px;">
                         <span style="font-size: 16px;">💡</span>
-                        <div><strong>System Alert Announcement:</strong> half-sword physics rendering loops are operational under configuration script environment profile system core logs [v1.01].</div>
+                        <div><strong>system alert announcement:</strong> half-sword physics rendering loops are operational under configuration script environment profile system core logs [v1.01].</div>
                     </div>
 
                     <div style="text-align: center; margin-top: 15px; padding-top: 10px; border-top: 1px dashed #d6d3ce;">
@@ -506,9 +461,9 @@
                             <div id="media-title" style="margin-top: 3px; text-transform: lowercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">querying last.fm stream logs...</div>
                         </div>
                         <div class="wmp-controls">
-                            <button class="wmp-btn" onclick="alert('Playback engine isolated via thread exception hooks.')">Stop</button>
+                            <button class="wmp-btn" onclick="alert('error')">Stop</button>
                             <button class="wmp-btn" onclick="updateMediaPlayer()">Play Track</button>
-                            <button class="wmp-btn" onclick="alert('Audio stream logging pause hook applied.')">Pause</button>
+                            <button class="wmp-btn" onclick="alert('paused')">Pause</button>
                         </div>
                     </div>
                 </div>
@@ -528,17 +483,17 @@
                     <div class="explorer-grid">
                         
                         <div class="explorer-card">
-                            <div style="font-size: 20px; display: flex; align-items: center; gap: 8px;">📁 <strong style="font-size:12px;">Icey Website Layout</strong></div>
+                            <div style="font-size: 20px; display: flex; align-items: center; gap: 8px;">📁 <strong style="font-size:12px;">icy website layout</strong></div>
                             <div style="font-size: 11px; color: #555; text-transform: lowercase;">primary deployment node repository build.</div>
-                            <div style="font-size: 10px; margin-top: auto; color:#777;">Version: 2.0.4<br>Updated: Recent</div>
-                            <button class="win-btn" style="font-size:10px; margin-top:5px; padding:2px;" onclick="alert('Folder parameters already mounted inside viewport directory.')">Open Directory</button>
+                            <div style="font-size: 10px; margin-top: auto; color:#777;">version: 2.0.4<br>updated: recent</div>
+                            <button class="win-btn" style="font-size:10px; margin-top:5px; padding:2px;" onclick="alert('mounted')">Open Directory</button>
                         </div>
 
                         <div class="explorer-card">
-                            <div style="font-size: 20px; display: flex; align-items: center; gap: 8px;">📁 <strong style="font-size:12px;">Stream Scrapper Matrix</strong></div>
+                            <div style="font-size: 20px; display: flex; align-items: center; gap: 8px;">📁 <strong style="font-size:12px;">stream scrapper matrix</strong></div>
                             <div style="font-size: 11px; color: #555; text-transform: lowercase;">audioscrobbler background micro-daemon task mapping loop.</div>
-                            <div style="font-size: 10px; margin-top: auto; color:#777;">Version: 1.0.0<br>Updated: Locked</div>
-                            <button class="win-btn" style="font-size:10px; margin-top:5px; padding:2px;" onclick="alert('Target engine core locked by process owner.')">Open Directory</button>
+                            <div style="font-size: 10px; margin-top: auto; color:#777;">version: 1.0.0<br>updated: locked</div>
+                            <button class="win-btn" style="font-size:10px; margin-top:5px; padding:2px;" onclick="alert('locked')">Open Directory</button>
                         </div>
 
                     </div>
@@ -561,15 +516,15 @@
                     <div class="document-well" style="display: flex; flex-direction: column; gap: 8px;">
                         <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px dotted #ccc; padding-bottom:4px;">
                             <span>📦 <strong>XP_Icons_PixelPack.zip</strong> (2.4 MB)</span>
-                            <button class="win-btn" onclick="alert('Download stream pipe initiated via local browser download queue shadow thread.')">Download Pack</button>
+                            <button class="win-btn" onclick="alert('downloading')">Download Pack</button>
                         </div>
                         <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px dotted #ccc; padding-bottom:4px;">
                             <span>📦 <strong>Bliss_HighRes_Wallpaper_Mod.rar</strong> (4.1 MB)</span>
-                            <button class="win-btn" onclick="alert('Download package routed.')">Download Pack</button>
+                            <button class="win-btn" onclick="alert('downloading')">Download Pack</button>
                         </div>
                         <div style="display:flex; justify-content:space-between; align-items:center;">
                             <span>📦 <strong>Source_Code_Archive.tar.gz</strong> (512 KB)</span>
-                            <button class="win-btn" onclick="alert('Source archive streaming pipeline activated.')">Download Pack</button>
+                            <button class="win-btn" onclick="alert('downloading')">Download Pack</button>
                         </div>
                     </div>
                 </div>
@@ -584,48 +539,13 @@
                 </div>
                 <div class="xp-window-body">
                     <div class="document-well" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px;">
-                        <a href="https://www.youtube.com/@yeci_.1" target="_blank" style="color: #245edb; text-decoration: underline; font-weight: bold; text-transform: lowercase;">🌐 My Youtube Channel</a>
-                        <a href="https://www.roblox.com/users/4447690823/profile" target="_blank" style="color: #245edb; text-decoration: underline; font-weight: bold; text-transform: lowercase;">🎮 My Roblox Profile</a>
-                        <a href="https://www.last.fm/user/icy51" target="_blank" style="color: #245edb; text-decoration: underline; font-weight: bold; text-transform: lowercase;">🎵 My Last.fm Page</a>
+                        <a href="https://www.youtube.com/@yeci_.1" target="_blank" style="color: #245edb; text-decoration: underline; font-weight: bold; text-transform: lowercase;">🌐 my youtube channel</a>
+                        <a href="https://www.roblox.com/users/4447690823/profile" target="_blank" style="color: #245edb; text-decoration: underline; font-weight: bold; text-transform: lowercase;">🎮 my roblox profile</a>
+                        <a href="https://www.last.fm/user/icy51" target="_blank" style="color: #245edb; text-decoration: underline; font-weight: bold; text-transform: lowercase;">🎵 my last.fm page</a>
                     </div>
                     <div style="margin-top: 12px; padding: 6px; background:#fff; border:1px solid #7f9db9; font-size:11px; text-transform: lowercase;">
-                        💬 Discord Network Handle Coordinate: <strong>._icey1</strong>
+                        💬 discord network handle coordinate: <strong>._icey1</strong>
                     </div>
-                </div>
-            </div>
-
-            <div class="xp-window" id="guestbook">
-                <div class="xp-titlebar">
-                    <span class="xp-title-text">💬 MSN Chat Group History - Guestbook Database</span>
-                    <div class="xp-controls">
-                        <div class="xp-btn xp-btn-min">_</div><div class="xp-btn xp-btn-max">▢</div><div class="xp-btn xp-btn-close">✕</div>
-                    </div>
-                </div>
-                <div class="xp-window-body">
-                    
-                    <div id="guestbook-list" class="document-well" style="max-height: 250px; overflow-y: auto; margin-bottom: 12px; background: #fff;">
-                        <div class="msn-bubble">
-                            <div class="msn-meta"><span>🙂</span> Carter says:</div>
-                            <div style="text-transform: lowercase;">nice website layout config setup! the luna gradient looks incredibly elite.</div>
-                        </div>
-                        <div class="msn-bubble">
-                            <div class="msn-meta"><span>😎</span> Someone says:</div>
-                            <div style="text-transform: lowercase;">love the design structure choice. pure 2004 nostalgia bliss engine.</div>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; flex-direction: column; gap: 8px;">
-                        <div style="display: flex; gap: 10px;">
-                            <input type="text" id="gb-name" placeholder="Your Handle / MSN Name" style="width: 30%;">
-                            <input type="text" id="gb-msg" placeholder="Type your instant message parameter here..." style="width: 70%;">
-                        </div>
-                        
-                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                            <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="light"></div>
-                            <button class="win-btn" onclick="submitGuestbookPending()" style="font-weight: bold; padding: 6px 15px;">Send MSN Message</button>
-                        </div>
-                    </div>
-
                 </div>
             </div>
 
@@ -633,7 +553,7 @@
     </div>
 
     <div class="xp-taskbar">
-        <button class="xp-start-btn" onclick="alert('Windows XP Start Engine Framework initialized via micro-kernel layout hierarchy hooks.')">start</button>
+        <button class="xp-start-btn" onclick="alert('start clicked')">start</button>
         
         <div style="flex-grow:1; color:white; font-size:11px; padding-left:15px; font-weight:normal; letter-spacing:0.5px; text-transform: lowercase;">
             system status container active || optimize layout parsing for ie6 architecture
@@ -690,34 +610,6 @@
         }
         setInterval(updateMediaPlayer, 30000);
         updateMediaPlayer();
-
-        function submitGuestbookPending() {
-            var name = document.getElementById('gb-name').value.trim();
-            var msg = document.getElementById('gb-msg').value.trim();
-            var token = turnstile.getResponse();
-
-            if (name === "" || msg === "") {
-                alert("Please complete both messaging block parameters to commit an MSN bubble record.");
-                return;
-            }
-            if (!token) {
-                alert("Security Gateway Exception: Verification token payload completely null.");
-                return;
-            }
-
-            // Client simulation update block
-            var list = document.getElementById('guestbook-list');
-            var bubble = document.createElement('div');
-            bubble.className = "msn-bubble";
-            bubble.innerHTML = '<div class="msn-meta"><span>💬</span> ' + name + ' says:</div><div style="text-transform:lowercase;">' + msg + '</div>';
-            list.appendChild(bubble);
-            list.scrollTop = list.scrollHeight;
-
-            alert("Success! Entry message successfully transmitted into the active MSN session pipeline framework.");
-            document.getElementById('gb-name').value = "";
-            document.getElementById('gb-msg').value = "";
-            turnstile.reset();
-        }
     </script>
 </body>
 </html>
