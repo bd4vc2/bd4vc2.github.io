@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>icy website</title>
+    <title>icey's central hub</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+f/5+fn/+fn58An5+f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfn5//39/f/9/f3//f39//39/f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfn5//39/f/7Gxsf+xsfH/39/f/9/f3/+fn5//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+f/9/f3//f39//39/f/9/f3//f39//n5+f/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ+fn//f39//39/f/9/f3//f39//39/f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfn5//39/f/7Gxsf+xsfH/39/f/9/f3/+fn5//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+f/9/f3//f39//39/f/9/f3//f39//n5+f/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ+fn//f39//39/f/9/f3//f39//39/f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfn5//39/f/9/f3//f39//39/f/9/f3/+fn5//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+f/5+fn/+fn58An5+f/5+fn/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <style>
@@ -11,613 +11,645 @@
             box-sizing: border-box;
         }
         body {
-            background-color: #008080; /* Authentic 1995 Teal Desktop backdrop */
+            /* The Legendary Bliss / Desktop Backdrop Theme */
+            background: #245edb url('https://i.imgur.com/8Fk79V6.png') no-repeat fixed center;
+            background-size: cover;
             color: #000000;
-            font-family: Tahoma, "MS Sans Serif", Geneva, sans-serif;
+            font-family: Tahoma, "MS Sans Serif", sans-serif;
             font-size: 12px;
             margin: 0;
-            padding: 20px 15px 85px 15px;
+            padding: 0;
+            padding-bottom: 70px;
             overflow-x: hidden;
-            -webkit-font-smoothing: none; /* Disables font anti-aliasing for raw 90s pixels */
-            -moz-osx-font-smoothing: none;
         }
 
-        /* --- DESKTOP LAYOUT --- */
-        #desktop-container {
-            display: flex;
-            gap: 20px;
-            max-width: 1400px;
-            margin: 0 auto;
-            align-items: flex-start;
-        }
-
-        #desktop-icons {
+        /* --- INTERNET EXPLORER TOP FRAME HEADER --- */
+        #ie-header {
+            background: #edf3fe;
+            border-bottom: 2px solid #99b6ed;
+            padding: 4px 8px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            width: 80px;
-            flex-shrink: 0;
-            padding-top: 10px;
-            user-select: none;
+            gap: 2px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
         }
-        .desktop-icon {
+        .ie-titlebar {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            text-align: center;
-            cursor: pointer;
-            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            font-size: 12px;
+            padding: 2px;
         }
-        .desktop-icon-text {
-            color: #ffffff;
-            font-size: 11px;
-            margin-top: 5px;
-            padding: 2px 4px;
-            border: 1px dotted transparent;
+        .ie-address-bar {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border: 1px solid #7f9db9;
+            padding: 3px 6px;
+            gap: 8px;
+            font-size: 12px;
+            border-radius: 2px;
+            margin-top: 2px;
         }
-        .desktop-icon:focus .desktop-icon-text, .desktop-icon:active .desktop-icon-text {
-            background-color: #000080;
-            border: 1px dotted #ffff00;
+        .ie-address-label {
+            color: #7f7f7f;
+            font-weight: bold;
         }
-
-        /* Pure CSS Drawn Desktop Hardware Icons from 1995 */
-        .ico-computer {
-            width: 32px; height: 26px; background: #d4d0c8; border: 2px solid #ffffff; border-right-color: #808080; border-bottom-color: #808080; position: relative; box-shadow: 1px 1px 0 0 #000000;
-        }
-        .ico-computer::after {
-            content: ''; position: absolute; bottom: -6px; left: 10px; width: 8px; height: 5px; background: #808080; border: 1px solid #000;
-        }
-        .ico-computer::before {
-            content: ''; position: absolute; bottom: -9px; left: 4px; width: 20px; height: 4px; background: #d4d0c8; border: 1px solid #fff; border-right-color: #808080; border-bottom-color: #808080; box-shadow: 1px 1px 0 0 #000;
-        }
-        .ico-recycle {
-            width: 24px; height: 28px; border: 2px solid #808080; background: #fff; position: relative; box-shadow: inset 1px 1px 0 #000;
-        }
-        .ico-recycle::before {
-            content: '♻'; font-size: 16px; color: #008000; position: absolute; top: 2px; left: 2px;
-        }
-
-        /* --- CONTENT GRID STRUCTURE --- */
-        #desktop-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-            gap: 20px;
+        .ie-address-url {
+            color: #000;
             flex-grow: 1;
         }
 
-        /* --- THE LEGENDARY WINDOW 95 CLASSIC 3D FRAME --- */
-        .window {
-            background-color: #d4d0c8; /* Classic gray finish */
-            border-top: 2px solid #ffffff;
-            border-left: 2px solid #ffffff;
-            border-right: 2px solid #808080;
-            border-bottom: 2px solid #808080;
-            box-shadow: 1px 1px 0 0 #000000;
-            padding: 3px;
+        /* --- TOP WINDOW MENU NAVIGATION BAR --- */
+        .xp-nav-bar {
+            background: #f1f1f1;
+            border-bottom: 1px solid #d6d3ce;
+            padding: 4px 10px;
+            display: flex;
+            gap: 15px;
+            font-size: 11px;
+            font-weight: normal;
+        }
+        .xp-nav-item {
+            cursor: pointer;
+            color: #000;
+            text-decoration: none;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .xp-nav-item:hover {
+            background: #316ac5;
+            color: #fff;
+        }
+
+        /* --- WEBSITE MAIN CONTAINER STRUCTURE --- */
+        #main-layout {
+            display: flex;
+            max-width: 1300px;
+            margin: 20px auto;
+            padding: 0 15px;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        /* --- LEFT EXPLORER SIDEBAR --- */
+        #xp-sidebar {
+            width: 260px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* XP Foldable Sidebar Panels */
+        .sidebar-panel {
+            background: linear-gradient(to bottom, #fcfcfc 0%, #d6e4ff 100%);
+            border: 1px solid #4f73ce;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 1px 1px 4px rgba(0,0,0,0.15);
+        }
+        .sidebar-header {
+            background: linear-gradient(to right, #245edb 0%, #5b8de2 100%);
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .sidebar-body {
+            padding: 10px;
+        }
+
+        /* --- MAIN CONTENT CANVAS WINDOWS --- */
+        #content-area {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* Authentic Windows XP Luna Window Wrapper */
+        .xp-window {
+            background-color: #f1f1f1;
+            border: 3px solid #0053e2;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+            box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.35);
             display: flex;
             flex-direction: column;
             overflow: hidden;
         }
-
-        /* --- HIGH CONTRAST DARK BLUE CLASSIC TITLE BAR --- */
-        .title-bar {
-            background: linear-gradient(to right, #000080 0%, #1084d0 100%);
-            color: #ffffff;
+        .xp-titlebar {
+            background: linear-gradient(to bottom, #0058e6 0%, #003db3 100%);
+            color: white;
             font-weight: bold;
             font-size: 12px;
-            padding: 3px 4px;
+            padding: 5px 8px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 20px;
+            text-shadow: 1px 1px 1px #000;
             user-select: none;
         }
-
-        .title-bar-text {
-            letter-spacing: 0.5px;
-            text-transform: lowercase;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        /* Pure CSS System Explorer Folders */
-        .title-icon-folder {
-            width: 14px; height: 10px;
-            background: #ffcc66; border: 1px solid #000;
-            position: relative; margin-top: 2px;
-        }
-        .title-icon-folder::before {
-            content: ''; position: absolute;
-            top: -3px; left: 0; width: 5px; height: 3px;
-            background: #ffcc66; border: 1px solid #000; border-bottom: none;
-        }
-
-        /* --- WINDOW MANAGEMENT CONTROLS --- */
-        .title-bar-controls {
-            display: flex;
-            gap: 2px;
-        }
-        .title-bar-controls button {
-            background: #d4d0c8;
-            border-top: 1px solid #fff;
-            border-left: 1px solid #fff;
-            border-right: 1px solid #808080;
-            border-bottom: 1px solid #808080;
-            box-shadow: 1px 1px 0 0 #000;
-            color: #000000;
-            font-weight: bold;
-            font-size: 9px;
-            font-family: monospace;
-            width: 16px; height: 14px;
-            padding: 0;
-            cursor: pointer;
-            display: flex; align-items: center; justify-content: center;
-        }
-        .title-bar-controls button:active {
-            border: 1px solid #808080;
-            border-right-color: #fff;
-            border-bottom-color: #fff;
-            box-shadow: none;
-            padding-top: 1px; padding-left: 1px;
-        }
-
-        /* --- THE INSIDE WINDOW CANVAS PANEL --- */
-        .window-body {
-            padding: 10px;
-            background-color: #d4d0c8; 
-            margin-top: 4px;
-            overflow-y: auto;
-            flex: 1;
-        }
-
-        /* --- WINDOW TOOLBAR MENUS --- */
-        .window-menu {
-            display: flex;
-            gap: 2px;
-            padding: 2px 2px 0 2px;
-            font-size: 11px;
-            user-select: none;
-            border-bottom: 1px solid #808080;
-        }
-        .window-menu span {
-            cursor: pointer;
-            padding: 2px 6px;
-        }
-        .window-menu span:hover {
-            background-color: #000080;
-            color: #ffffff;
-        }
-
-        /* --- STYLING FOR DIALOG CONTROL ELEMENTS --- */
-        .announcement-banner {
-            background-color: #ffffcc;
-            border: 1px solid #000000;
-            padding: 8px;
-            margin: 0 auto 20px auto;
-            max-width: 1400px;
-            font-weight: bold;
-            color: #000000;
-            text-align: center;
-            box-shadow: 1px 1px 0 0 #000;
-        }
-
-        .form-group {
-            margin-bottom: 10px;
-        }
-
-        input[type="text"] {
-            width: 100%;
-            box-sizing: border-box;
-            font-family: inherit;
-            font-size: 12px;
-            padding: 4px;
-            background-color: #ffffff;
-            color: #000;
-            border-top: 2px solid #808080;
-            border-left: 2px solid #808080;
-            border-right: 2px solid #ffffff;
-            border-bottom: 2px solid #ffffff;
-            outline: none;
-        }
-
-        /* Beveled Classic Interface Button */
-        button.win-btn {
-            background: #d4d0c8;
-            border-top: 2px solid #ffffff;
-            border-left: 2px solid #ffffff;
-            border-right: 2px solid #808080;
-            border-bottom: 2px solid #808080;
-            box-shadow: 1px 1px 0 0 #000;
-            font-family: inherit;
-            font-size: 11px;
-            padding: 4px 12px;
-            cursor: pointer;
-            color: #000000;
-        }
-        button.win-btn:active {
-            border: 2px solid #808080;
-            border-right-color: #ffffff;
-            border-bottom-color: #ffffff;
-            box-shadow: none;
-        }
-
-        .link-list a {
+        .xp-title-text {
             display: flex;
             align-items: center;
             gap: 6px;
-            color: #0000ff;
-            margin-bottom: 8px;
-            text-decoration: underline;
         }
-        .link-list a:visited {
-            color: #800080;
+        .xp-controls {
+            display: flex;
+            gap: 2px;
         }
-
-        /* Classic Browser Navigation Link Bullet icon */
-        .ie-bullet {
-            width: 10px; height: 10px;
-            border: 1px solid #000; background: #fff;
-            position: relative; display: inline-block;
-            flex-shrink: 0;
+        .xp-btn {
+            width: 21px;
+            height: 21px;
+            border-radius: 3px;
+            font-weight: bold;
+            font-size: 11px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            border: 1px solid rgba(0,0,0,0.4);
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
         }
-        .ie-bullet::after {
-            content: ""; position: absolute;
-            top: 3px; left: 2px; width: 4px; height: 2px;
-            background: #0000ff;
-        }
-
-        /* Inner Document Box Frame */
-        .document-well {
-            background-color: #ffffff;
-            border-top: 2px solid #808080;
-            border-left: 2px solid #808080;
-            border-right: 2px solid #ffffff;
-            border-bottom: 2px solid #ffffff;
-            padding: 8px;
-        }
-
-        .guestbook-entry {
-            border-bottom: 1px dotted #808080;
-            padding: 4px 0;
+        .xp-btn-min { background: linear-gradient(to bottom, #609bf1 0%, #225ad5 100%); }
+        .xp-btn-max { background: linear-gradient(to bottom, #609bf1 0%, #225ad5 100%); }
+        .xp-btn-close { background: linear-gradient(to bottom, #e7603c 0%, #bd2c0d 100%); }
+        
+        .xp-window-menu {
+            background: #efebde;
+            border-bottom: 1px solid #d6d3ce;
+            padding: 2px 6px;
+            display: flex;
+            gap: 8px;
             font-size: 11px;
         }
-        .guestbook-name {
-            font-weight: bold;
-            color: #000080;
+        .xp-window-menu span {
+            cursor: pointer;
+            padding: 1px 5px;
+        }
+        .xp-window-menu span:hover {
+            background: #316ac5;
+            color: white;
+        }
+        .xp-window-body {
+            padding: 12px;
+            background-color: #f4f3ee;
+            overflow-y: auto;
         }
 
-        /* Custom Dashboard Dynamic Monitor Display Readout */
+        /* --- INNER COMPONENT STYLES --- */
+        .document-well {
+            background-color: #ffffff;
+            border: 1px solid #7f9db9;
+            padding: 10px;
+        }
+
+        /* MSN Messenger Bubble Theme for Guestbook */
+        .msn-bubble {
+            background: linear-gradient(to bottom, #f3f8ff 0%, #e1edff 100%);
+            border: 1px solid #a3bfe8;
+            border-radius: 8px;
+            padding: 8px 12px;
+            margin-bottom: 10px;
+            position: relative;
+            box-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+        .msn-meta {
+            font-size: 11px;
+            font-weight: bold;
+            color: #245edb;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Explorer-Style Task Files Grid */
+        .explorer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 15px;
+        }
+        .explorer-card {
+            background: #fff;
+            border: 1px solid #d6d3ce;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            border-radius: 3px;
+        }
+        .explorer-card:hover {
+            border-color: #7f9db9;
+            background: #faffff;
+        }
+
+        /* Counter Readout Block */
         .counter-box {
             background-color: #000000;
             color: #00ff00; 
             font-family: "Courier New", monospace;
             font-size: 20px;
             font-weight: bold;
-            letter-spacing: 3px;
-            padding: 3px 8px;
-            border-top: 2px solid #808080;
-            border-left: 2px solid #808080;
-            border-right: 2px solid #ffffff;
-            border-bottom: 2px solid #ffffff;
+            letter-spacing: 2px;
+            padding: 2px 6px;
+            border: 2px inset #fff;
             display: inline-block;
-            margin-top: 5px;
         }
 
-        /* --- THE SYSTEM TASKBAR FOOTER --- */
-        .retro-marquee {
-            position: fixed;
-            bottom: 0; left: 0; width: 100%; height: 30px;
-            background: #d4d0c8;
-            border-top: 2px solid #ffffff;
-            box-shadow: 0 -1px 0 0 #808080;
-            display: flex; align-items: center; justify-content: space-between;
-            z-index: 9999; padding-left: 65px; padding-right: 95px;
-        }
-
-        /* Classic Gray/Black Start Button Engine Component */
-        .start-button {
-            position: absolute;
-            left: 2px; top: 2px; bottom: 2px; width: 58px;
-            background: #d4d0c8;
-            border-top: 2px solid #ffffff;
-            border-left: 2px solid #ffffff;
-            border-right: 2px solid #808080;
-            border-bottom: 2px solid #808080;
-            box-shadow: 1px 1px 0 0 #000;
-            color: #000000; font-family: "Tahoma", sans-serif;
-            font-weight: bold; font-size: 12px;
-            display: flex; align-items: center; justify-content: center;
-            cursor: pointer; user-select: none; gap: 3px;
-        }
-        .start-button::before {
-            content: '❖'; font-size: 11px;
-        }
-        .start-button:active {
-            border: 2px solid #808080;
-            border-right-color: #ffffff;
-            border-bottom-color: #ffffff;
-            box-shadow: none;
-            padding-top: 1px; padding-left: 1px;
-        }
-
-        #live-ticker {
-            color: #000; font-weight: normal; font-size: 12px;
-            flex-grow: 1; margin: 0 15px;
-            background: #fff;
-            border-top: 1px solid #808080; border-left: 1px solid #808080;
-            border-right: 1px solid #fff; border-bottom: 1px solid #fff;
-            padding: 2px 4px;
-            height: 20px;
-        }
-
-        /* --- SYSTEM TRAY INDEX --- */
-        .system-tray {
-            position: absolute; right: 2px; top: 2px; bottom: 2px;
-            background: #d4d0c8;
-            border-top: 1px solid #808080; border-left: 1px solid #808080;
-            border-right: 1px solid #fff; border-bottom: 1px solid #fff;
-            display: flex; align-items: center; padding: 0 6px;
-            color: #000; font-size: 11px; gap: 6px;
-        }
-
-        /* --- THE COMPACT COGNAC AUDIO MEDIA VISUALIZER EQ --- */
-        .eq-container {
-            display: flex; justify-content: center; align-items: flex-end; gap: 2px;
-            height: 32px; margin-top: 8px; background: #000; padding: 4px; 
-            border-top: 2px solid #808080; border-left: 2px solid #808080; border-right: 2px solid #fff; border-bottom: 2px solid #fff;
-        }
-        .eq-bar {
-            width: 7px; height: 100%;
-            background: #00ff00;
-            transform-origin: bottom;
-            animation: bounceEQ 0.8s ease-in-out infinite alternate;
-        }
-        @keyframes bounceEQ {
-            0% { transform: scaleY(0.1); }
-            100% { transform: scaleY(0.95); }
-        }
-
-        .wmp-hardware-tray {
-            background: #d4d0c8; padding: 6px; margin-top: 8px;
-            border: 1px solid #808080;
-        }
-        .wmp-interface-buttons {
-            display: flex; justify-content: center; gap: 4px; margin-top: 4px;
-        }
-        .wmp-btn {
-            background: #d4d0c8;
-            border-top: 1px solid #fff; border-left: 1px solid #fff; border-right: 1px solid #808080; border-bottom: 1px solid #808080;
-            color: #000; font-size: 10px; cursor: pointer;
-            width: 22px; height: 18px; display: flex; align-items: center; justify-content: center;
-        }
-        .wmp-btn:active {
-            border: 1px solid #808080; border-right-color: #fff; border-bottom-color: #fff;
-        }
-
-        /* --- RETRO ADS STYLING FRAMEWORKS --- */
-        .messenger-ad-card {
-            border-top: 2px solid #808080; border-left: 2px solid #808080; border-right: 2px solid #fff; border-bottom: 2px solid #fff;
-            padding: 8px;
-            margin-top: 10px;
-            font-size: 11px;
+        /* --- VINTAGE ERA FAKE ADVERTISEMENTS --- */
+        .vintage-banner-ad {
+            width: 468px;
+            height: 60px;
+            margin: 10px auto;
+            border: 2px solid #000;
+            background: yellow;
+            overflow: hidden;
             display: flex;
             align-items: center;
-            gap: 10px;
-        }
-        .msn-bg {
-            background: #eff7ff;
-            border-left: 4px solid #000080;
-        }
-        .yahoo-bg {
-            background: #fbf5ff;
-            border-left: 4px solid #6001d2;
-        }
-        .ad-tag {
-            font-size: 9px;
-            background: #ff8c00;
-            color: #fff;
-            padding: 1px 3px;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 3px 3px 0px #000;
             font-weight: bold;
-            text-transform: uppercase;
+            text-align: center;
+            text-decoration: none;
+            animation: flashingAd 0.9s infinite alternate;
         }
+        @keyframes flashingAd {
+            0% { background: #ffcc00; color: #000; border-color: #ff0000; }
+            100% { background: #ff0000; color: #fff; border-color: #ffcc00; }
+        }
+        
+        .tower-ad-sidebar {
+            width: 120px;
+            height: 600px;
+            background: linear-gradient(135deg, #6001d2 0%, #a031ff 100%);
+            border: 2px dashed #fff;
+            color: white;
+            padding: 15px 5px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 10px auto;
+            text-decoration: none;
+        }
+
+        /* --- XP LUNA TASKBAR FOOTER --- */
+        .xp-taskbar {
+            position: fixed;
+            bottom: 0; left: 0; width: 100%; height: 30px;
+            background: linear-gradient(to bottom, #245edb 0%, #3a75ef 10%, #245edb 30%, #174cb7 100%);
+            display: flex; align-items: center; justify-content: space-between;
+            z-index: 9999; box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+        }
+        .xp-start-btn {
+            height: 100%;
+            padding: 0 15px;
+            background: linear-gradient(to bottom, #66b132 0%, #38841a 100%);
+            color: white; font-family: "Tahoma", sans-serif;
+            font-weight: bold; font-size: 14px; italic;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; border-top-right-radius: 8px; border-bottom-right-radius: 8px;
+            box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+            text-shadow: 1px 1px 1px #000;
+            border: none;
+        }
+        .xp-start-btn:active {
+            background: linear-gradient(to bottom, #38841a 0%, #66b132 100%);
+        }
+        .status-tray-clock {
+            height: 100%;
+            background: linear-gradient(to bottom, #0c8df2 0%, #0053e2 100%);
+            border-left: 1px solid #1066cc;
+            display: flex; align-items: center; padding: 0 12px;
+            color: white; font-size: 11px; gap: 8px;
+            box-shadow: inset 1px 0px 2px rgba(0,0,0,0.2);
+        }
+
+        /* Windows Media Player Reskin styling */
+        .wmp-frame {
+            background: #08183a;
+            border: 2px solid #3a75ef;
+            padding: 8px;
+            color: #fff;
+            border-radius: 4px;
+        }
+        .wmp-screen {
+            background: #000;
+            border: 1px solid #1a3264;
+            padding: 6px;
+            font-family: monospace;
+            color: #00ff00;
+            font-size: 11px;
+            margin-bottom: 6px;
+        }
+        .wmp-controls {
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+        }
+        .wmp-btn {
+            background: linear-gradient(to bottom, #5b8de2 0%, #245edb 100%);
+            border: 1px solid #1040a0;
+            color: #fff;
+            font-size: 10px;
+            padding: 2px 8px;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        /* Simple form styling override */
+        input[type="text"] {
+            border: 1px solid #7f9db9;
+            padding: 4px;
+            font-family: inherit;
+            font-size: 12px;
+            outline: none;
+        }
+        .win-btn {
+            background: linear-gradient(to bottom, #fff 0%, #ece9d8 100%);
+            border: 1px solid #7f9db9;
+            padding: 4px 12px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .win-btn:hover { background: #f5f5f5; border-color: #245edb; }
     </style>
 </head>
 <body>
 
-    <div style="text-align: center; margin-bottom: 25px;">
-        <h1 style="color: #ffffff; font-family: 'Tahoma', sans-serif; font-weight: bold; margin: 5px 0; font-size: 28px; text-shadow: 2px 2px 0px #000000;">icey's central hub</h1>
-        <div style="color: #ffffff; font-size: 12px; font-weight: bold; text-shadow: 1px 1px 0px #000000;">Microsoft Windows XP Professional [Version 5.1.2600]</div>
+    <div id="ie-header">
+        <div class="ie-titlebar">
+            <span>Microsoft Internet Explorer 6.0</span>
+            <div style="font-size: 10px; color:#555;">[ icey-homepage-v2.tpl ]</div>
+        </div>
+        <div class="ie-address-bar">
+            <span class="ie-address-label">Address</span>
+            <span class="ie-address-url">https://bd4vc2.github.io/iceys_hub_2004</span>
+        </div>
     </div>
 
-    <div id="site-announcement" class="announcement-banner" style="display: none;"></div>
+    <div class="xp-nav-bar">
+        <a href="#about" class="xp-nav-item">📁 Home</a>
+        <a href="#projects" class="xp-nav-item">📁 Projects</a>
+        <a href="#downloads" class="xp-nav-item">📁 Downloads</a>
+        <a href="#guestbook" class="xp-nav-item">📁 Guestbook</a>
+        <a href="#links" class="xp-nav-item">📁 Links</a>
+    </div>
 
-    <div id="desktop-container">
+    <a class="vintage-banner-ad" href="https://www.roblox.com" target="_blank">
+        💥 PUNCH THE MONKEY & WIN A FREE XBOX 360! 💥<br>
+        [ CLICK HERE TO CLAIM YOUR PRIZE - NO VIRUS CERTIFIED ]
+    </a>
+
+    <div id="main-layout">
         
-        <div id="desktop-icons">
-            <div class="desktop-icon" tabindex="0" onclick="alert('My Computer\\Local Disk (C:)\\hail_icy.sys properties loaded.')">
-                <div class="ico-computer"></div>
-                <span class="desktop-icon-text">my computer</span>
+        <aside id="xp-sidebar">
+            
+            <div class="sidebar-panel">
+                <div class="sidebar-header">
+                    <span>User Session</span>
+                </div>
+                <div class="sidebar-body" style="text-align: center;">
+                    <div style="width: 48px; height: 48px; background: #e06010; border-radius: 4px; margin: 0 auto 8px auto; border: 2px solid #fff; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:bold; font-size:24px;">♟</div>
+                    <div style="font-weight: bold; color: #245edb;">icey user node</div>
+                    <div style="font-size: 10px; color: #555; margin-top: 2px;">Last Updated: July 2026</div>
+                </div>
             </div>
-            <a class="desktop-icon" href="https://www.last.fm/user/icy51" target="_blank">
-                <div class="ico-recycle"></div>
-                <span class="desktop-icon-text">recycle bin</span>
-            </a>
-        </div>
 
-        <main id="desktop-grid">
+            <div class="sidebar-panel">
+                <div class="sidebar-header">
+                    <span>System Status</span>
+                </div>
+                <div class="sidebar-body" style="font-size: 11px; display: flex; flex-direction: column; gap: 5px;">
+                    <div>🟢 <strong>Status:</strong> online & chillin</div>
+                    <div>🎯 <strong>AIM ScreenName:</strong> icey_core_x</div>
+                    <div>📍 <strong>Location:</strong> matrix grid hub</div>
+                </div>
+            </div>
 
-            <div class="window">
-                <div class="title-bar">
-                    <span class="title-bar-text"><span class="title-icon-folder"></span>about me</span>
-                    <div class="title-bar-controls">
-                        <button class="btn-min">_</button><button class="btn-max">▢</button>
-                        <button class="btn-close" onclick="this.closest('.window').style.display='none'">✕</button>
+            <div class="sidebar-panel">
+                <div class="sidebar-header">
+                    <span>Web Badges & Rings</span>
+                </div>
+                <div class="sidebar-body" style="display:flex; flex-direction:column; gap:8px; align-items:center;">
+                    <img src="https://img.shields.io/badge/Made%20With-Notepad%2B%2B-007ACC?style=flat&logo=notepadplusplus&logoColor=white" alt="Made with Notepad++" style="border:1px solid #7f9db9; width:88px; height:31px;">
+                    <div style="background: #3a5f20; color: #fff; font-family: monospace; font-size: 9px; width: 88px; height: 31px; display: flex; align-items: center; justify-content: center; border: 1px solid #000; text-align: center; line-height: 1.1;">world spawn<br>xyz: 64.-12</div>
+                    <div style="font-size:10px; text-align:center; border-top:1px solid #a3bfe8; padding-top:4px; margin-top:2px; color:#333;">
+                        <strong>XP-Fans Webring</strong><br>
+                        [ <a href="#" style="color:#245edb;">Prev</a> | <a href="#" style="color:#245edb;">Random</a> | <a href="#" style="color:#245edb;">Next</a> ]
                     </div>
                 </div>
-                <div class="window-menu">
+            </div>
+
+            <a class="tower-ad-sidebar" href="https://www.last.fm/user/icy51" target="_blank">
+                <div>⚠️ NORTON ALERTS! ⚠️</div>
+                <div style="font-size: 18px; color: yellow; margin: 20px 0;">YOUR PC MIGHT BE INFECTED BY LACK OF RETRO VIBES!</div>
+                <div>CLICK HERE NOW FOR A FREE SECURITY SYSTEM SCAN!</div>
+            </a>
+
+        </aside>
+
+        <main id="content-area">
+
+            <div class="xp-window" id="about">
+                <div class="xp-titlebar">
+                    <span class="xp-title-text">📄 About Icey's Corner</span>
+                    <div class="xp-controls">
+                        <div class="xp-btn xp-btn-min">_</div>
+                        <div class="xp-btn xp-btn-max">▢</div>
+                        <div class="xp-btn xp-btn-close" onclick="alert('System window locked by administrator kernel core parameters.')">✕</div>
+                    </div>
+                </div>
+                <div class="xp-window-menu">
                     <span>File</span><span>Edit</span><span>View</span><span>Help</span>
                 </div>
-                <div class="window-body">
-                    <div class="document-well" style="min-height: 60px; line-height: 1.6; text-transform: lowercase;" id="display-about">
-                        loading...
+                <div class="xp-window-body">
+                    <div class="document-well" style="line-height: 1.6; text-transform: lowercase;">
+                        hey thanks for stopping by my little corner of the internet. building this out to index data logs, stream track histories, and test out pure luna visual architectures. stay tuned for raw code deployment sequences.
                     </div>
                     
-                    <div style="margin-top: 15px; border: 1px dashed #808080; padding: 7px; background: #d4d0c8; font-size: 11px;">
-                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 3px;">
-                            <span style="width: 8px; height: 8px; background: #00ff00; border: 1px solid #000; display: inline-block;"></span>
-                            <div style="color:#000;"><b>status:</b> engine profile processing</div>
-                        </div>
-                        <div style="color: #444; font-size: 10px; padding-left: 16px;">sys.core: half-sword physics rendering loop [v1.01]</div>
+                    <div style="margin-top: 15px; background: #ffffe1; border: 1px solid #e2b215; border-radius: 4px; padding: 8px; display: flex; gap: 8px; align-items: center; font-size: 11px;">
+                        <span style="font-size: 16px;">💡</span>
+                        <div><strong>System Alert Announcement:</strong> half-sword physics rendering loops are operational under configuration script environment profile system core logs [v1.01].</div>
                     </div>
 
-                    <div class="messenger-ad-card msn-bg">
-                        <div style="font-size: 16px; font-weight: bold; color: #000080;">(H)</div>
-                        <div>
-                            <div style="display: flex; align-items: center; gap: 5px;">
-                                <strong>MSN Messenger 7.0</strong> <span class="ad-tag">Ad</span>
-                            </div>
-                            <div style="color: #222; font-size: 10px;">Use our shitty messaging app!</div>
-                            <a href="https://www.roblox.com/users/4447690823/profile" target="_blank" style="color: #0000ff; font-weight: bold; text-decoration: underline; font-size: 10px;">Download Free Extension Now</a>
-                        </div>
-                    </div>
-
-                    <hr style="margin-top: 15px; border: 0; border-top: 2px inset #fff;">
-                    <div style="text-align: center; margin-top: 10px;">
-                        <div style="font-size: 10px; font-weight: bold; color: #000;">YOU ARE VISITOR NUMBER:</div>
-                        <div class="counter-box" id="hit-counter">000000</div>
+                    <div style="text-align: center; margin-top: 15px; padding-top: 10px; border-top: 1px dashed #d6d3ce;">
+                        <div style="font-size: 10px; font-weight: bold; color: #555; margin-bottom: 4px;">TOTAL HOMEPAGE RECONNAISSANCE PARSES:</div>
+                        <div class="counter-box" id="hit-counter">002491</div>
                     </div>
                 </div>
             </div>
 
-            <div class="window">
-                <div class="title-bar">
-                    <span class="title-bar-text"><span class="title-icon-folder"></span>my media player</span>
-                    <div class="title-bar-controls">
-                        <button class="btn-min">_</button><button class="btn-max">▢</button>
-                        <button class="btn-close" onclick="this.closest('.window').style.display='none'">✕</button>
+            <div class="xp-window">
+                <div class="xp-titlebar">
+                    <span class="xp-title-text">🎵 Windows Media Player 9 Series</span>
+                    <div class="xp-controls">
+                        <div class="xp-btn xp-btn-min">_</div><div class="xp-btn xp-btn-max">▢</div><div class="xp-btn xp-btn-close">✕</div>
                     </div>
                 </div>
-                <div class="window-menu">
-                    <span>Play</span><span>Tools</span><span>View</span>
-                </div>
-                <div class="window-body">
-                    <div style="background-color: #000000; color: #00ff00; font-family: monospace; padding: 12px; border-top: 2px solid #808080; border-left: 2px solid #808080; border-right: 2px solid #fff; border-bottom: 2px solid #fff;">
-                        <div id="media-status" style="font-weight: bold; font-size: 11px;">[CONNECTING]</div>
-                        <div id="media-title" style="font-size: 11px; margin-top: 4px; text-transform: lowercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">querying last.fm stream logs...</div>
-                    </div>
-                    
-                    <div class="eq-container">
-                        <div class="eq-bar" style="animation-delay: 0.1s;"></div>
-                        <div class="eq-bar" style="animation-delay: 0.4s;"></div>
-                        <div class="eq-bar" style="animation-delay: 0.2s;"></div>
-                        <div class="eq-bar" style="animation-delay: 0.6s;"></div>
-                        <div class="eq-bar" style="animation-delay: 0.3s;"></div>
-                    </div>
-
-                    <div class="wmp-hardware-tray">
-                        <div style="height: 4px; background: #808080; position: relative; margin-bottom: 6px; border-bottom: 1px solid #fff;">
-                            <div style="position: absolute; left: 40%; top: -3px; width: 6px; height: 10px; background: #d4d0c8; border: 1px solid #000; box-shadow: inset 1px 1px 0 #fff;"></div>
+                <div class="xp-window-body">
+                    <div class="wmp-frame">
+                        <div class="wmp-screen">
+                            <div id="media-status" style="font-weight: bold;">[LOADING AUDIO CHANNELS]</div>
+                            <div id="media-title" style="margin-top: 3px; text-transform: lowercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">querying last.fm stream logs...</div>
                         </div>
-                        <div class="wmp-interface-buttons">
-                            <button class="wmp-btn" onclick="alert('Playback control isolated by host thread.')">■</button>
-                            <button class="wmp-btn" onclick="updateMediaPlayer()">▶</button>
-                            <button class="wmp-btn" onclick="alert('Audio framework log updates paused.')">Ⅱ</button>
-                        </div>
-                    </div>
-
-                    <div class="messenger-ad-card yahoo-bg">
-                        <div style="font-size: 16px;">💡</div>
-                        <div>
-                            <div style="display: flex; align-items: center; gap: 5px;">
-                                <strong>Yahoo! Widgets</strong> <span class="ad-tag">Ad</span>
-                            </div>
-                            <div style="color: #222; font-size: 10px;">Get awesome, great cool, widgets to help you customize your old ass browser!.</div>
-                            <a href="https://www.last.fm/user/icy51" target="_blank" style="color: #6001d2; font-weight: bold; text-decoration: underline; font-size: 10px;">Get Yahoo! Widgets</a>
+                        <div class="wmp-controls">
+                            <button class="wmp-btn" onclick="alert('Playback engine isolated via thread exception hooks.')">Stop</button>
+                            <button class="wmp-btn" onclick="updateMediaPlayer()">Play Track</button>
+                            <button class="wmp-btn" onclick="alert('Audio stream logging pause hook applied.')">Pause</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="window">
-                <div class="title-bar">
-                    <span class="title-bar-text"><span class="title-icon-folder"></span>links stuff</span>
-                    <div class="title-bar-controls">
-                        <button class="btn-min">_</button><button class="btn-max">▢</button>
-                        <button class="btn-close" onclick="this.closest('.window').style.display='none'">✕</button>
+            <div class="xp-window" id="projects">
+                <div class="xp-titlebar">
+                    <span class="xp-title-text">📁 File Explorer - C:\My Documents\Projects</span>
+                    <div class="xp-controls">
+                        <div class="xp-btn xp-btn-min">_</div><div class="xp-btn xp-btn-max">▢</div><div class="xp-btn xp-btn-close">✕</div>
                     </div>
                 </div>
-                <div class="window-menu">
-                    <span>Favorites</span><span>Tools</span>
+                <div class="xp-window-menu">
+                    <span>File</span><span>Edit</span><span>View</span><span>Favorites</span><span>Tools</span>
                 </div>
-                <div class="window-body link-list">
-                    <div class="document-well">
-                        <a href="https://www.youtube.com/@yeci_.1" target="_blank" style="text-transform: lowercase;"><span class="ie-bullet"></span>my youtube channel</a>
-                        <a href="https://www.roblox.com/users/4447690823/profile" target="_blank" style="text-transform: lowercase;"><span class="ie-bullet"></span>my roblox profile</a>
-                        <a href="https://www.last.fm/user/icy51" target="_blank" style="text-transform: lowercase;"><span class="ie-bullet"></span>my last.fm page</a>
+                <div class="xp-window-body">
+                    <div class="explorer-grid">
                         
-                        <hr style="border:0; border-top: 2px inset #fff; margin: 12px 0;">
-                        <div style="font-size: 11px; color: #000; margin-bottom: 12px; text-transform: lowercase; padding-left: 2px;">discord user handle: <strong>._icey1</strong></div>
-                        
-                        <div style="border-top: 1px solid #808080; padding-top: 8px; text-align: center;">
-                            <div style="font-size: 9px; color: #444; margin-bottom: 8px; font-weight: bold; letter-spacing: 0.5px;">COLLECTIBLE WEB STAMPS:</div>
-                            <div style="display: flex; justify-content: center; gap: 6px; flex-wrap: wrap;">
-                                <img src="https://img.shields.io/badge/Made%20With-Notepad%2B%2B-007ACC?style=flat&logo=notepadplusplus&logoColor=white" alt="Made with Notepad++" style="border:1px solid #808080; width:88px; height:31px; image-rendering: pixelated;">
-                                
-                                <div style="background: #3a5f20; color: #fff; font-family: monospace; font-size: 9px; width: 88px; height: 31px; display: flex; align-items: center; justify-content: center; border-top: 1px solid #fff; border-left: 1px solid #fff; border-right: 1px solid #000; border-bottom: 1px solid #000; line-height: 1.1; text-align: center;">world spawn<br>xyz: 64.-12.256</div>
-                            </div>
+                        <div class="explorer-card">
+                            <div style="font-size: 20px; display: flex; align-items: center; gap: 8px;">📁 <strong style="font-size:12px;">Icey Website Layout</strong></div>
+                            <div style="font-size: 11px; color: #555; text-transform: lowercase;">primary deployment node repository build.</div>
+                            <div style="font-size: 10px; margin-top: auto; color:#777;">Version: 2.0.4<br>Updated: Recent</div>
+                            <button class="win-btn" style="font-size:10px; margin-top:5px; padding:2px;" onclick="alert('Folder parameters already mounted inside viewport directory.')">Open Directory</button>
+                        </div>
+
+                        <div class="explorer-card">
+                            <div style="font-size: 20px; display: flex; align-items: center; gap: 8px;">📁 <strong style="font-size:12px;">Stream Scrapper Matrix</strong></div>
+                            <div style="font-size: 11px; color: #555; text-transform: lowercase;">audioscrobbler background micro-daemon task mapping loop.</div>
+                            <div style="font-size: 10px; margin-top: auto; color:#777;">Version: 1.0.0<br>Updated: Locked</div>
+                            <button class="win-btn" style="font-size:10px; margin-top:5px; padding:2px;" onclick="alert('Target engine core locked by process owner.')">Open Directory</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <a class="vintage-banner-ad" href="https://www.last.fm" target="_blank" style="animation-duration: 1.5s; background: cyan;">
+                ⚡ DOWNLOAD MSN MESSENGER 7.5 ADDONS NOW! ⚡<br>
+                CUSTOM WINKS, NEON SMILIES, AND SEEN-BLOCK DETECTORS! 100% FREE!
+            </a>
+
+            <div class="xp-window" id="downloads">
+                <div class="xp-titlebar">
+                    <span class="xp-title-text">💾 Shared Storage Directory - Download Packs</span>
+                    <div class="xp-controls">
+                        <div class="xp-btn xp-btn-min">_</div><div class="xp-btn xp-btn-max">▢</div><div class="xp-btn xp-btn-close">✕</div>
+                    </div>
+                </div>
+                <div class="xp-window-body">
+                    <div class="document-well" style="display: flex; flex-direction: column; gap: 8px;">
+                        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px dotted #ccc; padding-bottom:4px;">
+                            <span>📦 <strong>XP_Icons_PixelPack.zip</strong> (2.4 MB)</span>
+                            <button class="win-btn" onclick="alert('Download stream pipe initiated via local browser download queue shadow thread.')">Download Pack</button>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px dotted #ccc; padding-bottom:4px;">
+                            <span>📦 <strong>Bliss_HighRes_Wallpaper_Mod.rar</strong> (4.1 MB)</span>
+                            <button class="win-btn" onclick="alert('Download package routed.')">Download Pack</button>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <span>📦 <strong>Source_Code_Archive.tar.gz</strong> (512 KB)</span>
+                            <button class="win-btn" onclick="alert('Source archive streaming pipeline activated.')">Download Pack</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="window" style="grid-column: 1 / -1;">
-                <div class="title-bar">
-                    <span class="title-bar-text"><span class="title-icon-folder"></span>sign my guestbook database</span>
-                    <div class="title-bar-controls">
-                        <button class="btn-min">_</button><button class="btn-max">▢</button>
-                        <button class="btn-close" onclick="this.closest('.window').style.display='none'">✕</button>
+            <div class="xp-window" id="links">
+                <div class="xp-titlebar">
+                    <span class="xp-title-text">🌐 System Explorer Network Shortcuts</span>
+                    <div class="xp-controls">
+                        <div class="xp-btn xp-btn-min">_</div><div class="xp-btn xp-btn-max">▢</div><div class="xp-btn xp-btn-close">✕</div>
                     </div>
                 </div>
-                <div class="window-menu">
-                    <span>Options</span>
-                </div>
-                <div class="window-body">
-                    <div id="guestbook-list" class="document-well" style="max-height: 120px; overflow-y: auto; margin-bottom: 10px;"></div>
-                    <div class="form-group" style="display: flex; gap: 10px;">
-                        <input type="text" id="gb-name" placeholder="your name / user alias" style="width: 30%;">
-                        <input type="text" id="gb-msg" placeholder="write record entry parameter content string..." style="width: 70%;">
+                <div class="xp-window-body">
+                    <div class="document-well" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px;">
+                        <a href="https://www.youtube.com/@yeci_.1" target="_blank" style="color: #245edb; text-decoration: underline; font-weight: bold; text-transform: lowercase;">🌐 My Youtube Channel</a>
+                        <a href="https://www.roblox.com/users/4447690823/profile" target="_blank" style="color: #245edb; text-decoration: underline; font-weight: bold; text-transform: lowercase;">🎮 My Roblox Profile</a>
+                        <a href="https://www.last.fm/user/icy51" target="_blank" style="color: #245edb; text-decoration: underline; font-weight: bold; text-transform: lowercase;">🎵 My Last.fm Page</a>
                     </div>
+                    <div style="margin-top: 12px; padding: 6px; background:#fff; border:1px solid #7f9db9; font-size:11px; text-transform: lowercase;">
+                        💬 Discord Network Handle Coordinate: <strong>._icey1</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="xp-window" id="guestbook">
+                <div class="xp-titlebar">
+                    <span class="xp-title-text">💬 MSN Chat Group History - Guestbook Database</span>
+                    <div class="xp-controls">
+                        <div class="xp-btn xp-btn-min">_</div><div class="xp-btn xp-btn-max">▢</div><div class="xp-btn xp-btn-close">✕</div>
+                    </div>
+                </div>
+                <div class="xp-window-body">
                     
-                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                        <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="light"></div>
-                        <button class="win-btn" onclick="submitGuestbookPending()" style="text-transform: lowercase; font-weight: bold; height: 26px;">submit entry message</button>
+                    <div id="guestbook-list" class="document-well" style="max-height: 250px; overflow-y: auto; margin-bottom: 12px; background: #fff;">
+                        <div class="msn-bubble">
+                            <div class="msn-meta"><span>🙂</span> Carter says:</div>
+                            <div style="text-transform: lowercase;">nice website layout config setup! the luna gradient looks incredibly elite.</div>
+                        </div>
+                        <div class="msn-bubble">
+                            <div class="msn-meta"><span>😎</span> Someone says:</div>
+                            <div style="text-transform: lowercase;">love the design structure choice. pure 2004 nostalgia bliss engine.</div>
+                        </div>
                     </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <div style="display: flex; gap: 10px;">
+                            <input type="text" id="gb-name" placeholder="Your Handle / MSN Name" style="width: 30%;">
+                            <input type="text" id="gb-msg" placeholder="Type your instant message parameter here..." style="width: 70%;">
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                            <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="light"></div>
+                            <button class="win-btn" onclick="submitGuestbookPending()" style="font-weight: bold; padding: 6px 15px;">Send MSN Message</button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
         </main>
     </div>
 
-    <div style="text-align: center; margin-top: 30px; padding: 10px; color: #ffffff; font-size:11px; font-weight:bold; text-shadow:1px 1px 0px #000000; text-transform: lowercase;">
-        optimized for internet explorer 5.0 at 1024x768 resolution
-    </div>
-
-    <div class="retro-marquee">
-        <div class="start-button" onclick="alert('Windows XP Start Engine Framework initialized via micro-kernel layout.')">start</div>
-        <marquee id="live-ticker" scrollamount="4" behavior="scroll" direction="left">+++ processing data streams from client network hub nodes +++</marquee>
+    <div class="xp-taskbar">
+        <button class="xp-start-btn" onclick="alert('Windows XP Start Engine Framework initialized via micro-kernel layout hierarchy hooks.')">start</button>
         
-        <div class="system-tray">
-            <span title="Windows Updates Installed Status Mode" style="cursor:pointer;">⚡</span>
-            <span title="Hardware Volume Parameter Audio Engine" style="cursor:pointer;">🔊</span>
-            <div id="browser-clock" style="font-weight: bold;"></div>
+        <div style="flex-grow:1; color:white; font-size:11px; padding-left:15px; font-weight:normal; letter-spacing:0.5px; text-transform: lowercase;">
+            system status container active || optimize layout parsing for ie6 architecture
+        </div>
+
+        <div class="status-tray-clock">
+            <span title="Volume Control" style="cursor:pointer;">🔊</span>
+            <span title="Local Processing Node Active" style="cursor:pointer;">⚡</span>
+            <div id="browser-clock" style="font-weight: bold;">00:00 AM</div>
         </div>
     </div>
 
     <script>
         function updateClock() {
             var now = new Date();
-            document.getElementById('browser-clock').innerText = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}).toLowerCase();
+            document.getElementById('browser-clock').innerText = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
         }
         setInterval(updateClock, 1000);
         updateClock();
@@ -648,12 +680,12 @@
                     var titleEl = document.getElementById('media-title');
                     var isNowPlaying = track['@attr'] && track['@attr'].nowplaying === "true";
                     
-                    statusEl.innerText = isNowPlaying ? "[PLAYING NOW]" : "[LAST PLAYED]";
+                    statusEl.innerText = isNowPlaying ? "[WMP: PLAYING NOW]" : "[WMP: LAST TRACK]";
                     titleEl.innerText = (track.name + " - " + track.artist['#text']).toLowerCase();
                 })
                 .catch(err => {
-                    document.getElementById('media-status').innerText = "[OFFLINE]";
-                    document.getElementById('media-title').innerText = "endpoint lookup timeout";
+                    document.getElementById('media-status').innerText = "[WMP: OFFLINE]";
+                    document.getElementById('media-title').innerText = "endpoint lookup track log timeout";
                 });
         }
         setInterval(updateMediaPlayer, 30000);
@@ -665,59 +697,27 @@
             var token = turnstile.getResponse();
 
             if (name === "" || msg === "") {
-                alert("please fill out both input block fields to submit text parameters.");
+                alert("Please complete both messaging block parameters to commit an MSN bubble record.");
                 return;
             }
             if (!token) {
-                alert("security token empty. please verify the cloudflare gateway challenge.");
+                alert("Security Gateway Exception: Verification token payload completely null.");
                 return;
             }
 
-            alert("success! entry stored and routed for administrator dashboard moderation checks.");
+            // Client simulation update block
+            var list = document.getElementById('guestbook-list');
+            var bubble = document.createElement('div');
+            bubble.className = "msn-bubble";
+            bubble.innerHTML = '<div class="msn-meta"><span>💬</span> ' + name + ' says:</div><div style="text-transform:lowercase;">' + msg + '</div>';
+            list.appendChild(bubble);
+            list.scrollTop = list.scrollHeight;
+
+            alert("Success! Entry message successfully transmitted into the active MSN session pipeline framework.");
             document.getElementById('gb-name').value = "";
             document.getElementById('gb-msg').value = "";
             turnstile.reset();
         }
-
-        function loadSavedData() {
-            fetch('data.json?t=' + new Date().getTime())
-                .then(response => response.json())
-                .then(data => {
-                    var banner = document.getElementById('site-announcement');
-                    if(data.announcement && data.announcement.trim() !== "") {
-                        banner.innerText = data.announcement.toLowerCase();
-                        banner.style.display = "block";
-                    } else {
-                        banner.style.display = "none";
-                    }
-                    document.getElementById('display-about').innerText = (data.aboutText || "all hail icy").toLowerCase();
-                    
-                    if(data.tickerText) {
-                        document.getElementById('live-ticker').innerText = data.tickerText.toLowerCase();
-                    }
-
-                    var list = document.getElementById('guestbook-list');
-                    list.innerHTML = "";
-                    if (data.guestbook && data.guestbook.length > 0) {
-                        data.guestbook.forEach(function(item) {
-                            var entry = document.createElement('div');
-                            entry.className = "guestbook-entry";
-                            entry.innerHTML = "<span class='guestbook-name'>" + escapeHTML(item.name).toLowerCase() + ":</span> " + escapeHTML(item.message).toLowerCase();
-                            list.appendChild(entry);
-                        });
-                    } else {
-                        list.innerHTML = "<div style='color:#777; font-style:italic;'>no entries yet. be the first!</div>";
-                    }
-                })
-                .catch(err => {
-                    document.getElementById('display-about').innerText = "all hail icy";
-                });
-        }
-
-        function escapeHTML(str) {
-            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-        }
-        window.onload = loadSavedData;
     </script>
 </body>
 </html>
